@@ -52,7 +52,6 @@ body {
     justify-content: center;
     text-align: center;
     height: 480px;
-    text-transform: capitalize;
 }
 
 .weather-content {

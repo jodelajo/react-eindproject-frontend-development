@@ -1,4 +1,54 @@
+
 .footer {
+    display: flex;
+    justify-content: space-around;
     height: 72px;
+    padding-top: 16px;
+    padding-bottom: 8px;
     background-color: #181D17;
+    margin-top: 0;
+    font-size: 42px;
+    width: 100%;
+    align-items: flex-end;
+}
+
+.footer-icon {
+    background-color: #181D17;
+    color: #f9bec7;
+}
+
+.icon-bar {
+    font-size: 34px;
+    background-color: #40463F;
+    fill: #f9bec7;
+}
+
+.icon-cafe {
+    margin-top: 8px;
+    font-size: 34px;
+    align-self: center;
+    fill: #f71818;
+    z-index: 1;
+}
+
+.icon {
+    font-size: 34px;
+    background-color: #181D17;
+    fill: #f9bec7;
+}
+
+.icon > * {
+    fill: #f9bec7;
+    background-color: #181D17;
+}
+
+.icon > *:hover {
+    fill: #747474;
+}
+
+#home-button > * {
+    fill: #f71818;
+}
+#back-button > * {
+    fill: #40463F;
 }

@@ -1,7 +1,9 @@
 .navbar{
     width: 100%;
-    background-color:
-            #595859;
+    background-color: #ff0a54;
     height: 60px;
     margin:0;
+    font-size: 44px;
+    text-align: start;
+    padding: 6px;
 }

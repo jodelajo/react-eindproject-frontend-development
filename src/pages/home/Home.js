@@ -10,24 +10,24 @@ import zuidoost from "../../assets/plattegrond/zuidoost_roze.png";
 
 function Home(){
     return <div>
-            <h1>It beste plakje fan Fryslân</h1>
-            <div className="puzzel">
-                    <Link to="/wadden">
-                    <img src={wadden} id="wadden" alt="wadden" />
-                    </Link>
-                    <Link to="/noordwest">
-                    <img src={noordwest} id="noordwest" alt="noordwest" />
-                    </Link>
-                    <Link to="/noordoost">
-                    <img src={noordoost} id="noordoost" alt="noordoost"/>
-                    </Link>
-                    <Link to="/zuidwest">
-                    <img src={zuidwest} id="zuidwest" alt="zuidwest"/>
-                    </Link>
-                    <Link to="/zuidoost">
-                    <img src={zuidoost} id="zuidoost" alt="zuidoost"/>
-                    </Link>
-        </div>
+                    <h1>It beste plakje fan Fryslân</h1>
+                    <div>
+                            <Link to="/wadden">
+                            <img src={wadden} id="wadden" alt="wadden" />
+                            </Link>
+                            <Link to="/noordwest">
+                            <img src={noordwest} id="noordwest" alt="noordwest" />
+                            </Link>
+                            <Link to="/noordoost">
+                            <img src={noordoost} id="noordoost" alt="noordoost"/>
+                            </Link>
+                            <Link to="/zuidwest">
+                            <img src={zuidwest} id="zuidwest" alt="zuidwest"/>
+                            </Link>
+                            <Link to="/zuidoost">
+                            <img src={zuidoost} id="zuidoost" alt="zuidoost"/>
+                            </Link>
+                    </div>
 
     </div>
 }
