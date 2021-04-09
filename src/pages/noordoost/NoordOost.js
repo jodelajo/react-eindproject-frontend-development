@@ -1,12 +1,12 @@
 import React from 'react';
-import './Friesland.css';
+import './NoordOost.css';
 import { Link } from "react-router-dom";
 
-function Friesland(){
+function NoordOost(){
     return <div className="friesland">
         <Link to="/">
-        hoi
+            Groetjes uit NoordOost
         </Link>
-        </div>
+    </div>
 }
-export default Friesland
+export default NoordOost
