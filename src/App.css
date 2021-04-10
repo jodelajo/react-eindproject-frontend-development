@@ -38,7 +38,7 @@ body {
     width: 100%;
     border-radius: 2px 2px 0 0;
     height: 540px;
-    background: linear-gradient(#f9bec7, #ff477e);
+    background: linear-gradient(#ffffff, #f9bec7);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -52,10 +52,6 @@ body {
     justify-content: center;
     text-align: center;
     height: 480px;
-}
-
-.weather-content {
-
 }
 
 .tab-wrapper {
