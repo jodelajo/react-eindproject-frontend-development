@@ -34,7 +34,7 @@ function Wadden(){
         {locations && locations.map((location)=>{
             return <li key={location.name}>
                 <div className="weather-left">
-                    <img src={`https://openweathermap.org/img/wn/${location.weather[0].icon}.png`}/>
+                    <img className="icon-weather" src={`https://openweathermap.org/img/wn/${location.weather[0].icon}.png`}/>
                     <div className="name-description">
                 <p className="location-name">{location.name}</p>
                 <p>{location.weather[0].description}</p>

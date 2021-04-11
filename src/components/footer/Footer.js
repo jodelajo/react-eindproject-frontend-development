@@ -9,8 +9,9 @@ function Footer(){
         <Link to="/">
         <p className="icon" id="home-button"><RiHome2Line/></p>
         </Link>
+        <Link to="/bontebok">
         <p className="icon"><RiRefreshLine/></p>
-
+        </Link>
     </div>
 }
 export default Footer
