@@ -1,10 +1,88 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 
-function Counter( { pointsClouds, pointsTemp } ) {
-    const total = (pointsTemp+pointsClouds)
+function Counter( { temp, clouds, wind, location}) {
+    const [pointsClouds, setPointsClouds] = useState(0)
+    const [pointsTemp, setPointsTemp] = useState(0)
+    const [pointsWind, setPointsWind] =useState(0)
+
+    function getPointsClouds() {
+        if (clouds < 30) {
+            setPointsClouds(pointsClouds + 20);
+        }
+        if (clouds >= 30 && clouds < 50) {
+            setPointsClouds(pointsClouds + 15);
+        }
+        if (clouds > 50 && clouds < 99) {
+            setPointsClouds(pointsClouds + 8);
+        }
+        if (clouds > 99) {
+            setPointsClouds(pointsClouds + 2);
+        }
+    }
+
+    function getPointsTemp() {
+        if (temp < 0) {
+            setPointsTemp(pointsTemp + 1);
+        }
+        if (temp >= 0 && temp < 4) {
+            setPointsTemp(pointsTemp + 3);
+        }
+        if (temp >= 4 && temp < 6) {
+            setPointsTemp(pointsTemp + 4);
+        }
+        if (temp >= 6 && temp < 8) {
+            setPointsTemp(pointsTemp + 5);
+        }
+        if (temp >= 8 && temp < 10) {
+            setPointsTemp(pointsTemp + 6);
+        }
+        if (temp >= 10 && temp < 13) {
+            setPointsTemp(pointsTemp + 8);
+        }
+        if (temp >= 13 && temp < 20) {
+            setPointsTemp(pointsTemp + 10);
+        }
+        if (temp >= 20 && temp < 25) {
+            setPointsTemp(pointsTemp + 12);
+        }
+        if(temp >= 25) {
+            setPointsTemp(pointsTemp + 15);
+        }
+    }
+
+    function getPointsWind() {
+        if(wind < 2) {
+            setPointsWind(pointsWind + 10);
+        }
+        if(wind >= 2 && wind < 4) {
+            setPointsWind(pointsWind + 8);
+        }
+        if(wind >= 4 && wind < 6) {
+            setPointsWind(pointsWind + 4);
+        }
+        if(wind > 6 && wind < 8) {
+            setPointsWind(pointsWind + 2);
+        }
+        if(wind > 8) {
+            setPointsWind(pointsWind + 1);
+        }
+    }
+
+    useEffect(()=>{
+        getPointsClouds();
+        getPointsTemp();
+        getPointsWind();
+    },[])
+
+    const total = pointsTemp+pointsClouds+pointsWind;
+    // console.log(total)
+    // console.log([location, total])
     return <div>
+        {/*<p>temp{pointsTemp}</p>*/}
+        {/*<p>wolken{pointsClouds}</p>*/}
+        {/*<p>wind{pointsWind}</p>*/}
 
-        <p>{total}</p>
-    </div>
+        {total}</div>
 }
 export default Counter
+

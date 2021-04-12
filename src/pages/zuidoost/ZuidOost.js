@@ -3,6 +3,7 @@ import './ZuidOost.css';
 import axios from "axios";
 import kelvinToCelsius from "../../helpers/kelvinToCelsius";
 import metricToBeaufort from "../../helpers/metricToBeaufort";
+import Counter from "../../components/counter/Counter";
 
 function ZuidOost(){
     const [weatherData, setWeatherData] = useState({});
@@ -26,17 +27,20 @@ function ZuidOost(){
         fetchData();
     },[])
     return <div className="zuidoost">
-
-        {locations &&
-        locations.sort((a, b)=> {
-            //sorteren op zonnig:
-            if (a.main.temp > b.main.temp) return -1;
-            if (a.main.temp < b.main.temp) return 1;
+        {locations && locations.sort((a, b)=> {
+            //sorteren op output <Counter />
+            // if (a.key > b.key) return -1;
+            // if (a.key < b.key) return -1;
+            return a - b
         })
-
-            .map((location)=>{
+        .map((location)=>{
                 return <li key={location.name}>
                     <div className="weather-left">
+                        <Counter
+                            clouds={location.clouds.all}
+                            temp={kelvinToCelsius(location.main.temp)}
+                            wind={metricToBeaufort(location.wind.speed)}
+                        />
                         <img src={`https://openweathermap.org/img/wn/${location.weather[0].icon}.png`}/>
                         <div className="name-description">
                             <p className="location-name">{location.name}</p>
@@ -44,6 +48,7 @@ function ZuidOost(){
                         </div>
                     </div>
                     <div className="weather-right">
+
                         <p>{kelvinToCelsius(location.main.temp)}</p>
                         <p>Windkracht {metricToBeaufort(location.wind.speed)}</p>
                     </div>
