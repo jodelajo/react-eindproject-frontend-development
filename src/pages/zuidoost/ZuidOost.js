@@ -26,35 +26,38 @@ function ZuidOost(){
         }
         fetchData();
     },[])
-    return <div className="zuidoost">
-        {locations && locations.sort((a, b)=> {
-            //sorteren op output <Counter />
-            // if (a.key > b.key) return -1;
-            // if (a.key < b.key) return -1;
-            return a - b
-        })
-        .map((location)=>{
+    return <div className="wadden">
+        <ul>
+            {locations && locations.map((location) => {
                 return <li key={location.name}>
                     <div className="weather-left">
+                        <img className="icon-weather"
+                             src={`https://openweathermap.org/img/wn/${location.weather[0].icon}.png`}/>
+                        <div className="name-description">
+                            <p className="location-name">{location.name}</p>
+                            <p>{location.weather[0].description}</p>
+                            <p>{location.clouds.all}</p>
+                        </div>
+                    </div>
+                    <div className="weather-right">
                         <Counter
                             clouds={location.clouds.all}
                             temp={kelvinToCelsius(location.main.temp)}
                             wind={metricToBeaufort(location.wind.speed)}
+                            location={location.name}
+                            weather={location.weather[0].description}
+                            icon={location.weather[0].icon}
+                            key={location.name}
                         />
-                        <img src={`https://openweathermap.org/img/wn/${location.weather[0].icon}.png`}/>
-                        <div className="name-description">
-                            <p className="location-name">{location.name}</p>
-                            <p>{location.weather[0].description}</p>
-                        </div>
-                    </div>
-                    <div className="weather-right">
-
                         <p>{kelvinToCelsius(location.main.temp)}</p>
                         <p>Windkracht {metricToBeaufort(location.wind.speed)}</p>
                     </div>
                 </li>
-            })}
 
+
+
+            })}
+        </ul>
     </div>
 }
 export default ZuidOost

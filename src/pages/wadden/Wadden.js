@@ -7,7 +7,7 @@ import metricToBeaufort from "../../helpers/metricToBeaufort";
 import Counter from "../../components/counter/Counter";
 
 function Wadden() {
-    const [weatherData, setWeatherData] = useState({});
+    // const [weatherData, setWeatherData] = useState({});
     const [locations, setLocations] = useState('');
 
 
@@ -21,9 +21,10 @@ function Wadden() {
             try {
                 const result = await axios.get(urlGroup);
                 console.log(result.data)
-                setWeatherData(result.data)
+                // setWeatherData(result.data)
                 console.log(result.data.list)
                 setLocations(result.data.list)
+                console.log(locations)
             } catch (e) {
                 console.error(e);
             }
@@ -49,6 +50,9 @@ function Wadden() {
                            temp={kelvinToCelsius(location.main.temp)}
                            wind={metricToBeaufort(location.wind.speed)}
                            location={location.name}
+                           weather={location.weather[0].description}
+                           icon={location.weather[0].icon}
+                           key={location.name}
                            />
                             <p>{kelvinToCelsius(location.main.temp)}</p>
                             <p>Windkracht {metricToBeaufort(location.wind.speed)}</p>

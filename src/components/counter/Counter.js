@@ -1,16 +1,23 @@
 import React, {useEffect, useState} from 'react';
 
-function Counter( { temp, clouds, wind, location}) {
+function Counter( { temp, clouds, wind, location, icon, weather}) {
     const [pointsClouds, setPointsClouds] = useState(0)
     const [pointsTemp, setPointsTemp] = useState(0)
     const [pointsWind, setPointsWind] =useState(0)
 
     function getPointsClouds() {
-        if (clouds < 30) {
-            setPointsClouds(pointsClouds + 20);
+        if (clouds < 10) {
+            return 20
+            // setPointsClouds(pointsClouds + 20);
+        }
+        if (clouds >= 10 && clouds < 15) {
+            setPointsClouds(pointsClouds + 18);
+        }
+        if (clouds >= 15 && clouds < 30) {
+            setPointsClouds(pointsClouds + 15);
         }
         if (clouds >= 30 && clouds < 50) {
-            setPointsClouds(pointsClouds + 15);
+            setPointsClouds(pointsClouds + 10);
         }
         if (clouds > 50 && clouds < 99) {
             setPointsClouds(pointsClouds + 8);
