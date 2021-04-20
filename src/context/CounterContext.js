@@ -1,6 +1,6 @@
 //DIT IS NOG NIKS
 
-import React, {createContext, useEffect, useState} from 'react';
+import React, {createContext, } from 'react';
 
 export const CounterContext = createContext({})
 

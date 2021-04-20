@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+
 import React, {useEffect, useState} from 'react';
 import axios from "axios";
 import './Wadden.css';
@@ -37,7 +37,7 @@ function Wadden() {
                 return <li key={location.name}>
                         <div className="weather-left">
                             <img className="icon-weather"
-                                 src={`https://openweathermap.org/img/wn/${location.weather[0].icon}.png`}/>
+                                 src={`https://openweathermap.org/img/wn/${location.weather[0].icon}.png`} alt="icon"/>
                             <div className="name-description">
                                 <p className="location-name">{location.name}</p>
                                 <p>{location.weather[0].description}</p>
@@ -45,15 +45,7 @@ function Wadden() {
                             </div>
                         </div>
                         <div className="weather-right">
-                           <Counter
-                           clouds={location.clouds.all}
-                           temp={kelvinToCelsius(location.main.temp)}
-                           wind={metricToBeaufort(location.wind.speed)}
-                           location={location.name}
-                           weather={location.weather[0].description}
-                           icon={location.weather[0].icon}
-                           key={location.name}
-                           />
+                          
                             <p>{kelvinToCelsius(location.main.temp)}</p>
                             <p>Windkracht {metricToBeaufort(location.wind.speed)}</p>
                         </div>

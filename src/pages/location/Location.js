@@ -119,12 +119,12 @@ function Location() {
             </div>
             }
         </span>
-        <Counter
-            clouds={clouds}
-            temp={temp}
-            wind={wind}
+        {/*<Counter*/}
+        {/*    clouds={clouds}*/}
+        {/*    temp={temp}*/}
+        {/*    wind={wind}*/}
 
-        />
+        {/*/>*/}
         {/*<Counter pointsClouds={pointsClouds}*/}
         {/*         pointsTemp={pointsTemp}*/}
         {/*         pointsWind={pointsWind}*/}

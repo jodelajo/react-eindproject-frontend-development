@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import LocationContextProvider from "./context/LocationContext";
 
 
 ReactDOM.render(
     <React.StrictMode>
+        <LocationContextProvider>
             <App/>
+        </LocationContextProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );

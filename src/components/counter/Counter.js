@@ -1,95 +1,103 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
+import {LocationContext} from "../../context/LocationContext";
+import kelvinToCelsius from "../../helpers/kelvinToCelsius";
+import metricToBeaufort from "../../helpers/metricToBeaufort";
+import Friesland from "../../pages/friesland/Friesland";
 
-function Counter( { temp, clouds, wind, location, icon, weather}) {
-    const [pointsClouds, setPointsClouds] = useState(0)
-    const [pointsTemp, setPointsTemp] = useState(0)
-    const [pointsWind, setPointsWind] =useState(0)
+function Counter() {
+    const [points, setPoints] = useState(0)
+    const {locations} = useContext(LocationContext)
+
+    const clouds = locations.map((location) => {
+        return location.locationClouds;
+    })
+    console.log('clouds', clouds)
+
+    const wind = locations.map((location) => {
+        return metricToBeaufort(location.locationWind);
+    })
+    console.log('wind', wind)
+
+    const temp = locations.map((location) => {
+        return kelvinToCelsius(location.locationTemp);
+    })
+    console.log('temp', temp)
+
 
     function getPointsClouds() {
         if (clouds < 10) {
-            return 20
-            // setPointsClouds(pointsClouds + 20);
+
+            setPoints(points + 20);
         }
         if (clouds >= 10 && clouds < 15) {
-            setPointsClouds(pointsClouds + 18);
+
+            setPoints(points + 18);
         }
         if (clouds >= 15 && clouds < 30) {
-            setPointsClouds(pointsClouds + 15);
+
+            setPoints(points + 15);
         }
         if (clouds >= 30 && clouds < 50) {
-            setPointsClouds(pointsClouds + 10);
+
+            setPoints(points + 10);
         }
-        if (clouds > 50 && clouds < 99) {
-            setPointsClouds(pointsClouds + 8);
+        if (clouds >= 50 && clouds < 99) {
+
+            setPoints(points + 8);
         }
         if (clouds > 99) {
-            setPointsClouds(pointsClouds + 2);
+
+            setPoints(points + 2);
         }
     }
 
-    function getPointsTemp() {
-        if (temp < 0) {
-            setPointsTemp(pointsTemp + 1);
-        }
-        if (temp >= 0 && temp < 4) {
-            setPointsTemp(pointsTemp + 3);
-        }
-        if (temp >= 4 && temp < 6) {
-            setPointsTemp(pointsTemp + 4);
-        }
-        if (temp >= 6 && temp < 8) {
-            setPointsTemp(pointsTemp + 5);
-        }
-        if (temp >= 8 && temp < 10) {
-            setPointsTemp(pointsTemp + 6);
-        }
-        if (temp >= 10 && temp < 13) {
-            setPointsTemp(pointsTemp + 8);
-        }
-        if (temp >= 13 && temp < 20) {
-            setPointsTemp(pointsTemp + 10);
-        }
-        if (temp >= 20 && temp < 25) {
-            setPointsTemp(pointsTemp + 12);
-        }
-        if(temp >= 25) {
-            setPointsTemp(pointsTemp + 15);
-        }
-    }
 
-    function getPointsWind() {
-        if(wind < 2) {
-            setPointsWind(pointsWind + 10);
-        }
-        if(wind >= 2 && wind < 4) {
-            setPointsWind(pointsWind + 8);
-        }
-        if(wind >= 4 && wind < 6) {
-            setPointsWind(pointsWind + 4);
-        }
-        if(wind > 6 && wind < 8) {
-            setPointsWind(pointsWind + 2);
-        }
-        if(wind > 8) {
-            setPointsWind(pointsWind + 1);
-        }
-    }
+    useEffect(() => {
 
-    useEffect(()=>{
-        getPointsClouds();
-        getPointsTemp();
-        getPointsWind();
-    },[])
+        getPointsClouds()
 
-    const total = pointsTemp+pointsClouds+pointsWind;
-    // console.log(total)
-    // console.log([location, total])
-    return <div>
-        {/*<p>temp{pointsTemp}</p>*/}
-        {/*<p>wolken{pointsClouds}</p>*/}
-        {/*<p>wind{pointsWind}</p>*/}
+    }, [locations])
 
-        {total}</div>
+
+    console.log(points)
+
+
+    return <div className="wadden">
+        <ul>
+            {locations && locations.map((location) => {
+                return <li key={location.locationName}>
+                    {/*<Friesland*/}
+                    {/*name={location.locationName}*/}
+                    {/*/>*/}
+                    <div className="weather-left">
+
+                        <div className="name-description">
+                            <p className="location-name">{location.name}</p>
+                            <p>{location.locationName}</p>
+                            <p>{location.locationClouds}</p>
+                        </div>
+                    </div>
+                    <div className="weather-right">
+                        {/*<Counter*/}
+                        {/*    clouds={location.clouds.all}*/}
+                        {/*    temp={kelvinToCelsius(location.main.temp)}*/}
+                        {/*    wind={metricToBeaufort(location.wind.speed)}*/}
+                        {/*    location={location.name}*/}
+                        {/*    weather={location.weather[0].description}*/}
+                        {/*    icon={location.weather[0].icon}*/}
+                        {/*    key={location.name}*/}
+                        {/*/>*/}
+                        <p>{`${kelvinToCelsius(location.locationTemp)} C`}</p>
+
+                        <p>Windkracht {metricToBeaufort(location.locationWind)}</p>
+                    </div>
+                </li>
+
+
+
+            })}
+        </ul>
+    </div>
 }
-export default Counter
 
+export default Counter
