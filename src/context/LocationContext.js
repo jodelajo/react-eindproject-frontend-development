@@ -27,7 +27,6 @@ function getPointsClouds(clouds) {
         // setPointsClouds(pointsClouds + 2);
     }
 }
-
 function getPointsWind(wind) {
     if (wind < 2) {
         return 10;
@@ -45,7 +44,6 @@ function getPointsWind(wind) {
         return 1;
     }
 }
-
 function getPointsTemp(temp) {
     if (temp < 0) {
         return 1;
@@ -76,13 +74,14 @@ function getPointsTemp(temp) {
     }
 }
 
-
 export const LocationContext = createContext({})
 
 function LocationContextProvider({children}) {
     const [locationsWadden, setLocationsWadden] = useState([])
     const [locationsZuidOost, setLocationsZuidOost] = useState([])
     const [locationsNoordWest, setLocationsNoordWest] = useState([])
+    const [locationsNoordOost, setLocationsNoordOost] = useState([])
+    const [locationsZuidWest, setLocationsZuidWest] = useState([])
 
     async function fetchLocations() {
         try {
@@ -93,7 +92,6 @@ function LocationContextProvider({children}) {
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2750417&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2745944&appid=${process.env.REACT_APP_API_KEY}&lang=nl`)
             ]);
-            // const id = 'id=2754669,2756644,2755429,2759633,2744194'
             const resZuidOost = await Promise.all([
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2754669&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2756644&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
@@ -108,15 +106,28 @@ function LocationContextProvider({children}) {
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2751792&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2755812&appid=${process.env.REACT_APP_API_KEY}&lang=nl`)
             ]);
+            const resNoordOost = await Promise.all([
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=4696233&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2746023&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2759057&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2751792&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2755812&appid=${process.env.REACT_APP_API_KEY}&lang=nl`)
+            ]);
+            const resZuidWest = await Promise.all([
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=4696233&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2746023&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2759057&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2751792&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2755812&appid=${process.env.REACT_APP_API_KEY}&lang=nl`)
+            ]);
 
             const dataWadden = resWadden.map((res) => res.data);
-            console.log('data Wadden', dataWadden)
             const dataZuidOost = resZuidOost.map((res) => res.data);
             const dataNoordWest = resNoordWest.map((res) => res.data);
-
+            const dataNoordOost = resNoordOost.map((res) => res.data);
+            const dataZuidWest = resZuidWest.map((res) => res.data);
 
             const locationsWaddenWithPoints = dataWadden.map((location, index) => {
-
                 return {
                     locationName: location.name,
                     locationTemp: location.main.temp,
@@ -132,7 +143,6 @@ function LocationContextProvider({children}) {
             console.log('wadden', locationsWaddenWithPoints)
 
             const locationsZuidOostWithPoints = dataZuidOost.map((location, index) => {
-
                 return {
                     locationName: location.name,
                     locationTemp: location.main.temp,
@@ -144,12 +154,10 @@ function LocationContextProvider({children}) {
                     totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed) + getPointsTemp(location.main.temp),
                 }
             })
-
             setLocationsZuidOost(locationsZuidOostWithPoints)
-            console.log('ZuidOost', locationsZuidOostWithPoints)
+            console.log('Zuidoost', locationsZuidOostWithPoints)
 
             const locationsNoordWestWithPoints = dataNoordWest.map((location, index) => {
-
                 return {
                     locationName: location.name,
                     locationTemp: location.main.temp,
@@ -161,9 +169,38 @@ function LocationContextProvider({children}) {
                     totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed) + getPointsTemp(location.main.temp),
                 }
             })
-
             setLocationsNoordWest(locationsNoordWestWithPoints)
             console.log('Noordwest', locationsNoordWestWithPoints)
+
+            const locationsNoordOostWithPoints = dataNoordOost.map((location, index) => {
+                return {
+                    locationName: location.name,
+                    locationTemp: location.main.temp,
+                    locationClouds: location.clouds.all,
+                    locationWind: location.wind.speed,
+                    locationID: location.id,
+                    locationIcon: location.weather[0].icon,
+                    region: 'noordoost',
+                    totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed) + getPointsTemp(location.main.temp),
+                }
+            })
+            setLocationsNoordOost(locationsNoordOostWithPoints)
+            console.log('Noordoost', locationsNoordOostWithPoints)
+
+            const locationsZuidWestWithPoints = dataZuidWest.map((location, index) => {
+                return {
+                    locationName: location.name,
+                    locationTemp: location.main.temp,
+                    locationClouds: location.clouds.all,
+                    locationWind: location.wind.speed,
+                    locationID: location.id,
+                    locationIcon: location.weather[0].icon,
+                    region: 'zuidwest',
+                    totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed) + getPointsTemp(location.main.temp),
+                }
+            })
+            setLocationsZuidWest(locationsZuidWestWithPoints)
+            console.log('ZuidWest', locationsZuidWestWithPoints)
 
         } catch {
             throw Error("Promise failed");
@@ -171,24 +208,21 @@ function LocationContextProvider({children}) {
     }
 
     useEffect(() => {
-
         fetchLocations();
-
     }, [])
 
     const data = {
         locationsWadden: locationsWadden,
         locationsZuidOost: locationsZuidOost,
         locationsNoordWest: locationsNoordWest,
-
+        locationsNoordOost: locationsNoordOost,
+        locationsZuidWest: locationsZuidWest,
     }
 
     return (
         <LocationContext.Provider value={data}>
             {children}
-
         </LocationContext.Provider>
     )
-}
-
+};
 export default LocationContextProvider

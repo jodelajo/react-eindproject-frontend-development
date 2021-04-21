@@ -17,8 +17,6 @@ function App() {
     return (
         <Router>
             <div className="weather-container">
-
-                {/*HEADER -------------------- */}
                 <div className="weather-header">
                     <NavBar/>
 
@@ -31,29 +29,25 @@ function App() {
                          <Friesland/>
                   </Route>
                     <Route path="/wadden">
-                         <Wadden />
+                         <Wadden/>
                   </Route>
                     <Route exact path="/noordwest">
-                         <NoordWest />
+                         <NoordWest/>
                   </Route>
                       <Route exact path="/noordoost">
-                         <NoordOost />
+                         <NoordOost/>
                   </Route>
                     <Route exact path="/zuidwest">
-                         <ZuidWest />
+                         <ZuidWest/>
                   </Route>
                      <Route exact path="/zuidoost">
-                         <ZuidOost />
+                         <ZuidOost/>
                   </Route>
 
              </Switch>
           </span>
                 </div>
-
-                {/*CONTENT ------------------ */}
                 <div className="weather-content">
-                    {/*<TabBarMenu/>*/}
-
                     <div className="tab-wrapper">
                         <HeroButton/>
                         <HeroButton/>

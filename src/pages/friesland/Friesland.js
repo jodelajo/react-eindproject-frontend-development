@@ -1,8 +1,6 @@
 import React, { useContext } from 'react';
 import {LocationContext} from "../../context/LocationContext";
 import Counter from "../../components/counter/Counter";
-import kelvinToCelsius from "../../helpers/kelvinToCelsius";
-import metricToBeaufort from "../../helpers/metricToBeaufort";
 
 function Friesland() {
     const {locationsWadden, locationsZuidOost, locationsNoordWest} = useContext(LocationContext)
@@ -22,8 +20,8 @@ function Friesland() {
                     key={location.locationID}
                     location={location}
                     clouds={location.locationClouds}
-                    wind={metricToBeaufort(location.locationWind)}
-                    temp={kelvinToCelsius(location.locationTemp)}
+                    wind={location.locationWind}
+                    temp={location.locationTemp}
                     totalPoints={location.totalPoints}
                 />
             })}
