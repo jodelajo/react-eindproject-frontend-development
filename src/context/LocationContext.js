@@ -116,8 +116,7 @@ function LocationContextProvider({children}) {
 
 
             const locationsWaddenWithPoints = dataWadden.map((location, index) => {
-                console.log('cloudsss', location.clouds.all)
-                console.log('icon', location.weather[0].icon)
+
                 return {
                     locationName: location.name,
                     locationTemp: location.main.temp,
@@ -183,7 +182,7 @@ function LocationContextProvider({children}) {
         locationsNoordWest: locationsNoordWest,
 
     }
-    // console.log(locations)
+
     return (
         <LocationContext.Provider value={data}>
             {children}

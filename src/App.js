@@ -12,7 +12,6 @@ import NoordOost from "./pages/noordoost/NoordOost";
 import ZuidWest from "./pages/zuidwest/ZuidWest";
 import ZuidOost from "./pages/zuidoost/ZuidOost";
 
-import Location from "./pages/location/Location";
 
 function App() {
     return (
@@ -46,9 +45,7 @@ function App() {
                      <Route exact path="/zuidoost">
                          <ZuidOost />
                   </Route>
-                    <Route  path="/location">
-                         <Location />
-                    </Route>
+
              </Switch>
           </span>
                 </div>
