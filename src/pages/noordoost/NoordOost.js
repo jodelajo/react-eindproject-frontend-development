@@ -1,5 +1,4 @@
 import React from 'react';
-import './NoordOost.css';
 import { Link } from "react-router-dom";
 
 function NoordOost(){

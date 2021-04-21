@@ -1,60 +1,29 @@
-
-import React, {useEffect, useState} from 'react';
-import axios from "axios";
-import './Wadden.css';
-import kelvinToCelsius from "../../helpers/kelvinToCelsius";
-import metricToBeaufort from "../../helpers/metricToBeaufort";
+import React, {useContext} from 'react';
+import {LocationContext} from "../../context/LocationContext";
 import Counter from "../../components/counter/Counter";
+import metricToBeaufort from "../../helpers/metricToBeaufort";
+import kelvinToCelsius from "../../helpers/kelvinToCelsius";
+
 
 function Wadden() {
-    // const [weatherData, setWeatherData] = useState({});
-    const [locations, setLocations] = useState('');
-
-
-
-    useEffect(() => {
-
-        async function fetchData() {
-            const id = 'id=2749334,2744608,2753887,2750417,2759757'
-            const urlGroup = `https://api.openweathermap.org/data/2.5/group?${id}&appid=${process.env.REACT_APP_API_KEY}&lang=nl`
-
-            try {
-                const result = await axios.get(urlGroup);
-                console.log(result.data)
-                // setWeatherData(result.data)
-                console.log(result.data.list)
-                setLocations(result.data.list)
-                console.log(locations)
-            } catch (e) {
-                console.error(e);
-            }
-        }
-        fetchData();
-    }, [])
-    return <div className="wadden">
+    const { locationsWadden } = useContext(LocationContext)
+    return <div>
+        <h1>TOP 5 beste Plakjes</h1>
         <ul>
-            {locations && locations.map((location) => {
-                return <li key={location.name}>
-                        <div className="weather-left">
-                            <img className="icon-weather"
-                                 src={`https://openweathermap.org/img/wn/${location.weather[0].icon}.png`} alt="icon"/>
-                            <div className="name-description">
-                                <p className="location-name">{location.name}</p>
-                                <p>{location.weather[0].description}</p>
-                                <p>{location.clouds.all}</p>
-                            </div>
-                        </div>
-                        <div className="weather-right">
-                          
-                            <p>{kelvinToCelsius(location.main.temp)}</p>
-                            <p>Windkracht {metricToBeaufort(location.wind.speed)}</p>
-                        </div>
-                    </li>
-
-
-
-            })}
+            {locationsWadden && locationsWadden.sort((a,b)=>
+                b.totalPoints - a.totalPoints).slice(0,5)
+                .map((location) => {
+                    return <Counter
+                        key={location.locationID}
+                        location={location}
+                        clouds={location.locationClouds}
+                        wind={metricToBeaufort(location.locationWind)}
+                        temp={kelvinToCelsius(location.locationTemp)}
+                        totalPoints={location.totalPoints}
+                    />
+                })}
         </ul>
     </div>
 }
+
 export default Wadden

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import {RiHome2Line, RiRefreshLine, RiArrowLeftLine, RiMenuFill} from "react-icons/ri";
+import { RiHome2Line, RiRefreshLine, RiArrowLeftLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 
 function Footer(){
