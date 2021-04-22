@@ -21,4 +21,3 @@ function Counter({location}) {
     </div>
 };
 export default Counter
-

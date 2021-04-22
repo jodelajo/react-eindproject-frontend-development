@@ -1,14 +1,14 @@
 import React, { useContext } from 'react';
-import {LocationContext} from "../../context/LocationContext";
+import { LocationContext } from "../../context/LocationContext";
 import Counter from "../../components/counter/Counter";
 
 function Friesland() {
-    const {locationsWadden, locationsZuidOost, locationsNoordWest} = useContext(LocationContext)
+    const {locationsWadden, locationsZuidOost, locationsNoordWest, locationsNoordOost, locationsZuidWest} = useContext(LocationContext)
 
-    const frieslandLocations = locationsWadden.concat(locationsZuidOost).concat(locationsNoordWest).concat([])
+    const frieslandLocations = locationsWadden.concat(locationsZuidOost).concat(locationsNoordWest).concat(locationsNoordOost).concat(locationsZuidWest)
 
     console.log('friesland', frieslandLocations)
-    console.log('noordwest', locationsNoordWest)
+
 
     return <div>
         <h1>TOP 5 beste Plakjes</h1>
