@@ -4,6 +4,9 @@ import Counter from "../../components/counter/Counter";
 
 function Wadden() {
     const { locationsWadden } = useContext(LocationContext)
+
+
+
     return <div>
         <h1>TOP 5 Wadden</h1>
         <ul>
@@ -12,6 +15,7 @@ function Wadden() {
                 .map((location) => {
                     return <Counter
                         key={location.locationID}
+                        name={location.locationName}
                         location={location}
                         clouds={location.locationClouds}
                         wind={location.locationWind}

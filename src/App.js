@@ -29,19 +29,19 @@ function App() {
                          <Friesland/>
                   </Route>
                     <Route path="/wadden">
-                         <Wadden/>
+                         <Wadden />
                   </Route>
                     <Route exact path="/noordwest">
-                         <NoordWest/>
+                         <NoordWest />
                   </Route>
                       <Route exact path="/noordoost">
-                         <NoordOost/>
+                         <NoordOost />
                   </Route>
                     <Route exact path="/zuidwest">
-                         <ZuidWest/>
+                         <ZuidWest />
                   </Route>
                      <Route exact path="/zuidoost">
-                         <ZuidOost/>
+                         <ZuidOost />
                   </Route>
 
              </Switch>

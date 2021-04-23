@@ -17,8 +17,8 @@ function Friesland() {
         .concat(locationsNoordOost)
         .concat(locationsZuidWest)
 
-    console.log('friesland', frieslandLocations)
 
+    console.log('friesland', frieslandLocations)
 
     return <div>
         <h1>TOP 5 beste Plakjes</h1>
@@ -26,8 +26,10 @@ function Friesland() {
             {frieslandLocations && frieslandLocations.sort((a, b) =>
                 b.totalPoints - a.totalPoints).slice(0, 5)
                 .map((location) => {
+
                     return <Counter
                         key={location.locationID}
+                        name={location.locationName}
                         location={location}
                         clouds={location.locationClouds}
                         wind={location.locationWind}

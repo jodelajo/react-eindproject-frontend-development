@@ -27,6 +27,7 @@ function getPointsClouds(clouds) {
         // setPointsClouds(pointsClouds + 2);
     }
 }
+
 function getPointsWind(wind) {
     if (wind < 2) {
         return 10;
@@ -44,6 +45,7 @@ function getPointsWind(wind) {
         return 1;
     }
 }
+
 function getPointsTemp(temp) {
     if (temp < 0) {
         return 1;
@@ -84,41 +86,42 @@ function LocationContextProvider({children}) {
     const [locationsZuidWest, setLocationsZuidWest] = useState([])
 
     async function fetchLocations() {
+
         try {
             const resWadden = await Promise.all([
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2749334&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2744608&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2753887&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2750417&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2745944&appid=${process.env.REACT_APP_API_KEY}&lang=nl`)
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2749334&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2744608&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2753887&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2750417&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2745944&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`)
             ]);
             const resZuidOost = await Promise.all([
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2759922&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2756644&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2754668&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2759633&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2750310&appid=${process.env.REACT_APP_API_KEY}&lang=nl`)
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2759922&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2756644&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2754668&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2759633&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2750310&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`)
             ]);
             const resNoordWest = await Promise.all([
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2754817&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2746023&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2750965&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2751792&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2747297&appid=${process.env.REACT_APP_API_KEY}&lang=nl`)
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2754817&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2746023&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2750965&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2751792&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2747297&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`)
             ]);
             const resNoordOost = await Promise.all([
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2756759&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2759757&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2758131&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2755920&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2759103&appid=${process.env.REACT_APP_API_KEY}&lang=nl`)
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2756759&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2759757&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2758131&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2755920&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2759103&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`)
             ]);
             const resZuidWest = await Promise.all([
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2744194&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2751729&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2747063&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2744179&appid=${process.env.REACT_APP_API_KEY}&lang=nl`),
-                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2751253&appid=${process.env.REACT_APP_API_KEY}&lang=nl`)
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2744194&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2751729&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2747063&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2744179&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
+                axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2751253&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`)
             ]);
 
             const dataWadden = resWadden.map((res) => res.data);
@@ -128,6 +131,18 @@ function LocationContextProvider({children}) {
             const dataZuidWest = resZuidWest.map((res) => res.data);
 
             const locationsWaddenWithPoints = dataWadden.map((location, index) => {
+                if (location.name === "Ulrum") {
+                    return {
+                        locationName: 'Schiermonnikoog',
+                        locationTemp: location.main.temp,
+                        locationClouds: location.clouds.all,
+                        locationWind: location.wind.speed,
+                        locationID: location.id,
+                        locationIcon: location.weather[0].icon,
+                        region: 'wadden',
+                        totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed) + getPointsTemp(location.main.temp),
+                    }
+                }
                 return {
                     locationName: location.name,
                     locationTemp: location.main.temp,
@@ -142,7 +157,32 @@ function LocationContextProvider({children}) {
             setLocationsWadden(locationsWaddenWithPoints)
             console.log('wadden', locationsWaddenWithPoints)
 
+
             const locationsZuidOostWithPoints = dataZuidOost.map((location, index) => {
+                if(location.name === "Assen"){
+                    return {
+                        locationName: 'Appelscha',
+                        locationTemp: location.main.temp,
+                        locationClouds: location.clouds.all,
+                        locationWind: location.wind.speed,
+                        locationID: location.id,
+                        locationIcon: location.weather[0].icon,
+                        region: 'zuidoost',
+                        totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed) + getPointsTemp(location.main.temp),
+                    }
+                }
+                if (location.name === "Nieuwehorne") {
+                    return {
+                        locationName: 'Bontebok',
+                        locationTemp: location.main.temp,
+                        locationClouds: location.clouds.all,
+                        locationWind: location.wind.speed,
+                        locationID: location.id,
+                        locationIcon: location.weather[0].icon,
+                        region: 'zuidoost',
+                        totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed) + getPointsTemp(location.main.temp),
+                    }
+                }
                 return {
                     locationName: location.name,
                     locationTemp: location.main.temp,
@@ -209,6 +249,7 @@ function LocationContextProvider({children}) {
 
     useEffect(() => {
         fetchLocations();
+
     }, [])
 
     const data = {
@@ -225,4 +266,5 @@ function LocationContextProvider({children}) {
         </LocationContext.Provider>
     )
 }
+
 export default LocationContextProvider
