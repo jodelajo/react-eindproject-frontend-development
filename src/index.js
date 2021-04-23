@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -8,9 +9,11 @@ import LocationContextProvider from "./context/LocationContext";
 
 ReactDOM.render(
     <React.StrictMode>
+        <Router>
         <LocationContextProvider>
             <App/>
         </LocationContextProvider>
+        </Router>
     </React.StrictMode>,
     document.getElementById('root')
 );

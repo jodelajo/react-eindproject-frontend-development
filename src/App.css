@@ -37,7 +37,7 @@ body {
 .weather-header {
     width: 100%;
     border-radius: 2px 2px 0 0;
-    height: 540px;
+    /*height: 540px;*/
     background: linear-gradient(#ffffff, #f9bec7);
     display: flex;
     flex-direction: column;
@@ -54,9 +54,24 @@ body {
     height: 480px;
 }
 
-.tab-wrapper {
+.auth {
+    width: 100%;
+    height: 56px;
+    display: flex;
+    /*justify-content: center;*/
+
+
+}
+
+.auth-link, .auth-link-active {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: stretch;
+    /*text-align: center;*/
+    color: white;
+    text-decoration: none;
+    background-color: #5a287f;
+}
+.auth-link-active {
+    background-color: #f71818;
+
 }
