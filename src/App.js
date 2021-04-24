@@ -11,7 +11,8 @@ import NoordOost from "./pages/noordoost/NoordOost";
 import ZuidWest from "./pages/zuidwest/ZuidWest";
 import ZuidOost from "./pages/zuidoost/ZuidOost";
 import SignUp from "./pages/signUp/SignUp";
-import SignIn from "./pages/signIn/SignIn";
+import LogIn from "./pages/logIn/LogIn";
+import DashBoard from "./components/dashBoard/DashBoard";
 
 
 
@@ -48,17 +49,20 @@ function App() {
                                  <Route exact path="/sign-up">
                                      <SignUp/>
                               </Route>
-                                <Route exact path="/sign-in">
-                                     <SignIn/>
+                                <Route exact path="/log-in">
+                                     <LogIn/>
+                              </Route>
+                                <Route path="/dashboard">
+                                     <DashBoard />
                               </Route>
                          </Switch>
                         </span>
                     </div>
                     <div>
                         <div className="auth">
-                            <Link to="/sign-up" className="auth-link-active">Sign Up
+                            <Link to="/sign-up" className="auth-link-active" >Sign Up
                             </Link>
-                            <Link to="/sign-in" className="auth-link">Sign In
+                            <Link to="/log-in" className="auth-link">Log In
                             </Link>
 
                         </div>
