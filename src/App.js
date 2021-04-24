@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, Link } from "react-router-dom";
+import {Route, Switch, Link} from "react-router-dom";
 import './App.css';
 import NavBar from "./components/navBar/NavBar";
 import Home from "./pages/home/Home";
@@ -15,15 +15,14 @@ import LogIn from "./pages/logIn/LogIn";
 import DashBoard from "./components/dashBoard/DashBoard";
 
 
-
 function App() {
     return (
         <>
-        <div className="weather-container">
-                    <div className="weather-header">
-                        <NavBar/>
+            <div className="weather-container">
+                <div className="weather-header">
+                    <NavBar/>
 
-                        <span className="location-details">
+                    <span className="location-details">
                             <Switch>
                                 <Route exact path="/">
                                    <Home/>
@@ -53,26 +52,26 @@ function App() {
                                      <LogIn/>
                               </Route>
                                 <Route path="/dashboard">
-                                     <DashBoard />
+                                     <DashBoard/>
                               </Route>
                          </Switch>
                         </span>
+                </div>
+                <div>
+                    <div className="auth">
+                        <Link to="/sign-up" className="auth-link-active">Sign Up
+                        </Link>
+                        <Link to="/log-in" className="auth-link">Log In
+                        </Link>
+
                     </div>
                     <div>
-                        <div className="auth">
-                            <Link to="/sign-up" className="auth-link-active" >Sign Up
-                            </Link>
-                            <Link to="/log-in" className="auth-link">Log In
-                            </Link>
-
-                        </div>
-                        <div>
-                            <Footer/>
-                        </div>
+                        <Footer/>
                     </div>
                 </div>
+            </div>
         </>
-)
+    )
 };
 
 export default App;

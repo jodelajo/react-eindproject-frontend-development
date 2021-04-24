@@ -1,10 +1,14 @@
 .navbar{
     width: 100%;
-    background-color: #f71818;
+    background-color: #ff0a54;
     height: 60px;
     margin:0;
     font-size: 44px;
     text-align: start;
     padding: 6px;
     display: flex;
+}
+.hamburger {
+    text-decoration: none;
+    color: #747474;
 }

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function NavBar(){
     return <div className="navbar">
         <Link to="/dashboard">
-        <p><RiMenuFill/></p>
+        <p className="hamburger"><RiMenuFill/></p>
         </Link>
     </div>
 }
