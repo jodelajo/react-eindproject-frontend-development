@@ -13,6 +13,7 @@ import ZuidOost from "./pages/zuidoost/ZuidOost";
 import SignUp from "./pages/signUp/SignUp";
 import LogIn from "./pages/logIn/LogIn";
 import DashBoard from "./components/dashBoard/DashBoard";
+import PrivateRoute from "./components/privateRoute/PrivateRoute";
 
 
 function App() {
@@ -45,15 +46,11 @@ function App() {
                                  <Route exact path="/zuidoost">
                                      <ZuidOost/>
                               </Route>
-                                 <Route exact path="/sign-up">
-                                     <SignUp/>
-                              </Route>
-                                <Route exact path="/log-in">
-                                     <LogIn/>
-                              </Route>
-                                <Route path="/dashboard">
-                                     <DashBoard/>
-                              </Route>
+                                 <PrivateRoute exact path="/sign-up" component={SignUp} />
+
+                                <Route exact path="/log-in" component={LogIn} />
+
+                                <Route path="/dashboard" component={DashBoard} />
                          </Switch>
                         </span>
                 </div>

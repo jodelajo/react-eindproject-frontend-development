@@ -10,11 +10,12 @@
     margin-bottom: 10px;
     height: 40px;
     background-color: #f71818;
+    min-width: 200px;
     color: white;
     border: none;
     font-weight: bold;
     font-size: 18px;
-    border-radius: 12px;
+    border-radius: 8px;
 }
 .input {
     margin-bottom: 6px;
