@@ -14,6 +14,8 @@ import SignUp from "./pages/signUp/SignUp";
 import LogIn from "./pages/logIn/LogIn";
 import DashBoard from "./components/dashBoard/DashBoard";
 import PrivateRoute from "./components/privateRoute/PrivateRoute";
+import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
+import UpdateProfile from "./pages/updateProfile/UpdateProfile";
 
 
 function App() {
@@ -25,32 +27,19 @@ function App() {
 
                     <span className="location-details">
                             <Switch>
-                                <Route exact path="/">
-                                   <Home/>
-                               </Route>
-                                <Route path="/friesland">
-                                     <Friesland/>
-                              </Route>
-                                <Route path="/wadden">
-                                     <Wadden/>
-                              </Route>
-                                <Route exact path="/noordwest">
-                                     <NoordWest/>
-                              </Route>
-                                  <Route exact path="/noordoost">
-                                     <NoordOost/>
-                              </Route>
-                                <Route exact path="/zuidwest">
-                                     <ZuidWest/>
-                              </Route>
-                                 <Route exact path="/zuidoost">
-                                     <ZuidOost/>
-                              </Route>
-                                 <PrivateRoute exact path="/sign-up" component={SignUp} />
+                                <Route exact path="/" component={Home}/>
+                                <Route path="/friesland" component={Friesland}/>
+                                <Route path="/wadden" component={Wadden}/>
+                                <Route exact path="/noordwest" component={NoordWest}/>
+                                <Route exact path="/noordoost" component={NoordOost}/>
+                                <Route exact path="/zuidwest" component={ZuidWest}/>
+                                <Route exact path="/zuidoost" component={ZuidOost}/>
+                                <Route path="/sign-up" component={SignUp}/>
+                                <Route path="/log-in" component={LogIn}/>
+                                <PrivateRoute path="/dashboard" component={DashBoard}/>
+                                <Route path="/forgot-password" component={ForgotPassword}/>
+                                <PrivateRoute path="/update-profile" component={UpdateProfile}/>
 
-                                <Route exact path="/log-in" component={LogIn} />
-
-                                <Route path="/dashboard" component={DashBoard} />
                          </Switch>
                         </span>
                 </div>
@@ -69,6 +58,6 @@ function App() {
             </div>
         </>
     )
-};
+}
 
 export default App;

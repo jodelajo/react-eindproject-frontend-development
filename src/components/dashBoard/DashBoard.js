@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
-import '../../pages/signUp/SignUp.css';
-import { useAuth } from "../../context/AuthContext";
-import {Link, useHistory} from "react-router-dom";
+import React, { useState } from 'react'
+import '../../pages/signUp/SignUp.css'
+import { useAuth } from '../../context/AuthContext'
+import { Link, useHistory } from 'react-router-dom'
 
 function DashBoard() {
     const [error, setError] = useState('')
@@ -12,7 +12,7 @@ function DashBoard() {
         setError('')
         try {
             await logout()
-            history.push('/login')
+            history.push('/log-in')
         } catch {
             setError('Failed to log out')
         }

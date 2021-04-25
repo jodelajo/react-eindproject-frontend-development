@@ -2,11 +2,11 @@ import React, {useRef, useState} from 'react';
 import {useForm} from "react-hook-form";
 import './SignUp.css'
 import {useAuth} from '../../context/AuthContext'
-import {Link, useHistory, useLocation} from 'react-router-dom';
+import {Link, useHistory } from 'react-router-dom';
 
 
 function SignUp() {
-    const {handleSubmit, register} = useForm();
+    const {handleSubmit } = useForm();
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
@@ -27,7 +27,7 @@ function SignUp() {
             setLoading(true)
             const result = await signup(emailRef.current.value, passwordRef.current.value)
             console.log(result)
-            history.push("/dashboard")
+            history.push("/log-in")
         } catch {
             setError('Failed to create account')
         }
@@ -42,14 +42,14 @@ function SignUp() {
                 name="email"
                 id="email"
                 placeholder="Email"
-                ref={emailRef}
+                ref={emailRef} required
                 className="input"
             />
             <input
                 type="password"
                 name="password"
                 id="password-field"
-                ref={passwordRef}
+                ref={passwordRef} required
                 placeholder="Password"
                 className="input"
             />
@@ -58,7 +58,7 @@ function SignUp() {
                 name="password-confirmation"
                 id="confirmation-field"
                 placeholder="Password confirmation"
-                ref={passwordConfirmRef}
+                ref={passwordConfirmRef} required
                 className="input"
             />
             <button type="submit" className="submit-button" disabled={loading}>Maak een account aan</button>

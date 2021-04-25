@@ -38,14 +38,14 @@ function LogIn() {
                 name="email"
                 id="email"
                 placeholder="Email"
-                ref={emailRef}
+                ref={emailRef} required
                 className="input"
             />
             <input
                 type="password"
                 name="password"
                 id="password-field"
-                ref={passwordRef}
+                ref={passwordRef} required
                 placeholder="Password"
                 className="input"
             />
@@ -53,7 +53,7 @@ function LogIn() {
             <button type="submit" className="submit-button" disabled={loading}>Log in</button>
 
         </form>
-
+        <p>Wachtwoord vergeten? <Link to="/forgot-password">Klik hier</Link>.</p>
         <p>Nog geen account? <Link to="/sign-up">Klik hier</Link>.</p>
     </main>
 }
