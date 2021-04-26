@@ -30,14 +30,11 @@ body {
     width: 375px;
     height: 667px;
     background-color: white;
-    border-radius: 2px;
     box-shadow: .25rem .5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
 
 .weather-header {
     width: 100%;
-    border-radius: 2px 2px 0 0;
-    /*height: 540px;*/
     background: linear-gradient(#ffffff, #f9bec7);
     display: flex;
     flex-direction: column;
@@ -46,32 +43,11 @@ body {
 }
 
 .location-details {
+    /*padding-top: 30px;*/
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    height: 480px;
-}
-
-.auth {
-    width: 100%;
-    height: 56px;
-    display: flex;
-    /*justify-content: center;*/
-
-
-}
-
-.auth-link, .auth-link-active {
-    width: 100%;
-    height: 100%;
-    /*text-align: center;*/
-    color: white;
-    text-decoration: none;
-    background-color: #5a287f;
-}
-.auth-link-active {
-    background-color: #ff477e;
-
+    height: 535px;
 }

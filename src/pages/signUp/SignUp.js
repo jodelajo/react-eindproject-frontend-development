@@ -1,13 +1,14 @@
-import React, {useRef, useState} from 'react';
-import {useForm} from "react-hook-form";
+import React, {useRef, useState} from 'react'
+import {useForm} from "react-hook-form"
 import './SignUp.css'
 import {useAuth} from '../../context/AuthContext'
-import {Link, useHistory } from 'react-router-dom';
+import {Link, useHistory } from 'react-router-dom'
 
 
 function SignUp() {
-    const {handleSubmit } = useForm();
+    const {handleSubmit } = useForm()
     const emailRef = useRef()
+    const userNameRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
     const {signup, currentUser} = useAuth()
@@ -25,9 +26,9 @@ function SignUp() {
         try {
             setError('')
             setLoading(true)
-            const result = await signup(emailRef.current.value, passwordRef.current.value)
+            const result = await signup(emailRef.current.value, passwordRef.current.value, userNameRef.current.value)
             console.log(result)
-            history.push("/log-in")
+            history.push("/dashboard")
         } catch {
             setError('Failed to create account')
         }
@@ -37,6 +38,14 @@ function SignUp() {
     return <main>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
             {error && <p> {error} </p>}
+            <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Username"
+                ref={userNameRef} required
+                className="input"
+            />
             <input
                 type="email"
                 name="email"

@@ -1,8 +1,8 @@
-import React, {useRef, useState} from 'react';
-import {useForm} from "react-hook-form";
+import React, {useRef, useState} from 'react'
+import {useForm} from 'react-hook-form'
 import '../signUp/SignUp.css'
 import {useAuth} from '../../context/AuthContext'
-import {Link, useHistory} from 'react-router-dom';
+import {Link, useHistory} from 'react-router-dom'
 
 
 function UpdateProfile() {

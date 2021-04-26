@@ -4,7 +4,6 @@ import '../signUp/SignUp.css'
 import { useAuth } from '../../context/AuthContext'
 import { Link } from 'react-router-dom'
 
-
 function ForgotPassword() {
     const {handleSubmit} = useForm()
     const emailRef = useRef()
@@ -13,9 +12,7 @@ function ForgotPassword() {
     const [loading, setLoading] = useState(false)
     const [message, setMessage] = useState('')
 
-
     async function onSubmit() {
-
         try {
             setMessage('')
             setError('')

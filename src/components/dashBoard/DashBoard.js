@@ -12,17 +12,20 @@ function DashBoard() {
         setError('')
         try {
             await logout()
-            history.push('/log-in')
+            history.push('/')
         } catch {
             setError('Failed to log out')
         }
     }
 
     return <>
-        <div>
+        <div className='auth-wrapper'>
             <h2>Profiel</h2>
             {error && <p> {error} </p>}
-            <p><strong>Email:</strong>
+            <p><strong>Username: </strong>
+                {currentUser && currentUser.displayName}
+            </p>
+            <p><strong>Email: </strong>
                 {currentUser && currentUser.email}
             </p>
             <Link to="/update-profile">

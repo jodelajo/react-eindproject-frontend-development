@@ -23,12 +23,15 @@ function LogIn() {
             setLoading(true)
             const result = await login(emailRef.current.value, passwordRef.current.value)
             console.log(result)
-            history.push("/dashboard")
+            console.log(result.user.email)
+            history.push('/')
         } catch {
             setError('Failed to log in')
         }
         setLoading(false)
     }
+
+    console.log(currentUser)
 
     return <main>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>

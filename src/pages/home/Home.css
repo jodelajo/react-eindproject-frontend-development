@@ -1,15 +1,23 @@
-.map {
-    width: 90%;
-    margin-right: 12px;
+.home {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100%;
+}
+
+.home-wrapper {
+    height: 100%;
+    padding-top: 24px;
 }
 
 #noordwest {
     width: 52%;
     height: 46%;
     margin-top: -6px;
-
 }
-#zuidwest{
+
+#zuidwest {
     width: 52%;
     height: 54%;
     margin-top: -6px;
@@ -20,19 +28,41 @@
     height: 46%;
     margin-top: -6px;
 }
+
 #zuidoost {
     margin-top: -6px;
     width: 48%;
     height: 54%;
 }
 
-/*    #noordwest:hover, #wadden:hover {*/
-/*    cursor: pointer;*/
-
-/*}*/
-
 #wadden {
     width: 100%;
     margin-top: 6px;
     padding: 0;
 }
+
+.auth {
+    width: 100%;
+    height: 58px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.auth-link, .auth-link-active {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-variant: all-small-caps;
+    font-size: 30px;
+    color: #f9bec7;
+    text-decoration: none;
+    background-color: #5a287f;
+}
+
+.auth-link-active {
+    background-color: #f71818;
+    color: white;
+}
+

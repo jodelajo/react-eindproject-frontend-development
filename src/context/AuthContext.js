@@ -11,9 +11,16 @@ export function AuthContextProvider({ children }) {
     const [currentUser, setCurrentUser] = useState()
     const [loading, setLoading] = useState(true)
 
-    function signup(email, password) {
+    function signup(email, password,userName) {
         return auth.createUserWithEmailAndPassword(email, password)
+            .then((ref) =>{
+                ref.user.updateProfile({
+                    displayName: userName,
+                })
+            })
     }
+
+
 
     function login(email, password) {
         return auth.signInWithEmailAndPassword(email, password)
