@@ -43,7 +43,8 @@ function SignUp() {
                 name="username"
                 id="username"
                 placeholder="Username"
-                ref={userNameRef} required
+                ref={userNameRef}
+                required
                 className="input"
             />
             <input
@@ -51,7 +52,10 @@ function SignUp() {
                 name="email"
                 id="email"
                 placeholder="Email"
-                ref={emailRef} required
+                ref={emailRef}
+                required
+                // pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                // title="Het emailadres moet een @ bevatten"
                 className="input"
             />
             <input

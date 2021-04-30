@@ -5,7 +5,7 @@ import Counter from "../../components/counter/Counter";
 function NoordWest() {
     const { locationsNoordWest} = useContext(LocationContext)
     return <div>
-        <h1>TOP 5 Noordwest</h1>
+        <h2>TOP 5 Noordwest</h2>
         <ul>
             {locationsNoordWest && locationsNoordWest.sort((a,b)=>
                 b.totalPoints - a.totalPoints)

@@ -1,6 +1,6 @@
-import React, {useContext} from 'react';
-import {LocationContext} from "../../context/LocationContext";
-import Counter from "../../components/counter/Counter";
+import React, {useContext} from 'react'
+import {LocationContext} from '../../context/LocationContext'
+import Counter from '../../components/counter/Counter'
 
 function Friesland() {
     const {
@@ -21,7 +21,7 @@ function Friesland() {
     console.log('friesland', frieslandLocations)
 
     return <div>
-        <h1>TOP 5 beste Plakjes</h1>
+        <h2>TOP 5 beste Plakjes</h2>
         <ul>
             {frieslandLocations && frieslandLocations.sort((a, b) =>
                 b.totalPoints - a.totalPoints).slice(0, 5)

@@ -13,7 +13,7 @@ function Home() {
     const {currentUser} = useAuth()
 
     return <div className="home">
-        <h1>It beste plakje fan Fryslân</h1>
+        <h2>It beste plakje fan Fryslân</h2>
         <div className="home-wrapper">
             <div>
                 <Link to="/wadden">

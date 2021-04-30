@@ -1,12 +1,12 @@
 import React from 'react';
 import './Footer.css';
-import { RiHome2Line, RiRefreshLine, RiArrowLeftLine } from "react-icons/ri";
+import { RiHome2Line, RiRefreshLine,RiStarLine } from "react-icons/ri";
 import { Link } from 'react-router-dom';
 
 function Footer(){
     return <div className="footer">
         <Link to="/friesland">
-        <p className="icon" id="back-button"><RiArrowLeftLine/></p>
+        <p className="icon" id="star-button"><RiStarLine/></p>
         </Link>
         <Link to="/">
         <p className="icon" id="home-button"><RiHome2Line/></p>

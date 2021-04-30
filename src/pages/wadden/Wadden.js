@@ -8,7 +8,7 @@ function Wadden() {
 
 
     return <div>
-        <h1>TOP 5 Wadden</h1>
+        <h2>TOP 5 Wadden</h2>
         <ul>
             {locationsWadden && locationsWadden.sort((a,b)=>
                 b.totalPoints - a.totalPoints)

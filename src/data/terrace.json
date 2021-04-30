@@ -1,0 +1,252 @@
+[
+  {
+    "id": "Bontebok",
+    "name": "Smûk",
+    "address": "W.a. Nijenhuisweg 7",
+    "zip-code": "8455 JS",
+    "terrace-location": "Katlijk",
+    "website": "https://restaurantsmuk.nl/",
+    "email": "reservering@restaurantsmuk.nl",
+    "phone": "0513 745248"
+  },
+  {
+    "id": "Heerenveen",
+    "name": "Het Gerecht",
+    "address": "Gemeenteplein 33",
+    "zip-code": "8442 MA",
+    "terrace-location": "Heerenveen",
+    "website": "https://www.gerechtheerenveen.nl/",
+    "email": "info@gerechtheerenveen.nl",
+    "phone": "0513 845719"
+  },
+  {
+    "id": "Akkrum",
+    "name": "De Drijfveer",
+    "address": "Ulbe Twijnstrawei 31",
+    "zip-code": "8491 CJ",
+    "terrace-location": "Akkrum",
+    "website": "https://www.drijfveer.nl/terras-de-koken",
+    "email": "info@drijfveer.nl",
+    "phone": "0566 652789"
+  },
+  {
+    "id": "Appelscha",
+    "name": "De Jongens van Outdoor",
+    "address": "Boerestreek 8",
+    "zip-code": "8426 BP",
+    "terrace-location": "Appelscha",
+    "website": "https://dejongensvanoutdoor.nl",
+    "email": "info@dejongensvanoutdoor.nl",
+    "phone": "0516 433309"
+  },
+  {
+    "id": "Drachten",
+    "name": "'t Smelnehus",
+    "address": "Moleneind Noordzijde 14 ",
+    "zip-code": "9203 ZP",
+    "terrace-location": "Drachten",
+    "website": "https://www.smelnehus.nl",
+    "email": "info@smelnehus.nl",
+    "phone": "0512 542208"
+  },
+  {
+    "id": "Wolvega",
+    "name": "Paviljoen Driewegsluis",
+    "address": "Lindedijk 2a",
+    "zip-code": "8481 KH",
+    "terrace-location": "Nijetrijne",
+    "website": "https://driewegsluis.nl",
+    "email": "paviljoen@driewegsluis.nl",
+    "phone": "0561 481490"
+  },
+  {
+    "id": "Lemmer",
+    "name": "Beachclub Lemmer",
+    "address": "Industrieweg 2",
+    "zip-code": "8531 PA",
+    "terrace-location": "Lemmer",
+    "website": "https://www.beachclublemmer.nl",
+    "email": "info@beachclublemmer.nl",
+    "phone": "0514 593590"
+  },
+  {
+    "id": "Sneek",
+    "name": "Onder den Linden",
+    "address": "Marktstraat 30",
+    "zip-code": "8601 CV",
+    "terrace-location": "Sneek",
+    "website": "https://restaurantonderdelinden.nl",
+    "email": "info@restaurantonderdelinden.nl",
+    "phone": "0515 412654"
+  },
+  {
+    "id": "Stavoren",
+    "name": "De vrouwe van Stavoren",
+    "address": "Havenweg 1",
+    "zip-code": "8715 EM",
+    "terrace-location": "Stavoren",
+    "website": "https://www.hotel-vrouwevanstavoren.nl",
+    "email": "niet bekend",
+    "phone": "0514 681202"
+  },
+  {
+    "id": "Makkum",
+    "name": "It Posthus",
+    "address": " Plein 15",
+    "zip-code": "8754 ER",
+    "terrace-location": "Makkum",
+    "website": "http://www.itposthus.nl",
+    "email": "info@itposthus.nl",
+    "phone": "0515 231153"
+  },
+  {
+    "id": "Dokkum",
+    "name": "KB Foods & Drinks",
+    "address": "Keppelstraat 4",
+    "zip-code": "9101 MV",
+    "terrace-location": "Dokkum",
+    "website": "https://kbfood.nl",
+    "email": "info@kbfood.nl",
+    "phone": "0519 221199"
+  },
+  {
+    "id": "Anjum",
+    "name": "De Waegh",
+    "address": "Skânserwei 28",
+    "zip-code": "9133 DV",
+    "terrace-location": "Anjum",
+    "website": "http://www.tasteofhistory.nl/?de_waegh/over_de_waegh/",
+    "email": "niet bekend",
+    "phone": "0519 321818"
+  },
+  {
+    "id": "Buitenpost",
+    "name": "Pyramide",
+    "address": "Voorstraat 30",
+    "zip-code": "9285 NS",
+    "terrace-location": "Buitenpost",
+    "website": "https://pyramidebuitenpost.nl",
+    "email": "info@pyramidebuitenpost.nl",
+    "phone": "0511 544779"
+  },
+  {
+    "id": "Ferwert",
+    "name": "t Hoekje",
+    "address": "Hegebeintumerdyk 1",
+    "zip-code": "9172 PH",
+    "terrace-location": "Ferwert",
+    "website": "http://www.t-hoekje-ferwert.nl",
+    "email": "hoekjeferwert@gmail.com",
+    "phone": "06 83336148"
+  },
+  {
+    "id": "Bergum",
+    "name": "De Pleats",
+    "address": "Schoolstraat 82",
+    "zip-code": "9251 ED",
+    "terrace-location": "Burgum",
+    "website": "http://www.depleats.nl",
+    "email": "info@depleats.nl",
+    "phone": "0511 461556"
+  },
+  {
+    "id": "Harlingen",
+    "name": "Het Brouwdok",
+    "address": "Nieuwe Willemskade 8",
+    "zip-code": "8862 RZ",
+    "terrace-location": "Harlingen",
+    "website": "http://hetbrouwdok.nl",
+    "email": "info@hetbrouwdok.nl",
+    "phone": "0517 235363"
+  },
+  {
+    "id": "Menaam",
+    "name": "Lokaal Op Hatsum",
+    "address": "Hatzum 13",
+    "zip-code": "9035 VK",
+    "terrace-location": "Dronrijp",
+    "website": "https://lokaalophatsum.nl",
+    "email": "info@lokaalophatsum.nl",
+    "phone": "0517 231688"
+  },
+  {
+    "id": "Leeuwarden",
+    "name": "Proefverlof",
+    "address": "Blokhuisplein 40",
+    "zip-code": "8911 LJ",
+    "terrace-location": "Leeuwarden",
+    "website": "http://www.proefverlof.frl",
+    "email": "info@proefverlof.frl",
+    "phone": "058 3020030"
+  },
+  {
+    "id": "Sint Annaparochie",
+    "name": "Het Graauwe Paard",
+    "address": "Monnikebildtdijk 1",
+    "zip-code": "9078 VB",
+    "terrace-location": "Oudebildtzijl",
+    "website": "http://www.hetgraauwepaard.nl",
+    "email": "info@hetgraauwepaard.com",
+    "phone": "0518 421343"
+  },
+  {
+    "id": "Tzummarum",
+    "name": "Het Wapen van Barradeel",
+    "address": "Buorren 32",
+    "zip-code": "8851 EN",
+    "terrace-location": "Tzummarum",
+    "website": "https://www.hetwapenvanbarradeel.com",
+    "email": "hetwapenvanbarradeel@gmail.com",
+    "phone": "06 29048292"
+  },
+  {
+    "id": "Oost-Vlieland",
+    "name": "De Bolder",
+    "address": "Kampweg 1",
+    "zip-code": "8899 BX",
+    "terrace-location": "Vlieland",
+    "website": "https://www.stortemelk.nl/",
+    "email": "info@stortemelk.nl",
+    "phone": "0562 451225"
+  },
+  {
+    "id": "West-Terschelling",
+    "name": "De Walvis",
+    "address": "Meest westelijke puntje",
+    "zip-code": "Bij het Groene Strand",
+    "terrace-location": "West-Terschelling",
+    "website": "http://www.walvis.org/",
+    "email": "niet bekend",
+    "phone": "geen"
+  },
+  {
+    "id": "Hollum",
+    "name": "The Sunset",
+    "address": "Oranjeweg 61",
+    "zip-code": "9161 CB",
+    "terrace-location": "Hollum",
+    "website": "https://www.thesunset.nl/nl/index.html",
+    "email": "info@thesunset.nl",
+    "phone": "0519 554280"
+  },
+  {
+    "id": "Nes",
+    "name": "De Klimop",
+    "address": "Johan Hofkerweg 2",
+    "zip-code": "9163 GW",
+    "terrace-location": "Nes",
+    "website": "https://deklimopameland.nl",
+    "email": "info@deklimopameland.nl",
+    "phone": "0519 542296"
+  },
+  {
+    "id": "Schiermonnikoog",
+    "name": "De Marlijn",
+    "address": "Prins Bernardweg 2",
+    "zip-code": "9166 SH",
+    "terrace-location": "Schiermonnikoog",
+    "website": "https://demarlijn.com",
+    "email": "paviljoen@demarlijn.com",
+    "phone": "0519 531397"
+  }
+]

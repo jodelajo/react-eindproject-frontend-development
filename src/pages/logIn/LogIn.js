@@ -43,6 +43,8 @@ function LogIn() {
                 placeholder="Email"
                 ref={emailRef} required
                 className="input"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                title="Het emailadres moet een @ bevatten"
             />
             <input
                 type="password"
