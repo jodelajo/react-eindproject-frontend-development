@@ -85,6 +85,7 @@ function LocationContextProvider({children}) {
     const [locationsNoordOost, setLocationsNoordOost] = useState([])
     const [locationsZuidWest, setLocationsZuidWest] = useState([])
 
+
     async function fetchLocations() {
 
         try {
@@ -129,6 +130,8 @@ function LocationContextProvider({children}) {
             const dataNoordWest = resNoordWest.map((res) => res.data);
             const dataNoordOost = resNoordOost.map((res) => res.data);
             const dataZuidWest = resZuidWest.map((res) => res.data);
+
+
 
             const locationsWaddenWithPoints = dataWadden.map((location, index) => {
                 if (location.name === "Ulrum") {
@@ -242,6 +245,7 @@ function LocationContextProvider({children}) {
             setLocationsZuidWest(locationsZuidWestWithPoints)
             console.log('ZuidWest', locationsZuidWestWithPoints)
 
+
         } catch {
             throw Error("Promise failed");
         }
@@ -258,6 +262,7 @@ function LocationContextProvider({children}) {
         locationsNoordWest: locationsNoordWest,
         locationsNoordOost: locationsNoordOost,
         locationsZuidWest: locationsZuidWest,
+
     }
 
     return (

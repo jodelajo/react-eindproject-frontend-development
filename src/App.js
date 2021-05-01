@@ -16,7 +16,8 @@ import DashBoard from './components/dashBoard/DashBoard'
 import PrivateRoute from './components/privateRoute/PrivateRoute'
 import ForgotPassword from './pages/forgotPassword/ForgotPassword'
 import UpdateProfile from './pages/updateProfile/UpdateProfile'
-import Location from './pages/location/Location';
+import Location from './pages/location/Location'
+import Region from "./pages/region/Region"
 
 function App() {
     return (
@@ -34,7 +35,8 @@ function App() {
                                 <PrivateRoute exact path="/noordoost" component={NoordOost}/>
                                 <PrivateRoute exact path="/zuidwest" component={ZuidWest}/>
                                 <PrivateRoute exact path="/zuidoost" component={ZuidOost}/>
-                                <PrivateRoute path="/location" component={Location} />
+                                <PrivateRoute path="/location:slug" component={Location}/>
+                                <PrivateRoute path="/region" component={Region}/>
                                 <Route path="/sign-up" component={SignUp}/>
                                 <Route path="/log-in" component={LogIn}/>
                                 <PrivateRoute path="/dashboard" component={DashBoard}/>
@@ -52,4 +54,5 @@ function App() {
         </>
     )
 }
+
 export default App;

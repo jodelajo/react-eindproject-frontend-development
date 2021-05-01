@@ -1,6 +1,8 @@
 import React, {useContext} from 'react'
 import {LocationContext} from '../../context/LocationContext'
 import Counter from '../../components/counter/Counter'
+import terraceData from '../../data/terrace.json'
+import Location from "../location/Location";
 
 function Friesland() {
     const {
@@ -20,6 +22,11 @@ function Friesland() {
 
     console.log('friesland', frieslandLocations)
 
+    console.log(terraceData[0].name)
+
+
+
+
     return <div>
         <h2>TOP 5 beste Plakjes</h2>
         <ul>
@@ -37,6 +44,7 @@ function Friesland() {
                         totalPoints={location.totalPoints}
                     />
                 })}
+
         </ul>
     </div>
 }
