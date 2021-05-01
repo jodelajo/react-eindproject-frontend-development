@@ -85,9 +85,7 @@ function LocationContextProvider({children}) {
     const [locationsNoordOost, setLocationsNoordOost] = useState([])
     const [locationsZuidWest, setLocationsZuidWest] = useState([])
 
-
     async function fetchLocations() {
-
         try {
             const resWadden = await Promise.all([
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2749334&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
@@ -131,8 +129,7 @@ function LocationContextProvider({children}) {
             const dataNoordOost = resNoordOost.map((res) => res.data);
             const dataZuidWest = resZuidWest.map((res) => res.data);
 
-
-
+            console.log(dataWadden)
             const locationsWaddenWithPoints = dataWadden.map((location, index) => {
                 if (location.name === "Ulrum") {
                     return {
@@ -262,7 +259,6 @@ function LocationContextProvider({children}) {
         locationsNoordWest: locationsNoordWest,
         locationsNoordOost: locationsNoordOost,
         locationsZuidWest: locationsZuidWest,
-
     }
 
     return (

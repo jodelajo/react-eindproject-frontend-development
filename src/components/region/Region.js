@@ -1,40 +1,20 @@
-import React, {useContext} from 'react'
-import {LocationContext} from "../../context/LocationContext";
-import Counter from "../../components/counter/Counter";
+import React from 'react'
+import Counter from "../counter/Counter"
 import './Region.css'
 import { NavLink } from 'react-router-dom'
-import Location from "../location/Location";
-
 
 function Region( {locationsRegion, regionName } ){
-    const {
-        locationsWadden,
-        locationsZuidOost,
-        locationsNoordWest,
-        locationsNoordOost,
-        locationsZuidWest
-    } = useContext(LocationContext)
-
-    const frieslandLocations = locationsWadden
-        .concat(locationsZuidOost)
-        .concat(locationsNoordWest)
-        .concat(locationsNoordOost)
-        .concat(locationsZuidWest)
-
-
-    console.log('friesland-Region', frieslandLocations)
 
     return <div>
         <h2>Top 5 {regionName}</h2>
         <ul>
             {locationsRegion && locationsRegion.sort((a,b)=>
-                b.totalPoints - a.totalPoints)
+                b.totalPoints - a.totalPoints).slice(0, 5)
                 .map((location) => {
                     return <NavLink
-                        to="/location:slug"
+                        to={`/location/${location.locationName}`}
                         key={location.locationID}
                     ><li>
-
                         <Counter
                             key={location.locationID}
                             location={location}
@@ -42,9 +22,6 @@ function Region( {locationsRegion, regionName } ){
                             wind={location.locationWind}
                             temp={location.locationTemp}
                             totalPoints={location.totalPoints}
-                        />
-                        <Location
-                        locationName={location.locationName}
                         />
                     </li>
                     </NavLink>

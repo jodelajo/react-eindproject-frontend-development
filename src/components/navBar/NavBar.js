@@ -7,6 +7,8 @@ import {useAuth} from '../../context/AuthContext'
 
 function NavBar() {
     const {currentUser} = useAuth()
+    console.log(currentUser)
+
     return <div className="navbar">
         <Link to="/dashboard">
             <div>

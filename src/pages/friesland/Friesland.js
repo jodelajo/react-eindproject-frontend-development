@@ -1,8 +1,7 @@
 import React, {useContext} from 'react'
 import {LocationContext} from '../../context/LocationContext'
-import Counter from '../../components/counter/Counter'
-import terraceData from '../../data/terrace.json'
-import Location from "../location/Location";
+import Region from "../../components/region/Region";
+
 
 function Friesland() {
     const {
@@ -20,34 +19,12 @@ function Friesland() {
         .concat(locationsZuidWest)
 
 
-    console.log('friesland', frieslandLocations)
-
-    console.log(terraceData[0].name)
-
-
-
-
     return <div>
-        <h2>TOP 5 beste Plakjes</h2>
-        <ul>
-            {frieslandLocations && frieslandLocations.sort((a, b) =>
-                b.totalPoints - a.totalPoints).slice(0, 5)
-                .map((location) => {
-
-                    return <Counter
-                        key={location.locationID}
-                        name={location.locationName}
-                        location={location}
-                        clouds={location.locationClouds}
-                        wind={location.locationWind}
-                        temp={location.locationTemp}
-                        totalPoints={location.totalPoints}
-                    />
-                })}
-
-        </ul>
+        <Region
+            locationsRegion={frieslandLocations}
+            regionName="Friesland"
+        />
     </div>
-}
-
+};
 export default Friesland
 

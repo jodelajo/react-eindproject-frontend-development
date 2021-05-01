@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {LocationContext} from "../../context/LocationContext";
-import Region from "../region/Region";
+import Region from "../../components/region/Region";
 
 function ZuidOost() {
     const { locationsZuidOost} = useContext(LocationContext)
