@@ -1,10 +1,9 @@
 import React, {useContext} from 'react'
 import {LocationContext} from "../../context/LocationContext";
-import {useParams} from 'react-router-dom'
+import {useParams, Link} from 'react-router-dom'
 import terraceData from '../../data/terrace.json'
 import './Location.css'
-import kelvinToCelsius from "../../helpers/kelvinToCelsius";
-import metricToBeaufort from "../../helpers/metricToBeaufort";
+import Counter from "../../components/counter/Counter";
 
 
 function Location() {
@@ -34,25 +33,26 @@ function Location() {
     })
 
     return <div>
-        <div className="counter">
-            <div className="weather-left">
-                <div>
-                    <p className="location-name-location">{specificLocation && specificLocation.locationName}</p>
-                <img className="weather-icon"
-                     src={specificLocation && `https://openweathermap.org/img/wn/${specificLocation.locationIcon}.png`} alt="icon"/>
-                </div>
-            </div>
-            <div className="weather-right-location">
-                <p>{`${kelvinToCelsius(specificLocation && specificLocation.locationTemp)} °C`}</p>
-                <p>Windkracht {metricToBeaufort(specificLocation && specificLocation.locationWind)}</p>
-                <p><strong>{specificLocation && specificLocation.totalPoints}</strong></p>
+        <div>
+            <div >
+                <Counter
+                    key={specificLocation && specificLocation.locationID}
+                    location={specificLocation && specificLocation}
+                    clouds={specificLocation && specificLocation.locationClouds}
+                    wind={specificLocation && specificLocation.locationWind}
+                    temp={specificLocation && specificLocation.locationTemp}
+                    totalPoints={specificLocation && specificLocation.totalPoints}
+                />
             </div>
         </div>
         <div className="terras">
+            <img
+                className="terrace-image"
+                src={specificTerrace && specificTerrace.image} alt="terras"/>
             <h2>{specificTerrace && specificTerrace.name}</h2>
             <p>{specificTerrace && specificTerrace.address}</p>
             <p>{specificTerrace && specificTerrace.terraceLocation}</p>
-            <p>{specificTerrace &&  specificTerrace.website}</p>
+            <Link to={specificTerrace.website}>Website</Link>
             <p>{specificTerrace && specificTerrace.phone}</p>
             <p>{specificTerrace && specificTerrace.email}</p>
         </div>

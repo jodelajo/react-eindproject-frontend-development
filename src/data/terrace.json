@@ -2,6 +2,7 @@
   {
     "id": "Bontebok",
     "name": "Smûk",
+    "image": "https://media.insiders.nl/thumbs/fry/detail/files/image/smuk3_703082940.jpeg",
     "address": "W.a. Nijenhuisweg 7",
     "zipcode": "8455 JS",
     "terraceLocation": "Katlijk",
@@ -12,6 +13,7 @@
   {
     "id": "Heerenveen",
     "name": "Het Gerecht",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/01/Het-Gerecht-buiten.jpg",
     "address": "Gemeenteplein 33",
     "zipcode": "8442 MA",
     "terraceLocation": "Heerenveen",
@@ -22,6 +24,7 @@
   {
     "id": "Akkrum",
     "name": "De Drijfveer",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/05/de-koken-terras.jpg",
     "address": "Ulbe Twijnstrawei 31",
     "zipcode": "8491 CJ",
     "terraceLocation": "Akkrum",
@@ -32,6 +35,7 @@
   {
     "id": "Appelscha",
     "name": "De Jongens van Outdoor",
+    "image":"https://www.friesnieuws.nl/wp-content/uploads/2017/10/3P1010543.jpg",
     "address": "Boerestreek 8",
     "zipcode": "8426 BP",
     "terraceLocation": "Appelscha",
@@ -42,6 +46,7 @@
   {
     "id": "Drachten",
     "name": "'t Smelnehus",
+    "image":"https://www.uitagenda.nl/storage/location/Grand-Cafe-t-Smelnehus_uitagenda.jpg",
     "address": "Moleneind Noordzijde 14 ",
     "zipcode": "9203 ZP",
     "terraceLocation": "Drachten",
@@ -52,6 +57,7 @@
   {
     "id": "Wolvega",
     "name": "Paviljoen Driewegsluis",
+    "image": "https://www.touristserver.nl/img/166113-1607609683/B1280X1280/103968548_2136180949860450_5832779711584029673_n.jpg",
     "address": "Lindedijk 2a",
     "zipcode": "8481 KH",
     "terraceLocation": "Nijetrijne",
@@ -62,6 +68,7 @@
   {
     "id": "Lemmer",
     "name": "Beachclub Lemmer",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/05/beachclub-Lemmer.jpg",
     "address": "Industrieweg 2",
     "zipcode": "8531 PA",
     "terraceLocation": "Lemmer",
@@ -72,6 +79,7 @@
   {
     "id": "Sneek",
     "name": "Onder den Linden",
+    "image": "https://cdn.tbevents.nl/Media/city/115/e2caacfc-7519-4b6a-83f4-05f3d04bcbfd.jpg",
     "address": "Marktstraat 30",
     "zipcode": "8601 CV",
     "terraceLocation": "Sneek",
@@ -81,7 +89,8 @@
   },
   {
     "id": "Workum",
-    "name": "Hotel Restaurant de Gulden Leeuw",
+    "name": "De Gulden Leeuw",
+    "image": "https://deguldenleeuw.nl/wp-content/uploads/2018/03/EVF_9814-e1522413149576.jpg",
     "address": "Merk 2",
     "zipcode": "8711 CL",
     "terraceLocation": "Workum",
@@ -93,6 +102,7 @@
   {
     "id": "Makkum",
     "name": "It Posthus",
+    "image": "https://i.pinimg.com/originals/4f/4b/48/4f4b486068639403c6d79a52cd85aa75.jpg",
     "address": " Plein 15",
     "zipcode": "8754 ER",
     "terraceLocation": "Makkum",
@@ -103,6 +113,7 @@
   {
     "id": "Dokkum",
     "name": "KB Foods & Drinks",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/05/bk-food-en-drink.jpg",
     "address": "Keppelstraat 4",
     "zipcode": "9101 MV",
     "terraceLocation": "Dokkum",
@@ -113,6 +124,7 @@
   {
     "id": "Anjum",
     "name": "De Waegh",
+    "image": "https://www.parkvakanties.nl/media/inline/blogs/201810/1539013915.jpg",
     "address": "Skânserwei 28",
     "zipcode": "9133 DV",
     "terraceLocation": "Anjum",
@@ -123,6 +135,7 @@
   {
     "id": "Buitenpost",
     "name": "Pyramide",
+    "image": "https://cdn.binqmedia.nl/Streetview/bedrijven/2013/4/8/554593.jpg",
     "address": "Voorstraat 30",
     "zipcode": "9285 NS",
     "terraceLocation": "Buitenpost",
@@ -132,7 +145,8 @@
   },
   {
     "id": "Ferwerd",
-    "name": "t Hoekje",
+    "name": "'t Hoekje",
+    "image": "https://www.omropfryslan.nl/data/files/styles/omnibox/public/imagenodes/thoekje1.jpg",
     "address": "Hegebeintumerdyk 1",
     "zipcode": "9172 PH",
     "terraceLocation": "Ferwert",
@@ -143,6 +157,7 @@
   {
     "id": "Bergum",
     "name": "De Pleats",
+    "image": "https://pubblestorage.blob.core.windows.net/f55ba9dd/content/2020/6/62622b66-a567-4d5c-b6e9-87f71c4b956e_thumb840.jpg",
     "address": "Schoolstraat 82",
     "zipcode": "9251 ED",
     "terraceLocation": "Burgum",
@@ -153,6 +168,7 @@
   {
     "id": "Harlingen",
     "name": "Het Brouwdok",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/05/brouwdok.jpg",
     "address": "Nieuwe Willemskade 8",
     "zipcode": "8862 RZ",
     "terraceLocation": "Harlingen",
@@ -163,6 +179,7 @@
   {
     "id": "Menaldum",
     "name": "Lokaal Op Hatsum",
+    "image": "https://lokaalophatsum.nl/wp-content/uploads/2015/12/image-14.jpg",
     "address": "Hatzum 13",
     "zipcode": "9035 VK",
     "terraceLocation": "Dronrijp",
@@ -173,6 +190,7 @@
   {
     "id": "Leeuwarden",
     "name": "Proefverlof",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/05/proefverlof-1150x767.jpg",
     "address": "Blokhuisplein 40",
     "zipcode": "8911 LJ",
     "terraceLocation": "Leeuwarden",
@@ -183,6 +201,7 @@
   {
     "id": "Sint Annaparochie",
     "name": "Het Graauwe Paard",
+    "image": "https://d11s8ysge2pxse.cloudfront.net/app/uploads/2016/10/Eetcafe-Het-Graauwe-Paard-300x199.png",
     "address": "Monnikebildtdijk 1",
     "zipcode": "9078 VB",
     "terraceLocation": "Oudebildtzijl",
@@ -193,6 +212,7 @@
   {
     "id": "Tzummarum",
     "name": "Het Wapen van Barradeel",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Tzummarum%2C_het_Wapen_van_Barradeel_2010-04-17_13.36.JPG",
     "address": "Buorren 32",
     "zipcode": "8851 EN",
     "terraceLocation": "Tzummarum",
@@ -203,6 +223,7 @@
   {
     "id": "Oost-Vlieland",
     "name": "De Bolder",
+    "image": "https://www.stortemelk.nl/thumbs/1000x400c/2015-04/terras.jpg",
     "address": "Kampweg 1",
     "zipcode": "8899 BX",
     "terraceLocation": "Vlieland",
@@ -213,6 +234,7 @@
   {
     "id": "West-Terschelling",
     "name": "De Walvis",
+    "image": "https://media-cdn.tripadvisor.com/media/photo-s/10/60/77/84/restaurant-de-walvis.jpg",
     "address": "Meest westelijke puntje",
     "zipcode": "Bij het Groene Strand",
     "terraceLocation": "West-Terschelling",
@@ -223,6 +245,7 @@
   {
     "id": "Hollum",
     "name": "The Sunset",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/05/sunsetterras-1150x767.jpg",
     "address": "Oranjeweg 61",
     "zipcode": "9161 CB",
     "terraceLocation": "Hollum",
@@ -233,6 +256,7 @@
   {
     "id": "Nes",
     "name": "De Klimop",
+    "image": "https://deklimopameland.nl/wp-content/uploads/2021/02/KlimOpAmeland-15-arrangement.jpg",
     "address": "Johan Hofkerweg 2",
     "zipcode": "9163 GW",
     "terraceLocation": "Nes",
@@ -243,6 +267,7 @@
   {
     "id": "Schiermonnikoog",
     "name": "De Marlijn",
+    "image": "https://www.maudgeniet.nl/wp-content/uploads/2018/11/De-Marlijn-Schiermonnikoog-Maudgeniet.nl-4-min.png",
     "address": "Prins Bernardweg 2",
     "zipcode": "9166 SH",
     "terraceLocation": "Schiermonnikoog",
