@@ -1,53 +1,45 @@
 import React from 'react'
 import './Home.css'
-import {Link} from 'react-router-dom'
-import wadden from '../../assets/plattegrond/wadden_roze.png'
-import noordwest from '../../assets/plattegrond/noordwest_roze.png'
-import noordoost from '../../assets/plattegrond/noordoost_roze.png'
-import zuidwest from '../../assets/plattegrond/zuidwest_roze.png'
-import zuidoost from '../../assets/plattegrond/zuidoost_roze.png'
-import friesland from '../../assets/images/friesland_map_gedraaid.png'
 import {useAuth} from '../../context/AuthContext'
+import {ReactComponent as Terrace} from '../../assets/images/terrace-svgrepo-com.svg';
+import SignUpLogInLink from "../../components/signUpLogInLink/SignUpLogInLink";
+import Map from "../../components/map/Map";
+import Friesland from "../friesland/Friesland";
 
 
 function Home() {
     const {currentUser} = useAuth()
 
     return <div className="home">
-        <h2>It beste plakje fan Fryslân</h2>
+        <h2 className="home-title">It beste plakje fan Fryslân</h2>
 
 
         <div className="home-wrapper">
-            {!currentUser ? <div className="pop-up">
-                    <div className="welkom">Welkom!</div>
+            {!currentUser ?
+                <div className="pop-up">
+                    <div className="welkom">
+                        <h3 className="welkom-text">Welkom</h3>
+                        <p className="intro">Vind het terras met het beste weer van Friesland!</p>
+                        <p className="intro-2">Maak snel een account aan!</p>
+                        <Terrace className="icon-terrace"/>
                     </div>
-                :
-                <div>
-                    <Link to="/wadden">
-                        <img src={wadden} id="wadden" alt="wadden"/>
-                    </Link>
-                    <Link to="/noordwest">
-                        <img src={noordwest} id="noordwest" alt="noordwest"/>
-                    </Link>
-                    <Link to="/noordoost">
-                        <img src={noordoost} id="noordoost" alt="noordoost"/>
-                    </Link>
-                    <Link to="/zuidwest">
-                        <img src={zuidwest} id="zuidwest" alt="zuidwest"/>
-                    </Link>
-                    <Link to="/zuidoost">
-                        <img src={zuidoost} id="zuidoost" alt="zuidoost"/>
-                    </Link>
                 </div>
+                :
+                <Map/>
             }
-
         </div>
-        {!currentUser && <div className="auth">
-            <Link to="/sign-up" className="auth-link-active">Sign Up
-            </Link>
-            <Link to="/log-in" className="auth-link">Log In
-            </Link>
+        {!currentUser && <div className="signup">
+            <SignUpLogInLink/>
         </div>}
+
+        {/*<div className="web-home">*/}
+        {/*    <div className="web-left">*/}
+        {/*        <Friesland/>*/}
+        {/*    </div>*/}
+        {/*    <div className="web-right">*/}
+        {/*        <Map/>*/}
+        {/*    </div>*/}
+        {/*</div>*/}
     </div>
 }
 

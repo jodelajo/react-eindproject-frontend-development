@@ -1,0 +1,48 @@
+.map{
+    margin-bottom: 50px;
+    width: 100%;
+    height: 230px;
+}
+
+#friesland {
+    width: 100%;
+}
+
+#noordwest {
+    width: 52%;
+    height: 46%;
+    margin-top: -6px;
+}
+
+#zuidwest {
+    width: 52%;
+    height: 54%;
+    margin-top: -6px;
+}
+
+#noordoost {
+    width: 48%;
+    height: 46%;
+    margin-top: -6px;
+}
+
+#zuidoost {
+    margin-top: -6px;
+    width: 48%;
+    height: 54%;
+}
+
+#wadden {
+    width: 100%;
+    margin-top: 6px;
+    padding: 0;
+}
+
+
+@media only screen and (min-width: 767px) {
+  .map {
+      width: 400px;
+
+      /*height: 60%;*/
+  }
+}

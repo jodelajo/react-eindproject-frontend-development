@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form"
 import '../signUp/SignUp.css'
 import { useAuth } from '../../context/AuthContext'
 import { Link } from 'react-router-dom'
+import SubmitButton from "../../components/submitButton/SubmitButton";
 
 function ForgotPassword() {
     const {handleSubmit} = useForm()
@@ -38,12 +39,10 @@ function ForgotPassword() {
                 className="input"
             />
 
-            <button
-                type="submit"
-                className="submit-button"
-                disabled={loading}
-            >Reset password
-            </button>
+            <SubmitButton
+            disabled={loading}
+            buttonText="reset password"
+            />
 
         </form>
         <p><Link to="/log-in">Inloggen</Link>.</p>

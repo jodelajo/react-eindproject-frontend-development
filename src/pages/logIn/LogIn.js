@@ -3,6 +3,7 @@ import {useForm} from "react-hook-form";
 import '../signUp/SignUp.css'
 import {useAuth} from '../../context/AuthContext'
 import {Link, useHistory} from 'react-router-dom';
+import SubmitButton from "../../components/submitButton/SubmitButton";
 
 
 function LogIn() {
@@ -55,7 +56,10 @@ function LogIn() {
                 className="input"
             />
 
-            <button type="submit" className="submit-button" disabled={loading}>Log in</button>
+           <SubmitButton
+           disabled={loading}
+           buttonText="Inloggen"
+           />
 
         </form>
         <p>Wachtwoord vergeten? <Link to="/forgot-password">Klik hier</Link>.</p>

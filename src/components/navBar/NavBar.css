@@ -3,10 +3,15 @@
     background-color: #ff0a54;
     height: 60px;
     margin:0;
-
-    padding: 6px;
+    top: 0;
+    left: 0;
+    display: flex;
+    padding: 12px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    /*position: fixed;*/
+    z-index: 10;
     /*flex-wrap: wrap;*/
 }
 /*.navbar-input{*/
@@ -17,21 +22,33 @@
 /*    !*align-items: center;*!*/
 
 /*}*/
-.hamburger {
-    font-size: 44px;
+.settings {
+    font-size: 40px;
 
     text-decoration: none;
-    color: #747474;
+    color: #33312F;
+}
+.refresh {
+    font-size: 40px;
+    text-decoration: none;
+    color: #f9bec7;
 }
 
-.username {
-    width: 300px;
 
-    text-align: end;
+.username {
+    width: 200px;
+
+    text-align: center;
     font-size: 24px;
     color: white;
 }
 
 .username a {
     text-decoration: none;
+}
+
+@media only screen and (min-width: 767px){
+    .navbar {
+        position: fixed;
+    }
 }

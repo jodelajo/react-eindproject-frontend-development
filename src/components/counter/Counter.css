@@ -1,6 +1,6 @@
 .counter {
     width: 316px;
-    margin-top: 20px;
+    margin: 20px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -10,17 +10,7 @@
     color: #ffffff;
 }
 
-.location-name {
-    color: #f9bec7;
-    font-weight: 600;
-    font-size: 20px;
-    letter-spacing: 1px;
-    font-variant: all-small-caps;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
 
-}
 
 .name-description {
     display: flex;
@@ -30,9 +20,10 @@
 
 .weather-left {
     display: flex;
-    text-align: start;
-    align-content: flex-start;
 
+    text-align: start;
+    /*align-content: flex-start;*/
+    align-items: center;
 }
 .weather-right {
     font-size: 14px;
@@ -44,7 +35,19 @@
     justify-content: center;
 
 }
+
+.total-points {
+    background-color: #f9bec7;
+    color: #f71818;
+    border-radius: 50%;
+    padding: 4px;
+    text-align: center;
+}
 .icon-weather {
     width: 44px;
     height: 44px;
+}
+
+.windkracht {
+    font-size: 10px;
 }

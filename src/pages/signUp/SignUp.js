@@ -28,7 +28,7 @@ function SignUp() {
             setLoading(true)
             const result = await signup(emailRef.current.value, passwordRef.current.value, userNameRef.current.value)
             console.log(result)
-            history.push("/dashboard")
+            history.push("/profile")
         } catch {
             setError('Failed to create account')
         }

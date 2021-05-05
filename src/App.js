@@ -12,21 +12,21 @@ import ZuidWest from './pages/zuidwest/ZuidWest'
 import ZuidOost from './pages/zuidoost/ZuidOost'
 import SignUp from './pages/signUp/SignUp'
 import LogIn from './pages/logIn/LogIn'
-import DashBoard from './components/dashBoard/DashBoard'
+import Profile from './pages/profile/Profile'
 import PrivateRoute from './components/privateRoute/PrivateRoute'
 import ForgotPassword from './pages/forgotPassword/ForgotPassword'
 import UpdateProfile from './pages/updateProfile/UpdateProfile'
 import Location from './pages/location/Location'
 import Region from "./components/region/Region"
+import Header from "./components/header/Header";
 
 function App() {
     return (
         <>
             <div className="weather-container">
-                <div className="weather-header">
-                    <NavBar/>
-
-                    <span className="location-details">
+                <NavBar/>
+             <Header/>
+                        <span className="weather-wrapper">
                             <Switch>
                                 <Route exact path="/" component={Home}/>
                                 <PrivateRoute path="/friesland" component={Friesland}/>
@@ -39,17 +39,12 @@ function App() {
                                 <PrivateRoute path="/region" component={Region}/>
                                 <Route path="/sign-up" component={SignUp}/>
                                 <Route path="/log-in" component={LogIn}/>
-                                <PrivateRoute path="/dashboard" component={DashBoard}/>
+                                <PrivateRoute path="/profile" component={Profile}/>
                                 <Route path="/forgot-password" component={ForgotPassword}/>
                                 <PrivateRoute path="/update-profile" component={UpdateProfile}/>
-                         </Switch>
+                            </Switch>
                         </span>
-                </div>
-                <div>
-                    <div>
-                        <Footer/>
-                    </div>
-                </div>
+                <Footer/>
             </div>
         </>
     )

@@ -32,9 +32,8 @@ function Location() {
         return ter.id === slug
     })
 
-    return <div>
-        <div>
-            <div >
+    return <div className="single-location">
+        <div >
                 <Counter
                     key={specificLocation && specificLocation.locationID}
                     location={specificLocation && specificLocation}
@@ -43,7 +42,7 @@ function Location() {
                     temp={specificLocation && specificLocation.locationTemp}
                     totalPoints={specificLocation && specificLocation.totalPoints}
                 />
-            </div>
+
         </div>
         <div className="terras">
             <img

@@ -1,7 +1,11 @@
-ul {
+.region-ul {
     list-style-type: none;
 }
 
 a:link {
     text-decoration: none;
+}
+.region {
+    padding: 20px 0;
+    background-color: white;
 }

@@ -3,6 +3,7 @@ import {useForm} from 'react-hook-form'
 import '../signUp/SignUp.css'
 import {useAuth} from '../../context/AuthContext'
 import {Link, useHistory} from 'react-router-dom'
+import SubmitButton from "../../components/submitButton/SubmitButton";
 
 
 function UpdateProfile() {
@@ -35,7 +36,7 @@ function UpdateProfile() {
         }
 
         Promise.all(promises).then(() => {
-            history.push("/dashboard")
+            history.push("/profile")
         }).catch(() => {
             setError('Failed to update account')
         }).finally(() => {
@@ -73,11 +74,13 @@ function UpdateProfile() {
                     ref={passwordConfirmRef}
                     className="input"
                 />
-                <button type="submit" className="submit-button" disabled={loading}>Update</button>
-
+                <SubmitButton
+                disabled={loading}
+                buttonText="Update"
+                />
             </form>
 
-            <p><Link to="/dashboard">Cancel</Link></p>
+            <p><Link to="/profile">Cancel</Link></p>
         </main>
     }
 

@@ -1,0 +1,34 @@
+
+.auth {
+    width: 100%;
+    height: 68px;
+    display: flex;
+    /*align-content: flex-end;*/
+    /*align-items: flex-end;*/
+    margin: 0;
+    padding: 0;
+}
+
+.auth-link, .auth-link-active {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-variant: all-small-caps;
+    font-size: 30px;
+    color: #f9bec7;
+    text-decoration: none;
+    background-color: #5a287f;
+}
+
+.auth-link-active {
+    background-color: #f71818;
+    color: white;
+}
+
+@media only screen and (min-width: 786px){
+    .auth{
+        width: 250px;
+    }
+}

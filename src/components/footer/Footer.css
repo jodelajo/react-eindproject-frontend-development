@@ -10,6 +10,8 @@
     font-size: 42px;
     width: 100%;
     align-items: flex-end;
+    bottom: 0;
+    position: fixed;
 }
 
 .footer-icon {
@@ -23,13 +25,13 @@
     fill: #f9bec7;
 }
 
-.icon-cafe {
-    margin-top: 8px;
-    font-size: 34px;
-    align-self: center;
-    fill: #f71818;
-    z-index: 1;
-}
+/*.icon-cafe {*/
+/*    margin-top: 8px;*/
+/*    font-size: 34px;*/
+/*    align-self: center;*/
+/*    fill: #f71818;*/
+/*    z-index: 1;*/
+/*}*/
 
 .icon {
     font-size: 34px;

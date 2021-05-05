@@ -4,19 +4,24 @@ import metricToBeaufort from "../../helpers/metricToBeaufort";
 import './Counter.css';
 
 function Counter({location}) {
+
+
     return <div className="counter">
         <div className="weather-left">
+
+            <p className="total-points">{location && location.totalPoints}</p>
             <img className="icon-weather"
                  src={location && `https://openweathermap.org/img/wn/${location.locationIcon}.png`} alt="icon"/>
+
             <div className="name-description">
-                <p className="location-name">{location && location.locationName}</p>
-                <p>{location && location.locationClouds}% wolken</p>
+                <h3>{location && location.locationName}</h3>
+                <p>{location && location.locationDescription}</p>
             </div>
         </div>
         <div className="weather-right">
             <p>{`${kelvinToCelsius(location && location.locationTemp)} °C`}</p>
-            <p>Windkracht {metricToBeaufort(location && location.locationWind)}</p>
-            <p><strong>{location && location.totalPoints}</strong></p>
+            <p className="windkracht">Windkracht {metricToBeaufort(location && location.locationWind)}</p>
+
         </div>
     </div>
 };
