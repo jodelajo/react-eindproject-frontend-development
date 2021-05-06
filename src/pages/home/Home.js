@@ -4,10 +4,13 @@ import {useAuth} from '../../context/AuthContext'
 import {ReactComponent as Terrace} from '../../assets/images/terrace-svgrepo-com.svg';
 import SignUpLogInLink from "../../components/signUpLogInLink/SignUpLogInLink";
 import Map from "../../components/map/Map";
-import Friesland from "../friesland/Friesland";
+import LittleFooter from "../../components/littleFooter/LittleFooter";
+import mapExample from '../../assets/images/app_example.png'
+import {Link} from "react-router-dom";
 
 
 function Home() {
+
     const {currentUser} = useAuth()
 
     return <div className="home">
@@ -26,20 +29,36 @@ function Home() {
                 </div>
                 :
                 <Map/>
-            }
-        </div>
-        {!currentUser && <div className="signup">
-            <SignUpLogInLink/>
-        </div>}
 
-        {/*<div className="web-home">*/}
-        {/*    <div className="web-left">*/}
-        {/*        <Friesland/>*/}
-        {/*    </div>*/}
-        {/*    <div className="web-right">*/}
-        {/*        <Map/>*/}
-        {/*    </div>*/}
-        {/*</div>*/}
+            }
+
+            {!currentUser && <div className="signup">
+                <SignUpLogInLink/>
+            </div>}
+        </div>
+
+        <div className="web-home">
+            {!currentUser ?
+                <div className="web-left">
+                    <Link to="/log-in">
+                        <img src={mapExample} alt="map-example" className="map-example"/>
+                    </Link>
+                </div>
+                :
+                <div className="web-left">
+                    <Map/>
+                    <LittleFooter/>
+                </div>}
+            <div className="web-right">
+                <h2>Klik op een regio</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+                    consequatur ex fuga impedit optio quisquam saepe. Amet atque, cupiditate
+                    doloribus eaque laboriosam magni modi optio quaerat quasi sapiente ullam,
+                    vitae?
+                </p>
+            </div>
+        </div>
+
     </div>
 }
 

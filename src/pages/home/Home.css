@@ -5,22 +5,17 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    /*height: 535px;*/
-    /*background-color: white;*/
 }
 
 .home-wrapper {
     padding-top: 30px;
     display: flex;
     flex-direction: column;
-    /*justify-content: space-between;*/
     text-align: center;
-    /*height: 535px;*/
-    /*background-color: white;*/
+    height: 100vh;
 }
 
 .pop-up {
-    /*height: 100%;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,9 +32,7 @@
     align-self: flex-end;
     margin-bottom: 40px;
     align-items: center;
-    /*margin-top: 20px;*/
     background-color: rgba(90, 40, 127, 0.7);
-    /*height: 290px;*/
     width: 80%;
     padding:12px 20px;
     color: white;
@@ -69,7 +62,6 @@
 
 @media only screen and (min-width: 767px) {
     .home {
-        /*height: 200px;*/
         justify-content: flex-start;
         padding-top: 0;
         height: auto;
@@ -84,38 +76,46 @@
     .pop-up {
         display: none;
     }
-    .map-web {
-        width: 600px;
-        height: auto;
-        /*margin-bottom: 0;*/
-        align-self: center;
-    }
+
     .signup{
         display: none;
     }
-    .pop-up {
-        max-height: 100vh;
-    }
+
     .welkom {
         display: none;
     }
+
     .web-home{
-        margin-top: 60px;
         display: flex;
-
-        /*width: 100vw;*/
-        height: 800px;
+        padding: 0 60px;
     }
+
     .web-left {
-        background-color: #f71818;
+        background-color: rgba(90, 40, 127, 0.4);
         color: #33312F;
-
-        /*width: 34%;*/
-    }
-    .web-right {
-        /*background-color: #5a287f;*/
+        min-height: 400px;
+        width: 36%;
+        max-width: 540px;
+        border-radius: 32px 32px 0 0;
         display: flex;
-        /*width: 66%;*/
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: .25rem .5rem 2rem 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .web-right {
+        padding: 0 60px;
+        display: flex;
+        flex-direction: column;
+        width: 64%;
         justify-content: center;
+    }
+
+    .map-example {
+        width: 100%;
+        margin-bottom: -10px;
+        min-height: 400px;
+        max-width: 540px;
     }
 }

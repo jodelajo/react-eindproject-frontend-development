@@ -1,6 +1,7 @@
 import React, {useContext} from 'react'
 import {LocationContext} from '../../context/LocationContext'
 import Region from "../../components/region/Region";
+import LittleFooter from "../../components/littleFooter/LittleFooter";
 
 
 function Friesland() {
@@ -24,6 +25,7 @@ function Friesland() {
             locationsRegion={frieslandLocations}
             regionName="Friesland"
         />
+
     </div>
 };
 export default Friesland

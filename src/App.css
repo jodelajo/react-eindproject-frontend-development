@@ -17,42 +17,58 @@
 body {
     font-family: 'Core Sans G', Arial, sans-serif;
     width: 100vw;
+    height: 785px;
     color: #33312F;
+    background: linear-gradient(#ffffff, #f9bec7);
 }
 
 .weather-container {
-    position: relative;
-    /*display: flex;*/
+    position: fixed;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    width: 375px;
-    height: 100vh;
+    justify-content: center;
+    width: 100vw;
+    /*height: 595px;*/
+    height: auto;
     /*height: 667px;*/
-    background: linear-gradient(#ffffff, #f9bec7);
-    box-shadow: .25rem .5rem 1rem 0 rgba(0, 0, 0, 0.1);
+
+    /*box-shadow: .25rem .5rem 1rem 0 rgba(0, 0, 0, 0.1);*/
 }
 
 
 .weather-wrapper {
     display: flex;
+    /*padding-top: 60px;*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     height: auto;
-
+    /*background: linear-gradient(#ffffff, #f9bec7);*/
+}
+.app-content {
+    /*padding-top: 80px;*/
 }
 
 @media only screen and (min-width: 767px) {
+    body {
+        height: 100%;
+        background: none;
+    }
     .weather-container {
+        position: static;
         display: flex;
         flex-direction: column;
         width: 100vw;
-        height: 100vh;
+        min-height: 100vh;
+        justify-content: space-between;
+
+
     }
     .weather-wrapper {
-        padding-top: 50px;
-        padding-bottom: 150px;
+        padding-top: 60px;
+        padding-bottom: 70px;
         height: auto;
+        background: linear-gradient(#ffffff, #f9bec7);
     }
 }

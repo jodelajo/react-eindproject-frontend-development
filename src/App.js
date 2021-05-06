@@ -23,27 +23,30 @@ import Header from "./components/header/Header";
 function App() {
     return (
         <>
+
             <div className="weather-container">
                 <NavBar/>
-             <Header/>
-                        <span className="weather-wrapper">
-                            <Switch>
-                                <Route exact path="/" component={Home}/>
-                                <PrivateRoute path="/friesland" component={Friesland}/>
-                                <PrivateRoute path="/wadden" component={Wadden}/>
-                                <PrivateRoute exact path="/noordwest" component={NoordWest}/>
-                                <PrivateRoute exact path="/noordoost" component={NoordOost}/>
-                                <PrivateRoute exact path="/zuidwest" component={ZuidWest}/>
-                                <PrivateRoute exact path="/zuidoost" component={ZuidOost}/>
-                                <PrivateRoute path="/location/:slug" component={Location}/>
-                                <PrivateRoute path="/region" component={Region}/>
-                                <Route path="/sign-up" component={SignUp}/>
-                                <Route path="/log-in" component={LogIn}/>
-                                <PrivateRoute path="/profile" component={Profile}/>
-                                <Route path="/forgot-password" component={ForgotPassword}/>
-                                <PrivateRoute path="/update-profile" component={UpdateProfile}/>
-                            </Switch>
-                        </span>
+                <Header/>
+                <div className="weather-wrapper">
+                    <div className="app-content">
+                        <Switch>
+                            <Route exact path="/" component={Home}/>
+                            <PrivateRoute path="/friesland" component={Friesland}/>
+                            <PrivateRoute path="/wadden" component={Wadden}/>
+                            <PrivateRoute exact path="/noordwest" component={NoordWest}/>
+                            <PrivateRoute exact path="/noordoost" component={NoordOost}/>
+                            <PrivateRoute exact path="/zuidwest" component={ZuidWest}/>
+                            <PrivateRoute exact path="/zuidoost" component={ZuidOost}/>
+                            <PrivateRoute path="/location/:slug" component={Location}/>
+                            <PrivateRoute path="/region" component={Region}/>
+                            <Route path="/sign-up" component={SignUp}/>
+                            <Route path="/log-in" component={LogIn}/>
+                            <PrivateRoute path="/profile" component={Profile}/>
+                            <Route path="/forgot-password" component={ForgotPassword}/>
+                            <PrivateRoute path="/update-profile" component={UpdateProfile}/>
+                        </Switch>
+                    </div>
+                </div>
                 <Footer/>
             </div>
         </>

@@ -8,11 +8,12 @@ function Header() {
     const {currentUser} = useAuth()
     return <div className="header">
         <div className="title-map">
-            <h1 className="titel">It beste plakje fan Fryslân</h1>
+            <h1 className="title">It beste plakje fan Fryslân</h1>
             <img src={screenshot_app} alt="screenshot" className="screenshot"/>
         </div>
         {!currentUser &&
         <SignUpLogInLink/>
+
         }
     </div>
 }
