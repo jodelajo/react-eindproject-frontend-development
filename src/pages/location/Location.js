@@ -1,17 +1,15 @@
 import React, {useContext} from 'react'
 import {LocationContext} from "../../context/LocationContext";
-import {useParams, Link, useHistory} from 'react-router-dom'
+import {useParams, Link } from 'react-router-dom'
 import terraceData from '../../data/terrace.json'
 import './Location.css'
 import Counter from "../../components/counter/Counter";
 import LittleFooter from "../../components/littleFooter/LittleFooter";
-import Map from "../../components/map/Map";
-import {RiArrowLeftLine, RiHome2Line, RiStarLine} from "react-icons/ri";
+
 
 
 function Location() {
     const {slug} = useParams()
-    const history = useHistory()
 
     const {
         locationsWadden,

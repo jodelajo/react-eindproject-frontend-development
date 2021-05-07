@@ -1,6 +1,6 @@
 import React from 'react';
 import './Footer.css';
-import {RiHome2Line, RiStarLine, RiArrowLeftLine} from "react-icons/ri";
+import {RiHome2Line, RiStarLine, RiArrowLeftLine, RiGithubFill} from "react-icons/ri";
 import {Link, useHistory} from 'react-router-dom';
 
 function Footer() {
@@ -17,6 +17,9 @@ function Footer() {
         </div>
         <div className="footer-web">
             <p>girlPowered by jodelajo 2021</p>
+            <Link to="https://github.com/jodelajo">
+                <RiGithubFill/>
+            </Link>
         </div>
     </>
 }

@@ -4,7 +4,6 @@ import {useAuth} from '../../context/AuthContext'
 import {Link, useHistory} from 'react-router-dom'
 import './Profile.css'
 import SubmitButton from "../../components/submitButton/SubmitButton";
-import Booster from "../../components/booster/Booster";
 
 function Profile() {
     const [error, setError] = useState('')

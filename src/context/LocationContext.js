@@ -211,24 +211,17 @@ function LocationContextProvider({children}) {
     const [locationsNoordWest, setLocationsNoordWest] = useState([])
     const [locationsNoordOost, setLocationsNoordOost] = useState([])
     const [locationsZuidWest, setLocationsZuidWest] = useState([])
-    const [boosterSelected, toggleBoosterSelected] = useState(false)
-    const [totalClouds, setTotalClouds] = useState([])
+    // const [boosterSelected, toggleBoosterSelected] = useState(false)
 
-    // function toggleBooster() {
-    //     if (boosterSelected === false){
+    //
+    //
+    // function boosterCloud(){
+    //     if (boosterSelected === true){
+    //       toggleBoosterSelected(false)
+    //     }else {
     //         toggleBoosterSelected(true)
-    //     } else {
-    //         toggleBoosterSelected(false);
     //     }
     // }
-
-    function boosterCloud(){
-        if (boosterSelected === true){
-          toggleBoosterSelected(false)
-        }else {
-            toggleBoosterSelected(true)
-        }
-    }
 
     async function fetchLocations() {
         try {
@@ -445,7 +438,7 @@ function LocationContextProvider({children}) {
         locationsNoordWest: locationsNoordWest,
         locationsNoordOost: locationsNoordOost,
         locationsZuidWest: locationsZuidWest,
-        boosterCloud: boosterCloud,
+        // boosterCloud: boosterCloud,
     }
 
     return (
