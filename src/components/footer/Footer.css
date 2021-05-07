@@ -1,17 +1,18 @@
-
 .footer {
+    padding: 8px 12px 0 12px;
     display: flex;
-    justify-content: space-around;
-    height: 72px;
-    padding-top: 16px;
-    padding-bottom: 8px;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
     background-color: #181D17;
-    margin-top: 0;
-    font-size: 42px;
     width: 100%;
-    align-items: flex-end;
+    position: fixed;
+    bottom: 0;
 }
 
+.footer-web {
+    display: none;
+}
 .footer-icon {
     background-color: #181D17;
     color: #f9bec7;
@@ -21,14 +22,6 @@
     font-size: 34px;
     background-color: #40463F;
     fill: #f9bec7;
-}
-
-.icon-cafe {
-    margin-top: 8px;
-    font-size: 34px;
-    align-self: center;
-    fill: #f71818;
-    z-index: 1;
 }
 
 .icon {
@@ -49,6 +42,21 @@
 #home-button > * {
     fill: #f71818;
 }
-#back-button > * {
-    fill: #40463F;
+#star-button > * {
+    fill: #ff477e;
+}
+@media only screen and (min-width: 767px){
+
+
+    .footer {
+        display: none;
+    }
+
+    .footer-web{
+        display: flex;
+        width: 100%;
+        height: 180px;
+        background-color: #181D17;
+    }
+
 }

@@ -1,12 +1,32 @@
-import React from 'react';
-import './Friesland.css';
-import { Link } from "react-router-dom";
+import React, {useContext} from 'react'
+import {LocationContext} from '../../context/LocationContext'
+import Region from "../../components/region/Region";
+import LittleFooter from "../../components/littleFooter/LittleFooter";
 
-function Friesland(){
-    return <div className="friesland">
-        <Link to="/">
-        hoi
-        </Link>
-        </div>
-}
+
+function Friesland() {
+    const {
+        locationsWadden,
+        locationsZuidOost,
+        locationsNoordWest,
+        locationsNoordOost,
+        locationsZuidWest
+    } = useContext(LocationContext)
+
+    const frieslandLocations = locationsWadden
+        .concat(locationsZuidOost)
+        .concat(locationsNoordWest)
+        .concat(locationsNoordOost)
+        .concat(locationsZuidWest)
+
+
+    return <div>
+        <Region
+            locationsRegion={frieslandLocations}
+            regionName="Friesland"
+        />
+
+    </div>
+};
 export default Friesland
+

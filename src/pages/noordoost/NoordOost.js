@@ -1,12 +1,14 @@
-import React from 'react';
-import './NoordOost.css';
-import { Link } from "react-router-dom";
+import React, {useContext} from 'react';
+import {LocationContext} from "../../context/LocationContext";
+import Region from "../../components/region/Region";
 
-function NoordOost(){
-    return <div className="friesland">
-        <Link to="/">
-            Groetjes uit NoordOost
-        </Link>
+function NoordOost() {
+    const { locationsNoordOost} = useContext(LocationContext)
+    return <div>
+        <Region
+            locationsRegion={locationsNoordOost}
+            regionName="Noordoost"
+        />
     </div>
-}
+};
 export default NoordOost

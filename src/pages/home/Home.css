@@ -1,38 +1,121 @@
-.map {
-    width: 90%;
-    margin-right: 12px;
+.home {
+    padding-top: 30px;
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
 }
 
-#noordwest {
-    width: 52%;
-    height: 46%;
-    margin-top: -6px;
-
-}
-#zuidwest{
-    width: 52%;
-    height: 54%;
-    margin-top: -6px;
+.home-wrapper {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;
 }
 
-#noordoost {
-    width: 48%;
-    height: 46%;
-    margin-top: -6px;
+.pop-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("/src/assets/images/friesland_map_gedraaid.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center top;
+    margin-bottom: 14px;
 }
-#zuidoost {
-    margin-top: -5px;
-    width: 48%;
-    height: 54%;
+
+.welkom {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    margin-bottom: 40px;
+    align-items: center;
+    background-color: rgba(90, 40, 127, 0.7);
+    width: 80%;
+    padding:12px 20px;
+    color: white;
+    border: 3px solid #fff;
+    box-shadow: .25rem .5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+.web-home {
+    display: none;
+}
+.welkom-text {
+    font-size: 30px;
 }
 
-/*    #noordwest:hover, #wadden:hover {*/
-/*    cursor: pointer;*/
+.intro {
+    margin-top: 16px;
+    font-size: 1.2rem;
+}
+.intro-2 {
+    margin-top: 12px;
+    font-size: 1rem;
+}
+.icon-terrace {
+    margin-top: 40px;
+    width: 24%;
+    fill: #f71818;
+}
 
-/*}*/
+@media only screen and (min-width: 767px) {
+    .home {
+        justify-content: flex-start;
+        padding-top: 0;
+        height: auto;
+    }
+    .home-wrapper {
+       display: none;
+    }
+    .home-title {
+        display: none;
+    }
 
-#wadden {
-    width: 100%;
-    margin-top: 6px;
-    padding: 0;
+    .pop-up {
+        display: none;
+    }
+
+    .signup{
+        display: none;
+    }
+
+    .welkom {
+        display: none;
+    }
+
+    .web-home{
+        display: flex;
+        padding: 0 60px;
+    }
+
+    .web-left {
+        background-color: rgba(90, 40, 127, 0.4);
+        color: #33312F;
+        min-height: 400px;
+        width: 36%;
+        max-width: 540px;
+        border-radius: 32px 32px 0 0;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: .25rem .5rem 2rem 0 rgba(0, 0, 0, 0.1);
+    }
+
+    .web-right {
+        padding: 0 60px;
+        display: flex;
+        flex-direction: column;
+        width: 64%;
+        justify-content: center;
+    }
+
+    .map-example {
+        width: 100%;
+        margin-bottom: -10px;
+        min-height: 400px;
+        max-width: 540px;
+    }
 }

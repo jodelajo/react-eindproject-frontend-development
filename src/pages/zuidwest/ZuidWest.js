@@ -1,12 +1,14 @@
-import React from 'react';
-import './ZuidWest.css';
-import { Link } from "react-router-dom";
+import React, {useContext} from 'react';
+import {LocationContext} from "../../context/LocationContext";
+import Region from "../../components/region/Region";
 
-function ZuidWest(){
-    return <div className="friesland">
-        <Link to="/">
-            Groetjes uit Zuidwest
-        </Link>
+function ZuidWest() {
+    const { locationsZuidWest} = useContext(LocationContext)
+    return <div>
+        <Region
+            locationsRegion={locationsZuidWest}
+            regionName="Zuidwest"
+        />
     </div>
-}
+};
 export default ZuidWest

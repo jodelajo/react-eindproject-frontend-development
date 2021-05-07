@@ -1,0 +1,278 @@
+[
+  {
+    "id": "Bontebok",
+    "name": "Smûk",
+    "image": "https://media.insiders.nl/thumbs/fry/detail/files/image/smuk3_703082940.jpeg",
+    "address": "W.a. Nijenhuisweg 7",
+    "zipcode": "8455 JS",
+    "terraceLocation": "Katlijk",
+    "website": "https://restaurantsmuk.nl/",
+    "email": "reservering@restaurantsmuk.nl",
+    "phone": "0513 745248"
+  },
+  {
+    "id": "Heerenveen",
+    "name": "Het Gerecht",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/01/Het-Gerecht-buiten.jpg",
+    "address": "Gemeenteplein 33",
+    "zipcode": "8442 MA",
+    "terraceLocation": "Heerenveen",
+    "website": "https://www.gerechtheerenveen.nl/",
+    "email": "info@gerechtheerenveen.nl",
+    "phone": "0513 845719"
+  },
+  {
+    "id": "Akkrum",
+    "name": "De Drijfveer",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/05/de-koken-terras.jpg",
+    "address": "Ulbe Twijnstrawei 31",
+    "zipcode": "8491 CJ",
+    "terraceLocation": "Akkrum",
+    "website": "https://www.drijfveer.nl/terras-de-koken",
+    "email": "info@drijfveer.nl",
+    "phone": "0566 652789"
+  },
+  {
+    "id": "Appelscha",
+    "name": "De Jongens van Outdoor",
+    "image":"https://www.friesnieuws.nl/wp-content/uploads/2017/10/3P1010543.jpg",
+    "address": "Boerestreek 8",
+    "zipcode": "8426 BP",
+    "terraceLocation": "Appelscha",
+    "website": "https://dejongensvanoutdoor.nl",
+    "email": "info@dejongensvanoutdoor.nl",
+    "phone": "0516 433309"
+  },
+  {
+    "id": "Drachten",
+    "name": "'t Smelnehus",
+    "image":"https://www.uitagenda.nl/storage/location/Grand-Cafe-t-Smelnehus_uitagenda.jpg",
+    "address": "Moleneind Noordzijde 14 ",
+    "zipcode": "9203 ZP",
+    "terraceLocation": "Drachten",
+    "website": "https://www.smelnehus.nl",
+    "email": "info@smelnehus.nl",
+    "phone": "0512 542208"
+  },
+  {
+    "id": "Wolvega",
+    "name": "Paviljoen Driewegsluis",
+    "image": "https://www.touristserver.nl/img/166113-1607609683/B1280X1280/103968548_2136180949860450_5832779711584029673_n.jpg",
+    "address": "Lindedijk 2a",
+    "zipcode": "8481 KH",
+    "terraceLocation": "Nijetrijne",
+    "website": "https://driewegsluis.nl",
+    "email": "paviljoen@driewegsluis.nl",
+    "phone": "0561 481490"
+  },
+  {
+    "id": "Lemmer",
+    "name": "Beachclub Lemmer",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/05/beachclub-Lemmer.jpg",
+    "address": "Industrieweg 2",
+    "zipcode": "8531 PA",
+    "terraceLocation": "Lemmer",
+    "website": "https://www.beachclublemmer.nl",
+    "email": "info@beachclublemmer.nl",
+    "phone": "0514 593590"
+  },
+  {
+    "id": "Sneek",
+    "name": "Onder den Linden",
+    "image": "https://cdn.tbevents.nl/Media/city/115/e2caacfc-7519-4b6a-83f4-05f3d04bcbfd.jpg",
+    "address": "Marktstraat 30",
+    "zipcode": "8601 CV",
+    "terraceLocation": "Sneek",
+    "website": "https://restaurantonderdelinden.nl",
+    "email": "info@restaurantonderdelinden.nl",
+    "phone": "0515 412654"
+  },
+  {
+    "id": "Workum",
+    "name": "De Gulden Leeuw",
+    "image": "https://deguldenleeuw.nl/wp-content/uploads/2018/03/EVF_9814-e1522413149576.jpg",
+    "address": "Merk 2",
+    "zipcode": "8711 CL",
+    "terraceLocation": "Workum",
+    "website": "https://deguldenleeuw.nl",
+    "email": "receptie@deguldenleeuw.nl",
+    "phone": "0515 542341"
+  },
+
+  {
+    "id": "Makkum",
+    "name": "It Posthus",
+    "image": "https://i.pinimg.com/originals/4f/4b/48/4f4b486068639403c6d79a52cd85aa75.jpg",
+    "address": " Plein 15",
+    "zipcode": "8754 ER",
+    "terraceLocation": "Makkum",
+    "website": "http://www.itposthus.nl",
+    "email": "info@itposthus.nl",
+    "phone": "0515 231153"
+  },
+  {
+    "id": "Dokkum",
+    "name": "KB Foods & Drinks",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/05/bk-food-en-drink.jpg",
+    "address": "Keppelstraat 4",
+    "zipcode": "9101 MV",
+    "terraceLocation": "Dokkum",
+    "website": "https://kbfood.nl",
+    "email": "info@kbfood.nl",
+    "phone": "0519 221199"
+  },
+  {
+    "id": "Anjum",
+    "name": "De Waegh",
+    "image": "https://www.parkvakanties.nl/media/inline/blogs/201810/1539013915.jpg",
+    "address": "Skânserwei 28",
+    "zipcode": "9133 DV",
+    "terraceLocation": "Anjum",
+    "website": "http://www.tasteofhistory.nl/?de_waegh/over_de_waegh/",
+    "email": "niet bekend",
+    "phone": "0519 321818"
+  },
+  {
+    "id": "Buitenpost",
+    "name": "Pyramide",
+    "image": "https://cdn.binqmedia.nl/Streetview/bedrijven/2013/4/8/554593.jpg",
+    "address": "Voorstraat 30",
+    "zipcode": "9285 NS",
+    "terraceLocation": "Buitenpost",
+    "website": "https://pyramidebuitenpost.nl",
+    "email": "info@pyramidebuitenpost.nl",
+    "phone": "0511 544779"
+  },
+  {
+    "id": "Ferwerd",
+    "name": "'t Hoekje",
+    "image": "https://www.omropfryslan.nl/data/files/styles/omnibox/public/imagenodes/thoekje1.jpg",
+    "address": "Hegebeintumerdyk 1",
+    "zipcode": "9172 PH",
+    "terraceLocation": "Ferwert",
+    "website": "http://www.t-hoekje-ferwert.nl",
+    "email": "hoekjeferwert@gmail.com",
+    "phone": "06 83336148"
+  },
+  {
+    "id": "Bergum",
+    "name": "De Pleats",
+    "image": "https://pubblestorage.blob.core.windows.net/f55ba9dd/content/2020/6/62622b66-a567-4d5c-b6e9-87f71c4b956e_thumb840.jpg",
+    "address": "Schoolstraat 82",
+    "zipcode": "9251 ED",
+    "terraceLocation": "Burgum",
+    "website": "http://www.depleats.nl",
+    "email": "info@depleats.nl",
+    "phone": "0511 461556"
+  },
+  {
+    "id": "Harlingen",
+    "name": "Het Brouwdok",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/05/brouwdok.jpg",
+    "address": "Nieuwe Willemskade 8",
+    "zipcode": "8862 RZ",
+    "terraceLocation": "Harlingen",
+    "website": "http://hetbrouwdok.nl",
+    "email": "info@hetbrouwdok.nl",
+    "phone": "0517 235363"
+  },
+  {
+    "id": "Menaldum",
+    "name": "Lokaal Op Hatsum",
+    "image": "https://lokaalophatsum.nl/wp-content/uploads/2015/12/image-14.jpg",
+    "address": "Hatzum 13",
+    "zipcode": "9035 VK",
+    "terraceLocation": "Dronrijp",
+    "website": "https://lokaalophatsum.nl",
+    "email": "info@lokaalophatsum.nl",
+    "phone": "0517 231688"
+  },
+  {
+    "id": "Leeuwarden",
+    "name": "Proefverlof",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/05/proefverlof-1150x767.jpg",
+    "address": "Blokhuisplein 40",
+    "zipcode": "8911 LJ",
+    "terraceLocation": "Leeuwarden",
+    "website": "http://www.proefverlof.frl",
+    "email": "info@proefverlof.frl",
+    "phone": "058 3020030"
+  },
+  {
+    "id": "Sint Annaparochie",
+    "name": "Het Graauwe Paard",
+    "image": "https://d11s8ysge2pxse.cloudfront.net/app/uploads/2016/10/Eetcafe-Het-Graauwe-Paard-300x199.png",
+    "address": "Monnikebildtdijk 1",
+    "zipcode": "9078 VB",
+    "terraceLocation": "Oudebildtzijl",
+    "website": "http://www.hetgraauwepaard.nl",
+    "email": "info@hetgraauwepaard.com",
+    "phone": "0518 421343"
+  },
+  {
+    "id": "Tzummarum",
+    "name": "Het Wapen van Barradeel",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/3/36/Tzummarum%2C_het_Wapen_van_Barradeel_2010-04-17_13.36.JPG",
+    "address": "Buorren 32",
+    "zipcode": "8851 EN",
+    "terraceLocation": "Tzummarum",
+    "website": "https://www.hetwapenvanbarradeel.com",
+    "email": "hetwapenvanbarradeel@gmail.com",
+    "phone": "06 29048292"
+  },
+  {
+    "id": "Oost-Vlieland",
+    "name": "De Bolder",
+    "image": "https://www.stortemelk.nl/thumbs/1000x400c/2015-04/terras.jpg",
+    "address": "Kampweg 1",
+    "zipcode": "8899 BX",
+    "terraceLocation": "Vlieland",
+    "website": "https://www.stortemelk.nl/",
+    "email": "info@stortemelk.nl",
+    "phone": "0562 451225"
+  },
+  {
+    "id": "West-Terschelling",
+    "name": "De Walvis",
+    "image": "https://media-cdn.tripadvisor.com/media/photo-s/10/60/77/84/restaurant-de-walvis.jpg",
+    "address": "Meest westelijke puntje",
+    "zipcode": "Bij het Groene Strand",
+    "terraceLocation": "West-Terschelling",
+    "website": "http://www.walvis.org/",
+    "email": "niet bekend",
+    "phone": "geen"
+  },
+  {
+    "id": "Hollum",
+    "name": "The Sunset",
+    "image": "https://liefsuithetnoorden.nl/wp-content/uploads/2020/05/sunsetterras-1150x767.jpg",
+    "address": "Oranjeweg 61",
+    "zipcode": "9161 CB",
+    "terraceLocation": "Hollum",
+    "website": "https://www.thesunset.nl/nl/index.html",
+    "email": "info@thesunset.nl",
+    "phone": "0519 554280"
+  },
+  {
+    "id": "Nes",
+    "name": "De Klimop",
+    "image": "https://deklimopameland.nl/wp-content/uploads/2021/02/KlimOpAmeland-15-arrangement.jpg",
+    "address": "Johan Hofkerweg 2",
+    "zipcode": "9163 GW",
+    "terraceLocation": "Nes",
+    "website": "https://deklimopameland.nl",
+    "email": "info@deklimopameland.nl",
+    "phone": "0519 542296"
+  },
+  {
+    "id": "Schiermonnikoog",
+    "name": "De Marlijn",
+    "image": "https://www.maudgeniet.nl/wp-content/uploads/2018/11/De-Marlijn-Schiermonnikoog-Maudgeniet.nl-4-min.png",
+    "address": "Prins Bernardweg 2",
+    "zipcode": "9166 SH",
+    "terraceLocation": "Schiermonnikoog",
+    "website": "https://demarlijn.com",
+    "email": "paviljoen@demarlijn.com",
+    "phone": "0519 531397"
+  }
+]

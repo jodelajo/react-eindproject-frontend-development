@@ -1,0 +1,30 @@
+.auth-wrapper{
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    max-height: 100vh;
+}
+.submit-button {
+    margin-top: 40px;
+    margin-bottom: 10px;
+    height: 40px;
+    background-color: #f71818;
+    min-width: 200px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
+}
+.input {
+    margin-bottom: 6px;
+    width: 250px;
+    height: 26px;
+    padding: 4px;
+}

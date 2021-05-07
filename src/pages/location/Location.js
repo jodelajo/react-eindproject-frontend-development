@@ -1,136 +1,101 @@
-import React, {useEffect, useState} from 'react';
-import axios from "axios";
-import './Location.css';
-import kelvinToCelsius from "../../helpers/kelvinToCelsius";
-import metricToBeaufort from "../../helpers/metricToBeaufort";
+import React, {useContext} from 'react'
+import {LocationContext} from "../../context/LocationContext";
+import {useParams, Link, useHistory} from 'react-router-dom'
+import terraceData from '../../data/terrace.json'
+import './Location.css'
 import Counter from "../../components/counter/Counter";
+import LittleFooter from "../../components/littleFooter/LittleFooter";
+import Map from "../../components/map/Map";
+import {RiArrowLeftLine, RiHome2Line, RiStarLine} from "react-icons/ri";
+
 
 function Location() {
-    const [weatherData, setWeatherData] = useState({});
-    // const [locations, setLocations] = useState('');
-    const [temp, setTemp] = useState([])
-    const [clouds, setClouds] = useState([])
-    const [wind, setWind] = useState([])
-    // const [pointsClouds, setPointsClouds] = useState(0)
-    // const [pointsTemp, setPointsTemp] = useState(0)
-    // const [pointsWind, setPointsWind] =useState(0)
-    //
+    const {slug} = useParams()
+    const history = useHistory()
 
-    // const id = 'id=2749334,2744608,2753887,2750417,2759757'
-    // const id = ',184745,524901,5128581,1621177'
-    const urlGroup = `https://api.openweathermap.org/data/2.5/weather?q=Bontebok&appid=${process.env.REACT_APP_API_KEY}&lang=nl`
+    const {
+        locationsWadden,
+        locationsZuidOost,
+        locationsNoordWest,
+        locationsNoordOost,
+        locationsZuidWest
+    } = useContext(LocationContext)
 
-
-    // function getPointsClouds() {
-    //     if (clouds < 30) {
-    //         setPointsClouds(pointsClouds + 20);
-    //     }
-    //     if (clouds >= 30 && clouds < 50) {
-    //         setPointsClouds(pointsClouds + 15);
-    //     }
-    //     if (clouds > 50 && clouds < 99) {
-    //         setPointsClouds(pointsClouds + 8);
-    //     }
-    //     if (clouds > 99) {
-    //         setPointsClouds(pointsClouds + 2);
-    //     }
-    // }
-    //
-    // function getPointsTemp() {
-    //     if (temp < 0) {
-    //         setPointsTemp(pointsTemp + 1);
-    //     }
-    //     if (temp >= 0 && temp < 4) {
-    //         setPointsTemp(pointsTemp + 3);
-    //     }
-    //     if (temp >= 4 && temp < 6) {
-    //         setPointsTemp(pointsTemp + 4);
-    //     }
-    //     if (temp >= 6 && temp < 8) {
-    //         setPointsTemp(pointsTemp + 5);
-    //     }
-    //     if (temp >= 8 && temp < 10) {
-    //         setPointsTemp(pointsTemp + 6);
-    //     }
-    //     if (temp >= 10 && temp < 13) {
-    //         setPointsTemp(pointsTemp + 8);
-    //     }
-    //     if (temp >= 13 && temp < 20) {
-    //         setPointsTemp(pointsTemp + 10);
-    //     }
-    //     if (temp >= 20 && temp < 25) {
-    //         setPointsTemp(pointsTemp + 12);
-    //     }
-    //     if(temp >= 25) {
-    //         setPointsTemp(pointsTemp + 15);
-    //     }
-    // }
-    //
-    // function getPointsWind() {
-    //     if(wind < 2) {
-    //         setPointsWind(pointsWind + 10);
-    //     }
-    //     if(wind >= 2 && wind < 4) {
-    //         setPointsWind(pointsWind + 8);
-    //     }
-    //     if(wind >= 4 && wind < 6) {
-    //         setPointsWind(pointsWind + 4);
-    //     }
-    //     if(wind > 6 && wind < 8) {
-    //         setPointsWind(pointsWind + 2);
-    //     }
-    //     if(wind > 8) {
-    //         setPointsWind(pointsWind + 1);
-    //     }
-    // }
+    const frieslandLocations = locationsWadden
+        .concat(locationsZuidOost)
+        .concat(locationsNoordWest)
+        .concat(locationsNoordOost)
+        .concat(locationsZuidWest)
 
 
-    useEffect(() => {
+    const specificLocation = frieslandLocations.find((loc) => {
+        return loc.locationName === slug
+    })
 
-        async function fetchData() {
+    const specificTerrace = terraceData.find((ter) => {
+        return ter.id === slug
+    })
 
-            try {
-                const result = await axios.get(urlGroup);
-                setWeatherData(result.data)
-                setTemp(kelvinToCelsius(result.data.main.temp))
-                setClouds(result.data.clouds.all)
-                setWind(metricToBeaufort(result.data.wind.speed))
-                // getPointsClouds();
-                // getPointsTemp();
-                // getPointsWind();
-            } catch (e) {
-                console.error(e);
-            }
-        }
+    return <div className="single-location">
+        <div className="single-location-mobile">
+                <Counter
+                    key={specificLocation && specificLocation.locationID}
+                    location={specificLocation && specificLocation}
+                    clouds={specificLocation && specificLocation.locationClouds}
+                    wind={specificLocation && specificLocation.locationWind}
+                    temp={specificLocation && specificLocation.locationTemp}
+                    totalPoints={specificLocation && specificLocation.totalPoints}
+                />
 
-            fetchData();
+        </div>
+        <div className="terras">
+            <img
+                className="terrace-image"
+                src={specificTerrace && specificTerrace.image} alt="terras"/>
+            <h2>{specificTerrace && specificTerrace.name}</h2>
+            <p>{specificTerrace && specificTerrace.address}</p>
+            <p>{specificTerrace && specificTerrace.terraceLocation}</p>
+            <Link to={specificTerrace.website}>Website</Link>
+            <p>{specificTerrace && specificTerrace.phone}</p>
+            <p>{specificTerrace && specificTerrace.email}</p>
+        </div>
 
-    }, [])
+        <div className="web-home">
+            <div className="web-left">
+                <div className="single-location-web">
+                    <Counter
+                        key={specificLocation && specificLocation.locationID}
+                        location={specificLocation && specificLocation}
+                        clouds={specificLocation && specificLocation.locationClouds}
+                        wind={specificLocation && specificLocation.locationWind}
+                        temp={specificLocation && specificLocation.locationTemp}
+                        totalPoints={specificLocation && specificLocation.totalPoints}
+                    />
 
-    return <>
-        <span className="bontebok">
-            {weatherData &&
-            <div>
-                {/*<h2>{weatherData.weather[0].description}</h2>*/}
-                <h3>{weatherData.name}</h3>
-                <h1>{temp} &deg;C</h1>
-                <h4>{clouds} % bewolkt</h4>
-                <h4>Windkracht {wind}</h4>
+                </div>
+                <div className="terras-web">
+                    <img
+                        className="terrace-image"
+                        src={specificTerrace && specificTerrace.image} alt="terras"/>
+                    <h2>{specificTerrace && specificTerrace.name}</h2>
+                    <p>{specificTerrace && specificTerrace.address}</p>
+                    <p>{specificTerrace && specificTerrace.terraceLocation}</p>
+                    <Link to={specificTerrace.website}>Website</Link>
+                    <p>{specificTerrace && specificTerrace.phone}</p>
+                    <p>{specificTerrace && specificTerrace.email}</p>
+                </div>
+                <LittleFooter/>
             </div>
-            }
-        </span>
-        <Counter
-            clouds={clouds}
-            temp={temp}
-            wind={wind}
+            <div className="web-right">
+                <h2>Klik op een regio</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+                    consequatur ex fuga impedit optio quisquam saepe. Amet atque, cupiditate
+                    doloribus eaque laboriosam magni modi optio quaerat quasi sapiente ullam,
+                    vitae?
+                </p>
+            </div>
+        </div>
+    </div>
+}
 
-        />
-        {/*<Counter pointsClouds={pointsClouds}*/}
-        {/*         pointsTemp={pointsTemp}*/}
-        {/*         pointsWind={pointsWind}*/}
-        {/*/>*/}
-    </>
-
-
-};
 export default Location

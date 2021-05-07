@@ -1,88 +1,28 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
+import kelvinToCelsius from "../../helpers/kelvinToCelsius";
+import metricToBeaufort from "../../helpers/metricToBeaufort";
+import './Counter.css';
 
-function Counter( { temp, clouds, wind, location}) {
-    const [pointsClouds, setPointsClouds] = useState(0)
-    const [pointsTemp, setPointsTemp] = useState(0)
-    const [pointsWind, setPointsWind] =useState(0)
+function Counter({location}) {
 
-    function getPointsClouds() {
-        if (clouds < 30) {
-            setPointsClouds(pointsClouds + 20);
-        }
-        if (clouds >= 30 && clouds < 50) {
-            setPointsClouds(pointsClouds + 15);
-        }
-        if (clouds > 50 && clouds < 99) {
-            setPointsClouds(pointsClouds + 8);
-        }
-        if (clouds > 99) {
-            setPointsClouds(pointsClouds + 2);
-        }
-    }
 
-    function getPointsTemp() {
-        if (temp < 0) {
-            setPointsTemp(pointsTemp + 1);
-        }
-        if (temp >= 0 && temp < 4) {
-            setPointsTemp(pointsTemp + 3);
-        }
-        if (temp >= 4 && temp < 6) {
-            setPointsTemp(pointsTemp + 4);
-        }
-        if (temp >= 6 && temp < 8) {
-            setPointsTemp(pointsTemp + 5);
-        }
-        if (temp >= 8 && temp < 10) {
-            setPointsTemp(pointsTemp + 6);
-        }
-        if (temp >= 10 && temp < 13) {
-            setPointsTemp(pointsTemp + 8);
-        }
-        if (temp >= 13 && temp < 20) {
-            setPointsTemp(pointsTemp + 10);
-        }
-        if (temp >= 20 && temp < 25) {
-            setPointsTemp(pointsTemp + 12);
-        }
-        if(temp >= 25) {
-            setPointsTemp(pointsTemp + 15);
-        }
-    }
+    return <div className="counter">
+        <div className="weather-left">
 
-    function getPointsWind() {
-        if(wind < 2) {
-            setPointsWind(pointsWind + 10);
-        }
-        if(wind >= 2 && wind < 4) {
-            setPointsWind(pointsWind + 8);
-        }
-        if(wind >= 4 && wind < 6) {
-            setPointsWind(pointsWind + 4);
-        }
-        if(wind > 6 && wind < 8) {
-            setPointsWind(pointsWind + 2);
-        }
-        if(wind > 8) {
-            setPointsWind(pointsWind + 1);
-        }
-    }
+            <p className="total-points">{location && location.totalPoints}</p>
+            <img className="icon-weather"
+                 src={location && `https://openweathermap.org/img/wn/${location.locationIcon}.png`} alt="icon"/>
 
-    useEffect(()=>{
-        getPointsClouds();
-        getPointsTemp();
-        getPointsWind();
-    },[])
+            <div className="name-description">
+                <h3>{location && location.locationName}</h3>
+                <p>{location && location.locationDescription}</p>
+            </div>
+        </div>
+        <div className="weather-right">
+            <p>{`${kelvinToCelsius(location && location.locationTemp)} °C`}</p>
+            <p className="windkracht">Windkracht {metricToBeaufort(location && location.locationWind)}</p>
 
-    const total = pointsTemp+pointsClouds+pointsWind;
-    // console.log(total)
-    // console.log([location, total])
-    return <div>
-        {/*<p>temp{pointsTemp}</p>*/}
-        {/*<p>wolken{pointsClouds}</p>*/}
-        {/*<p>wind{pointsWind}</p>*/}
-
-        {total}</div>
-}
+        </div>
+    </div>
+};
 export default Counter
-

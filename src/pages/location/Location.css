@@ -1,6 +1,52 @@
-.bontebok {
+.single-location {
     display: flex;
-    flex-wrap: nowrap;
-    align-items: flex-start;
+    /*background-color: #747474;*/
     flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.terras {
+    margin: 20px 0;
+    background-color:rgba(255, 255, 255, 0.7);
+    padding: 24px 24px;
+    width: 316px;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*align-items: flex-start;*/
+    box-shadow: .25rem .5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.terrace-image {
+    width: 268px;
+    height: 140px;
+    margin-bottom: 12px;
+}
+
+.lil-foo {
+    display: none;
+}
+
+@media only screen and (min-width: 767px) {
+    .lil-foo {
+        display: flex;
+    }
+    .single-location-mobile {
+        display: none;
+    }
+    .terras {
+        display: none;
+    }
+    .single-location-web {
+        display: flex;
+    }
+    .terras-web {
+        margin: 20px 0;
+        background-color:rgba(255, 255, 255, 0.7);
+        padding: 24px 24px;
+        width: 316px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: .25rem .5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    }
 }

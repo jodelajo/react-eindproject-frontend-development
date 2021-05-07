@@ -1,34 +1,65 @@
-import React from 'react';
-import './Home.css';
-import { Link } from "react-router-dom";
-import wadden from "../../assets/plattegrond/wadden_roze.png";
-import noordwest from "../../assets/plattegrond/noordwest_roze.png";
-import noordoost from "../../assets/plattegrond/noordoost_roze.png";
-import zuidwest from "../../assets/plattegrond/zuidwest_roze.png";
-import zuidoost from "../../assets/plattegrond/zuidoost_roze.png";
+import React from 'react'
+import './Home.css'
+import {useAuth} from '../../context/AuthContext'
+import {ReactComponent as Terrace} from '../../assets/images/terrace-svgrepo-com.svg';
+import SignUpLogInLink from "../../components/signUpLogInLink/SignUpLogInLink";
+import Map from "../../components/map/Map";
+import LittleFooter from "../../components/littleFooter/LittleFooter";
+import mapExample from '../../assets/images/app_example.png'
+import {Link} from "react-router-dom";
 
 
-function Home(){
-    return <div>
-                    <h1>It beste plakje fan Fryslân</h1>
-                    <div>
-                            <Link to="/wadden">
-                            <img src={wadden} id="wadden" alt="wadden" />
-                            </Link>
-                            <Link to="/noordwest">
-                            <img src={noordwest} id="noordwest" alt="noordwest" />
-                            </Link>
-                            <Link to="/noordoost">
-                            <img src={noordoost} id="noordoost" alt="noordoost"/>
-                            </Link>
-                            <Link to="/zuidwest">
-                            <img src={zuidwest} id="zuidwest" alt="zuidwest"/>
-                            </Link>
-                            <Link to="/zuidoost">
-                            <img src={zuidoost} id="zuidoost" alt="zuidoost"/>
-                            </Link>
+function Home() {
+
+    const {currentUser} = useAuth()
+
+    return <div className="home">
+        <h2 className="home-title">It beste plakje fan Fryslân</h2>
+
+
+        <div className="home-wrapper">
+            {!currentUser ?
+                <div className="pop-up">
+                    <div className="welkom">
+                        <h3 className="welkom-text">Welkom</h3>
+                        <p className="intro">Vind het terras met het beste weer van Friesland!</p>
+                        <p className="intro-2">Maak snel een account aan!</p>
+                        <Terrace className="icon-terrace"/>
                     </div>
+                </div>
+                :
+                <Map/>
+
+            }
+
+            {!currentUser && <div className="signup">
+                <SignUpLogInLink/>
+            </div>}
+        </div>
+
+        <div className="web-home">
+            {!currentUser ?
+                <div className="web-left">
+                    <Link to="/log-in">
+                        <img src={mapExample} alt="map-example" className="map-example"/>
+                    </Link>
+                </div>
+                :
+                <div className="web-left">
+                    <Map/>
+                    <LittleFooter/>
+                </div>}
+            <div className="web-right">
+                <h2>Klik op een regio</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
+                    consequatur ex fuga impedit optio quisquam saepe. Amet atque, cupiditate
+                    doloribus eaque laboriosam magni modi optio quaerat quasi sapiente ullam,
+                    vitae?
+                </p>
+            </div>
+        </div>
 
     </div>
 }
+
 export default Home

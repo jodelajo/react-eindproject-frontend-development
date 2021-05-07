@@ -1,0 +1,28 @@
+.region-ul {
+    list-style-type: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+.region {
+    padding: 20px 0 0 0;
+    /*background-color: white;*/
+}
+.footer-region {
+    display: none;
+}
+.region-title {
+    padding: 20px 0;
+}
+@media only screen and (min-width: 767px) {
+    .footer-region {
+        display: flex;
+    }
+    .region-ul {
+        display: none;
+    }
+    .region-ul-web {
+        list-style-type: none;
+    }
+}

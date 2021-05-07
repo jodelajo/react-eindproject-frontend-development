@@ -1,74 +1,56 @@
-import React from 'react';
-import axios from 'axios';
-import {BrowserRouter as Router, NavLink, Route, Switch} from "react-router-dom";
-import './App.css';
-import NavBar from "./components/navBar/NavBar";
-import Home from "./pages/home/Home";
-import Friesland from "./pages/friesland/Friesland";
-import HeroButton from "./components/heroButton/HeroButton";
-import Footer from "./components/footer/Footer";
-import Wadden from "./pages/wadden/Wadden";
-import NoordWest from "./pages/noordwest/NoordWest";
-import NoordOost from "./pages/noordoost/NoordOost";
-import ZuidWest from "./pages/zuidwest/ZuidWest";
-import ZuidOost from "./pages/zuidoost/ZuidOost";
-
-import Location from "./pages/location/Location";
+import React from 'react'
+import {Route, Switch} from 'react-router-dom'
+import './App.css'
+import NavBar from './components/navBar/NavBar'
+import Home from './pages/home/Home'
+import Friesland from './pages/friesland/Friesland'
+import Footer from './components/footer/Footer'
+import Wadden from './pages/wadden/Wadden'
+import NoordWest from './pages/noordwest/NoordWest'
+import NoordOost from './pages/noordoost/NoordOost'
+import ZuidWest from './pages/zuidwest/ZuidWest'
+import ZuidOost from './pages/zuidoost/ZuidOost'
+import SignUp from './pages/signUp/SignUp'
+import LogIn from './pages/logIn/LogIn'
+import Profile from './pages/profile/Profile'
+import PrivateRoute from './components/privateRoute/PrivateRoute'
+import ForgotPassword from './pages/forgotPassword/ForgotPassword'
+import UpdateProfile from './pages/updateProfile/UpdateProfile'
+import Location from './pages/location/Location'
+import Region from "./components/region/Region"
+import Header from "./components/header/Header";
 
 function App() {
     return (
-        <Router>
+        <>
+
             <div className="weather-container">
-
-                {/*HEADER -------------------- */}
-                <div className="weather-header">
-                    <NavBar/>
-
-                    <span className="location-details">
-                <Switch>
-                    <Route exact path="/">
-                       <Home/>
-                   </Route>
-                    <Route path="/friesland">
-                         <Friesland/>
-                  </Route>
-                    <Route path="/wadden">
-                         <Wadden />
-                  </Route>
-                    <Route exact path="/noordwest">
-                         <NoordWest />
-                  </Route>
-                      <Route exact path="/noordoost">
-                         <NoordOost />
-                  </Route>
-                    <Route exact path="/zuidwest">
-                         <ZuidWest />
-                  </Route>
-                     <Route exact path="/zuidoost">
-                         <ZuidOost />
-                  </Route>
-                    <Route  path="/location">
-                         <Location />
-                    </Route>
-             </Switch>
-          </span>
-                </div>
-
-                {/*CONTENT ------------------ */}
-                <div className="weather-content">
-                    {/*<TabBarMenu/>*/}
-
-                    <div className="tab-wrapper">
-                        <HeroButton/>
-                        <HeroButton/>
-                    </div>
-                    <div>
-                        <Footer/>
+                <NavBar/>
+                <Header/>
+                <div className="weather-wrapper">
+                    <div className="app-content">
+                        <Switch>
+                            <Route exact path="/" component={Home}/>
+                            <PrivateRoute path="/friesland" component={Friesland}/>
+                            <PrivateRoute path="/wadden" component={Wadden}/>
+                            <PrivateRoute exact path="/noordwest" component={NoordWest}/>
+                            <PrivateRoute exact path="/noordoost" component={NoordOost}/>
+                            <PrivateRoute exact path="/zuidwest" component={ZuidWest}/>
+                            <PrivateRoute exact path="/zuidoost" component={ZuidOost}/>
+                            <PrivateRoute path="/location/:slug" component={Location}/>
+                            <PrivateRoute path="/region" component={Region}/>
+                            <Route path="/sign-up" component={SignUp}/>
+                            <Route path="/log-in" component={LogIn}/>
+                            <PrivateRoute path="/profile" component={Profile}/>
+                            <Route path="/forgot-password" component={ForgotPassword}/>
+                            <PrivateRoute path="/update-profile" component={UpdateProfile}/>
+                        </Switch>
                     </div>
                 </div>
+                <Footer/>
             </div>
-        </Router>
-    );
+        </>
+    )
 }
 
 export default App;

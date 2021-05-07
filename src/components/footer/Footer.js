@@ -1,17 +1,24 @@
 import React from 'react';
 import './Footer.css';
-import {RiHome2Line, RiRefreshLine, RiArrowLeftLine, RiMenuFill} from "react-icons/ri";
-import { Link } from 'react-router-dom';
+import {RiHome2Line, RiStarLine, RiArrowLeftLine} from "react-icons/ri";
+import {Link, useHistory} from 'react-router-dom';
 
-function Footer(){
-    return <div className="footer">
-        <p className="icon" id="back-button"><RiArrowLeftLine/></p>
-        <Link to="/">
-        <p className="icon" id="home-button"><RiHome2Line/></p>
-        </Link>
-        <Link to="/location">
-        <p className="icon"><RiRefreshLine/></p>
-        </Link>
-    </div>
+function Footer() {
+    const history = useHistory()
+    return <>
+        <div className="footer">
+            <p className="icon" onClick={() => history.goBack()}><RiArrowLeftLine/></p>
+            <Link to="/">
+                <p className="icon" id="home-button"><RiHome2Line/></p>
+            </Link>
+            <Link to="/friesland">
+                <p className="icon" id="star-button"><RiStarLine/></p>
+            </Link>
+        </div>
+        <div className="footer-web">
+            <p>girlPowered by jodelajo 2021</p>
+        </div>
+    </>
 }
+
 export default Footer
