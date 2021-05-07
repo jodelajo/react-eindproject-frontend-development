@@ -45,7 +45,7 @@ If you don't have the Firebase API key, you can go to their website at [firebase
 Copy the `.env.dist` file:
 
 ```shell
-cp ..env.dist ..env
+cp ...env.dist ..env
 ```
 
 Open the `.env` file and set the `REACT_APP_FIREBASE_API_KEY` with your own Firebase API key:

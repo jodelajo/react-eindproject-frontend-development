@@ -77,11 +77,12 @@ body {
 
 @media only screen and (min-width: 1600px) {
     .weather-container {
-        background: linear-gradient(#ffffff, #5a287f);
+        background: radial-gradient(#ffffff 70%, #ff477e);
         padding: 0 0 100px 0;
     }
     .weather-wrapper {
         min-height: 620px;
+        width: 1600px;
     }
 
 }
