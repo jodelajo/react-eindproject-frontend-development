@@ -1,6 +1,6 @@
 import React, {useContext} from 'react'
 import {LocationContext} from "../../context/LocationContext";
-import {useParams, Link } from 'react-router-dom'
+import {useParams} from 'react-router-dom'
 import terraceData from '../../data/terrace.json'
 import './Location.css'
 import Counter from "../../components/counter/Counter";
@@ -53,7 +53,7 @@ function Location() {
             <h2>{specificTerrace && specificTerrace.name}</h2>
             <p>{specificTerrace && specificTerrace.address}</p>
             <p>{specificTerrace && specificTerrace.terraceLocation}</p>
-            <Link to={specificTerrace.website}>Website</Link>
+            <a href={specificTerrace.website} target="_blank" rel="noreferrer">Website</a>
             <p>{specificTerrace && specificTerrace.phone}</p>
             <p>{specificTerrace && specificTerrace.email}</p>
         </div>
@@ -78,7 +78,7 @@ function Location() {
                     <h2>{specificTerrace && specificTerrace.name}</h2>
                     <p>{specificTerrace && specificTerrace.address}</p>
                     <p>{specificTerrace && specificTerrace.terraceLocation}</p>
-                    <Link to={specificTerrace.website}>Website</Link>
+                    <a href={specificTerrace.website} target="_blank" rel="noreferrer">Website</a>
                     <p>{specificTerrace && specificTerrace.phone}</p>
                     <p>{specificTerrace && specificTerrace.email}</p>
                 </div>

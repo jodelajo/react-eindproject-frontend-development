@@ -1,43 +1,16 @@
-.navbar{
-    width: 100%;
-    background-color: #ff0a54;
+#navbar {
     height: 60px;
-    margin:0;
+    background-color: #ff0a54;
+    position: sticky;
     top: 0;
-    left: 0;
+    width: 100%;
     display: flex;
-    padding: 12px;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
-    /*position: fixed;*/
-    z-index: 10;
-    /*flex-wrap: wrap;*/
+    align-items: center;
+    padding: 0 10px;
 }
-/*.navbar-input{*/
-/*    !*width: 100%;*!*/
-/*    display: flex;*/
-/*    !*justify-content: space-between;*!*/
-/*    !*align-content: space-between;*!*/
-/*    !*align-items: center;*!*/
-
-/*}*/
-.settings {
-    font-size: 40px;
-
-    text-decoration: none;
-    color: #33312F;
-}
-.refresh {
-    font-size: 40px;
-    text-decoration: none;
-    color: #f9bec7;
-}
-
 
 .username {
-    width: 200px;
-
     text-align: center;
     font-size: 24px;
     color: white;
@@ -47,8 +20,100 @@
     text-decoration: none;
 }
 
-@media only screen and (min-width: 767px){
-    .navbar {
-        position: fixed;
+.refresh {
+    font-size: 40px;
+    text-decoration: none;
+    color: #f9bec7;
+}
+.refresh-button {
+    border: none;
+    background: #ff0a54;
+}
+#menu {
+    display: block;
+    top: 60px;
+    left: 0;
+    width: 100px;
+    position: absolute;
+}
+
+#menu-web {
+    display: none;
+}
+
+.exit {
+    width: 100px;
+    text-align: right;
+    font-size: 28px;
+    border: none;
+    background-color: gray;
+}
+.hamburger-icon {
+    color: white;
+    font-size: 2.8em;
+}
+
+#hamburger {
+    display: none;
+}
+
+.menuClass {
+    width: 100px;
+    padding: 10px;
+    text-decoration: none;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+    border-top: 2px solid #333;
+    background-color: white;
+}
+
+.menuClass:hover {
+    background: #ff0a54;
+    color: white;
+
+}
+
+
+
+@media only screen and (min-width: 767px) {
+    #menu-web {
+        box-sizing: border-box;
+        display: flex;
+        position: static;
+    }
+
+    .refresh-button {
+        display: none;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .menuClass {
+        width: 100px;
+        color: white;
+        background-color: #ff0a54;
+        border: none;
+    }
+
+    .menuClass:hover {
+        border-bottom: 2px solid #333;
+    }
+
+    .hamburger-icon {
+        display: none;
+    }
+
+    .exit {
+        display: none;
+    }
+}
+@media only screen and (min-width: 1600px) {
+    #menu {
+        max-width: 1600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

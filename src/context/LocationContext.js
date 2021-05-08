@@ -211,6 +211,7 @@ function LocationContextProvider({children}) {
     const [locationsNoordWest, setLocationsNoordWest] = useState([])
     const [locationsNoordOost, setLocationsNoordOost] = useState([])
     const [locationsZuidWest, setLocationsZuidWest] = useState([])
+
     // const [boosterSelected, toggleBoosterSelected] = useState(false)
 
     //
@@ -222,6 +223,10 @@ function LocationContextProvider({children}) {
     //         toggleBoosterSelected(true)
     //     }
     // }
+
+    const refresh = () => {
+        fetchLocations()
+    }
 
     async function fetchLocations() {
         try {
@@ -438,6 +443,7 @@ function LocationContextProvider({children}) {
         locationsNoordWest: locationsNoordWest,
         locationsNoordOost: locationsNoordOost,
         locationsZuidWest: locationsZuidWest,
+        refresh,
         // boosterCloud: boosterCloud,
     }
 

@@ -19,6 +19,7 @@ import UpdateProfile from './pages/updateProfile/UpdateProfile'
 import Location from './pages/location/Location'
 import Region from "./components/region/Region"
 import Header from "./components/header/Header";
+import ContactForm from "./pages/contactForm/ContactForm";
 
 function App() {
     return (
@@ -44,6 +45,7 @@ function App() {
                             <PrivateRoute path="/profile" component={Profile}/>
                             <Route path="/forgot-password" component={ForgotPassword}/>
                             <PrivateRoute path="/update-profile" component={UpdateProfile}/>
+                            <Route path="/contact" component={ContactForm} />
                         </Switch>
                     </div>
                 </div>
