@@ -5,6 +5,7 @@
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+
 }
 
 .home-wrapper {
@@ -12,7 +13,8 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: 100vh;
+    height: auto;
+    justify-content: space-around;
 }
 
 .pop-up {
@@ -24,6 +26,7 @@
     background-repeat: no-repeat;
     background-position: center top;
     margin-bottom: 14px;
+    margin-top: 12px;
 }
 
 .welkom {
@@ -60,6 +63,22 @@
     fill: #f71818;
 }
 
+.signup {
+    display: inline-block;
+}
+@media only screen and (min-width: 414px){
+    .home-wrapper {
+        height: 498px;
+    }
+
+}
+@media only screen and (min-height: 812px){
+    .home-wrapper {
+        height: 574px;
+    }
+
+}
+
 @media only screen and (min-width: 767px) {
     .home {
         justify-content: flex-start;
@@ -87,7 +106,10 @@
 
     .web-home{
         display: flex;
-        padding: 0 60px;
+        justify-content: center;
+        /*padding: 0 60px;*/
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .web-left {

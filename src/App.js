@@ -28,7 +28,7 @@ function App() {
             <div className="weather-container">
                 <NavBar/>
                 <Header/>
-                <div className="weather-wrapper">
+                <main className="weather-wrapper">
                     <div className="app-content">
                         <Switch>
                             <Route exact path="/" component={Home}/>
@@ -40,15 +40,15 @@ function App() {
                             <PrivateRoute exact path="/zuidoost" component={ZuidOost}/>
                             <PrivateRoute path="/location/:slug" component={Location}/>
                             <PrivateRoute path="/region" component={Region}/>
-                            <Route path="/sign-up" component={SignUp}/>
-                            <Route path="/log-in" component={LogIn}/>
                             <PrivateRoute path="/profile" component={Profile}/>
                             <Route path="/forgot-password" component={ForgotPassword}/>
                             <PrivateRoute path="/update-profile" component={UpdateProfile}/>
                             <Route path="/contact" component={ContactForm} />
+                            <Route path="/sign-up" component={SignUp}/>
+                            <Route path="/log-in" component={LogIn}/>
                         </Switch>
                     </div>
-                </div>
+                </main>
                 <Footer/>
             </div>
         </>

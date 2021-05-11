@@ -1,5 +1,5 @@
 import React from 'react'
-import './ContactForm.css'
+import '../signUp/SignUp.css'
 import {useForm} from "react-hook-form";
 import SubmitButton from "../../components/submitButton/SubmitButton";
 
@@ -9,7 +9,8 @@ function ContactForm(){
     function onFormSubmit(data) {
         console.log(data)
     }
-    return <form onSubmit={handleSubmit(onFormSubmit)} className="contact-form">
+    return <main className="signup-wrapper">
+    <form onSubmit={handleSubmit(onFormSubmit)} className="form">
     <h2>Contactformulier</h2>
         <label htmlFor="details-name">
             Naam:
@@ -17,6 +18,7 @@ function ContactForm(){
             type="text"
             name="name"
             id="details-name"
+            className="input"
             {...register("username")} required
             />
         </label>
@@ -26,6 +28,7 @@ function ContactForm(){
                 type="text"
                 name="email"
                 id="details-email"
+                className="input"
                 {...register("email")} required
             />
         </label>
@@ -35,8 +38,9 @@ function ContactForm(){
                 type="text"
                 name="text-area"
                 rows="4"
-                cols="40"
+                cols="35"
                 id="details-message"
+                className="input"
                 {...register("message")} required
             />
         </label>
@@ -45,5 +49,6 @@ function ContactForm(){
         />
 
     </form>
+    </main>
 }
 export default ContactForm

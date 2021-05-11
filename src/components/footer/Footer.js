@@ -15,11 +15,11 @@ function Footer() {
                 <p className="icon" id="star-button"><RiStarLine/></p>
             </Link>
         </div>
-        <div className="footer-web">
+        <div className="footer-web" data-testid='footer-1'>
             <p>girlPowered by jodelajo 2021</p>
-            <Link to="https://github.com/jodelajo">
+            <a href="https://github.com/jodelajo">
                 <RiGithubFill/>
-            </Link>
+            </a>
         </div>
     </>
 }

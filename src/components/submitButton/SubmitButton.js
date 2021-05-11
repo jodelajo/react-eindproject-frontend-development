@@ -6,6 +6,7 @@ function SubmitButton({disabled, buttonText, onClick}){
                    className="submit-button"
                    disabled={disabled}
                     onClick={onClick}
+                   data-testid='button-1'
     >{buttonText}</button>
 }
 export default SubmitButton
