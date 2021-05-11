@@ -17,82 +17,67 @@
 body {
     font-family: 'Core Sans G', Arial, sans-serif;
     width: 100vw;
-    height: 785px;
     color: #33312F;
-    background: linear-gradient(#ffffff, #f9bec7);
-    padding: 0;
 }
 
 .weather-container {
-    position: fixed;
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: center;*/
+    display: flex;
+    flex-direction: column;
     width: 100vw;
-    /*height: 595px;*/
     height: 100vh;
-    /*height: 667px;*/
-
-    /*box-shadow: .25rem .5rem 1rem 0 rgba(0, 0, 0, 0.1);*/
+    min-height: 100%;
 }
-
 
 .weather-wrapper {
     display: flex;
-    /*padding-top: 60px;*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     height: auto;
-    /*background: linear-gradient(#ffffff, #f9bec7);*/
-}
-/*.app-content {*/
-/*    !*padding-top: 80px;*!*/
-/*}*/
-
-@media only screen and (min-width: 736px) {
-    body {
-        /*height: 944px;*/
-    }
+    flex-grow: 1;
+    background: linear-gradient(#ffffff, #f9bec7);
 }
 
 @media only screen and (min-width: 767px) {
-    body {
-        min-height: 100%;
-        background: none;
-    }
+
     .weather-container {
         position: static;
-        /*display: flex;*/
-        /*flex-direction: column;*/
         width: 100vw;
         height: auto;
-        /*justify-content: space-between;*/
     }
 
     .weather-wrapper {
-        padding-top: 60px;
-        padding-bottom: 70px;
-        height: auto;
+        padding: 60px 30px 160px 30px;
+        height: 100%;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
         max-width: 1600px;
+        flex-grow: 1;
         background: linear-gradient(#ffffff, #f9bec7);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .weather-wrapper {
+        padding: 60px 60px 160px 60px;
     }
 }
 
 @media only screen and (min-width: 1600px) {
     .weather-container {
-        background: radial-gradient(#ffffff 70%, #ff477e);
+        background: linear-gradient(#ffffff, #f9bec7);
         padding: 0 0 100px 0;
     }
+
     .weather-wrapper {
-        min-height: 620px;
+        min-height: 590px;
         width: 1600px;
         margin-left: auto;
         margin-right: auto;
+        background: white;
+        box-shadow: .25rem .5rem 1rem 0 rgba(0, 0, 0, 0.1);
     }
 
 }

@@ -10,10 +10,10 @@ function Header() {
         <div className="title-map">
             <h1 className="title">It beste plakje fan Fryslân</h1>
             <img src={screenshot_app} alt="screenshot" className="screenshot"/>
+
         </div>
         {!currentUser &&
         <SignUpLogInLink/>
-
         }
     </div>
 }

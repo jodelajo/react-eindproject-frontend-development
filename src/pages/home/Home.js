@@ -7,6 +7,7 @@ import Map from "../../components/map/Map";
 import LittleFooter from "../../components/littleFooter/LittleFooter";
 import mapExample from '../../assets/images/app_example.png'
 import {Link} from "react-router-dom";
+import Text from "../../components/text/Text";
 
 
 function Home() {
@@ -38,24 +39,25 @@ function Home() {
         </div>
 
         <div className="web-home">
-            {!currentUser ?
-                <div className="web-left">
-                    <Link to="/log-in">
-                        <img src={mapExample} alt="map-example" className="map-example"/>
-                    </Link>
-                </div>
-                :
-                <div className="web-left">
-                    <Map/>
-                    <LittleFooter/>
-                </div>}
+            <div className="web-left">
+                {!currentUser ?
+                    <div>
+                        <Link to="/log-in">
+                            <img src={mapExample} alt="map-example" className="map-example"/>
+                        </Link>
+                    </div>
+                    :
+                    <div className="web-left">
+                        <div className="map-web-left">
+                            <Map/>
+                        </div>
+                        <div className="footer-web-left">
+                            <LittleFooter/>
+                        </div>
+                    </div>}
+            </div>
             <div className="web-right">
-                <h2>Klik op een regio</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
-                    consequatur ex fuga impedit optio quisquam saepe. Amet atque, cupiditate
-                    doloribus eaque laboriosam magni modi optio quaerat quasi sapiente ullam,
-                    vitae?
-                </p>
+                <Text/>
             </div>
         </div>
 

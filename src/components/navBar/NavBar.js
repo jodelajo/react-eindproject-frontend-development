@@ -21,28 +21,31 @@ function NavBar() {
         <input type="checkbox"
                id="hamburger"
                checked={checked}
-               onChange={() => {setChecked(!checked)}}
+               onChange={() => {
+                   setChecked(!checked)
+               }}
         />
 
         {checked && <div id="menu">
             <button type="button" className="exit" onClick={handleClick}>X</button>
             <Link to="/" className="menuClass">Home</Link>
-            <Link to="/profile" className="menuClass">Settings</Link>
+            <Link to="/profile" className="menuClass">Instellingen</Link>
             <Link to="contact" className="menuClass">Contact</Link>
         </div>}
 
-        <div>
-            {currentUser && <p className="username">
+        <div className="nav-wrapper">
+            {currentUser ? <p className="username">
                 Hoi {currentUser && currentUser.displayName}
-            </p>}
-        </div>
+            </p>
+            :
+            <p></p>}
 
         {!checked && <div id="menu-web">
             <Link to="/" className="menuClass">Home</Link>
-            <Link to="/profile" className="menuClass">Settings</Link>
+            <Link to="/profile" className="menuClass">Instellingen</Link>
             <Link to="/contact" className="menuClass">Contact</Link>
         </div>}
-
+        </div>
         <button className="refresh-button" onClick={refresh}>
             <RiRefreshLine className="refresh"/>
         </button>

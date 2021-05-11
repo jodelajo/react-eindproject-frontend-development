@@ -1,7 +1,7 @@
 #navbar {
     height: 60px;
     background-color: #ff0a54;
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     display: flex;
@@ -24,6 +24,7 @@
     font-size: 40px;
     text-decoration: none;
     color: #f9bec7;
+    cursor: pointer;
 }
 .refresh-button {
     border: none;
@@ -71,16 +72,24 @@
 .menuClass:hover {
     background: #ff0a54;
     color: white;
-
 }
 
-
-
 @media only screen and (min-width: 767px) {
+
+    .nav-wrapper {
+        display: flex;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: baseline;
+        justify-content: space-between;
+    }
+
     #menu-web {
         box-sizing: border-box;
         display: flex;
-        position: static;
+        justify-content: space-between;
+        /*position: static;*/
     }
 
     .refresh-button {
@@ -111,9 +120,8 @@
     }
 }
 @media only screen and (min-width: 1600px) {
-    #menu {
-        max-width: 1600px;
-        margin-left: auto;
-        margin-right: auto;
+
+    .nav-wrapper {
+        width: 1600px;
     }
 }

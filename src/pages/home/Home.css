@@ -1,20 +1,21 @@
 .home {
-    padding-top: 30px;
-    padding-bottom: 0;
+    /*padding-top: 30px;*/
+    padding-bottom: 30px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    flex-grow: 1;
+    /*justify-content: space-between;*/
     text-align: center;
 
 }
 
 .home-wrapper {
-    padding-top: 30px;
+    /*padding-top: 30px;*/
     display: flex;
     flex-direction: column;
     text-align: center;
-    height: auto;
-    justify-content: space-around;
+    height: 100%;
+    /*justify-content: space-between;*/
 }
 
 .pop-up {
@@ -112,32 +113,43 @@
         margin-right: auto;
     }
 
-    .web-left {
-        background-color: rgba(90, 40, 127, 0.4);
-        color: #33312F;
-        min-height: 400px;
-        width: 36%;
-        max-width: 540px;
-        border-radius: 32px 32px 0 0;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: space-between;
-        box-shadow: .25rem .5rem 2rem 0 rgba(0, 0, 0, 0.1);
-    }
+    /*.web-left {*/
+    /*    background-color: rgba(90, 40, 127, 0.4);*/
+    /*    color: #33312F;*/
+    /*    min-height: 400px;*/
+    /*    width: 36%;*/
+    /*    min-width: 400px;*/
+    /*    max-width: 540px;*/
+    /*    border-radius: 32px 32px 0 0;*/
+    /*    display: flex;*/
+    /*    align-items: center;*/
+    /*    flex-direction: column;*/
+    /*    justify-content: space-between;*/
+    /*    box-shadow: .25rem .5rem 2rem 0 rgba(0, 0, 0, 0.1);*/
+    /*}*/
+    .footer-web-left {
 
+    }
     .web-right {
-        padding: 0 60px;
+        padding: 4px 20px 0 20px;
         display: flex;
         flex-direction: column;
+        min-height: 400px;
         width: 64%;
-        justify-content: center;
+        /*justify-content: center;*/
     }
-
     .map-example {
         width: 100%;
         margin-bottom: -10px;
         min-height: 400px;
         max-width: 540px;
+    }
+}
+
+
+
+@media only screen and (min-width: 1024px) {
+    .web-right {
+        /*padding: 60px;*/
     }
 }

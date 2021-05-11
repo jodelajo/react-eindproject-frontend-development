@@ -28,8 +28,8 @@ function App() {
             <div className="weather-container">
                 <NavBar/>
                 <Header/>
-                <main className="weather-wrapper">
-                    <div className="app-content">
+                <div className="weather-wrapper">
+                    <main className="app-content">
                         <Switch>
                             <Route exact path="/" component={Home}/>
                             <PrivateRoute path="/friesland" component={Friesland}/>
@@ -47,8 +47,8 @@ function App() {
                             <Route path="/sign-up" component={SignUp}/>
                             <Route path="/log-in" component={LogIn}/>
                         </Switch>
-                    </div>
-                </main>
+                    </main>
+                </div>
                 <Footer/>
             </div>
         </>
