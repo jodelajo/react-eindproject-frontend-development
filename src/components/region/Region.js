@@ -3,6 +3,7 @@ import Counter from "../counter/Counter"
 import './Region.css'
 import { NavLink } from 'react-router-dom'
 import LittleFooter from "../littleFooter/LittleFooter";
+import Text from "../text/Text";
 
 function Region({locationsRegion, regionName}) {
     return <div className="region">
@@ -66,12 +67,7 @@ function Region({locationsRegion, regionName}) {
               <LittleFooter />
             </div>
             <div className="web-right">
-                <h2>Klik op een regio</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
-                    consequatur ex fuga impedit optio quisquam saepe. Amet atque, cupiditate
-                    doloribus eaque laboriosam magni modi optio quaerat quasi sapiente ullam,
-                    vitae?
-                </p>
+                <Text/>
             </div>
         </div>
     </div>

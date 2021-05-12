@@ -31,5 +31,7 @@ a:link {
     .region-ul-web {
         list-style-type: none;
         padding: 10px 6px 0 6px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

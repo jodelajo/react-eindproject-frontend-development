@@ -37,6 +37,11 @@
     .terras {
         display: none;
     }
+
+    /*.web-left {*/
+    /*    margin-left: auto;*/
+    /*    margin-right: auto;*/
+    /*}*/
     .single-location-web {
         display: flex;
     }

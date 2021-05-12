@@ -47,7 +47,7 @@ function Home() {
                         </Link>
                     </div>
                     :
-                    <div className="web-left">
+                    <div>
                         <div className="map-web-left">
                             <Map/>
                         </div>

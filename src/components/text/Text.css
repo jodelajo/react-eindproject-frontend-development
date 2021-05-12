@@ -6,32 +6,58 @@
 
 #star-button > * {
     fill: #ff477e;
+    vertical-align: middle;
 
 }
+
 .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
+    background-color: rgba(51, 49, 47, 0.7);
+    margin-left: 40px;
 }
+
 .alinea-text {
-    background-color: white;
+
+    /*background-color: white;*/
+    display: flex;
+    flex-direction: column;
+    color: white;
+    /*align-items: center;*/
+
 }
 
 .alinea {
     padding: 10px;
-
     font-size: 1.6em;
     text-align: left;
     font-weight: 300;
 
 }
 
-
+#drie {
+    text-align: center;
+    font-weight: 600;
+}
+.arrow {
+    font-size: 30px;
+}
+.arrow > * {
+    fill: #f71818;
+    vertical-align: middle;
+}
 
 .text-h2 {
-    font-size: 1.4em;
+    font-size: 2.4em;
+    font-variant: all-small-caps;
+    color: #f9bec7;
 }
+
 
 @media only screen and (min-width: 1024px) {
     .text-h2 {
-        font-size: 2.4em;
+        font-size: 3.4em;
     }
 }

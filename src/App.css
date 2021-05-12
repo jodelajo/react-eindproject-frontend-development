@@ -56,12 +56,14 @@ body {
         max-width: 1600px;
         flex-grow: 1;
         background: linear-gradient(#ffffff, #f9bec7);
+
     }
 }
 
 @media only screen and (min-width: 1024px) {
     .weather-wrapper {
         padding: 60px 60px 160px 60px;
+
     }
 }
 

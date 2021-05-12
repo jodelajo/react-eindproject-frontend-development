@@ -5,6 +5,7 @@ import terraceData from '../../data/terrace.json'
 import './Location.css'
 import Counter from "../../components/counter/Counter";
 import LittleFooter from "../../components/littleFooter/LittleFooter";
+import Text from "../../components/text/Text";
 
 
 
@@ -85,12 +86,7 @@ function Location() {
                 <LittleFooter/>
             </div>
             <div className="web-right">
-                <h2>Klik op een regio</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores,
-                    consequatur ex fuga impedit optio quisquam saepe. Amet atque, cupiditate
-                    doloribus eaque laboriosam magni modi optio quaerat quasi sapiente ullam,
-                    vitae?
-                </p>
+                <Text/>
             </div>
         </div>
     </div>
