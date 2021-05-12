@@ -17,6 +17,8 @@ export function AuthContextProvider({children}) {
                 ref.user.updateProfile({
                     displayName: userName,
                 })
+                console.log(currentUser)
+                setCurrentUser({...currentUser, displayName: userName})
             })
     }
 
@@ -55,6 +57,7 @@ export function AuthContextProvider({children}) {
         signup,
         login,
         logout,
+        setCurrentUser,
         resetPassword: resetPassword,
         updateEmail: updateEmail,
         updatePassword: updatePassword,

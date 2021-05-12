@@ -2,9 +2,9 @@ import React, {createContext, useEffect, useState,} from 'react';
 import axios from 'axios';
 import kelvinToCelsius from "../helpers/kelvinToCelsius";
 
-function getPointsClouds(clouds) {
+function getPointsClouds(clouds,multiplier) {
     if (clouds < 10) {
-        return 11;
+        return 11 * multiplier;
         // setPointsClouds(pointsClouds + 20);
     }
     if (clouds >= 10 && clouds < 15) {
@@ -51,7 +51,6 @@ function getPointsClouds(clouds) {
         return 0;
     }
 }
-
 
 function getPointsWind(wind) {
     if (wind < 0.3) {
@@ -307,7 +306,7 @@ function LocationContextProvider({children}) {
                     totalPointsClouds: getPointsClouds(location.clouds.all),
                     totalPointsTemp: getPointsTemp(kelvinToCelsius(location.main.temp)),
                     totalPointsWind: getPointsWind(location.wind.speed),
-                    totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed) + getPointsTemp(kelvinToCelsius(location.main.temp)),
+                    totalPoints: getPointsClouds(location.clouds.all,1) + getPointsWind(location.wind.speed) + getPointsTemp(kelvinToCelsius(location.main.temp)),
                 }
 
             })

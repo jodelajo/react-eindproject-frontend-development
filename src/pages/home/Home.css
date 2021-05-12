@@ -130,17 +130,17 @@
         min-width: 400px;
         max-width: 640px;
         border-radius: 32px 32px 0 0;
-        /*display: flex;*/
-        /*align-items: center;*/
-        /*flex-direction: column;*/
-        /*justify-content: flex-end;*/
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: flex-end;
         /*box-shadow: .25rem .5rem 2rem 0 rgba(0, 0, 0, 0.1);*/
+        background-color: rgba(90, 40, 127, 0.4);
     }
 
     .map-web-left {
         width: 400px;
         border-radius: 32px 32px 0 0;
-        background-color: rgba(90, 40, 127, 0.4);
     }
 
     .footer-web-left {

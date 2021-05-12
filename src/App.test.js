@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import Counter from "./components/counter/Counter";
 import Footer from "./components/footer/Footer";
 import {BrowserRouter as Router} from 'react-router-dom';
-import Region from "./components/region/Region";
+
 
 
 afterEach(()=> {
@@ -19,19 +19,28 @@ test('should render SubmitButton component', () =>{
 
 })
 
+
 it('renders Counter without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<Counter />, div);
 });
+//
+// it('renders Region without crashing', () => {
+//     const div = document.createElement('div');
+//     act( ()=> {
+//
+//        ReactDOM.render(
+//            <Router>
+//                <AuthContextProvider>
+//                    <Region />
+//                </AuthContextProvider>
+//
+//            </Router>
+//            , div);
+//    })
+//
+// });
 
-it('renders Region without crashing', () => {
-    const div = document.createElement('div');
-    ReactDOM.render(
-        <Router>
-            <Region />
-        </Router>
-        , div);
-});
 
 test('should have text jodelajo',()=>{
     render(

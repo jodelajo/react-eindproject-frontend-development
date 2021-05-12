@@ -3,17 +3,17 @@
     flex-direction: column;
 }
 
-.signup-wrapper {
-    margin-top: 40px;
-    /*background-color: white;*/
-    width: 316px;
-    padding: 20px;
-    /*min-height: 470px;*/
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+/*.signup-wrapper {*/
+/*    margin-top: 40px;*/
+/*    background-color: white;*/
+/*    width: 316px;*/
+/*    padding: 20px;*/
+/*    !*min-height: 470px;*!*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    justify-content: space-between;*/
 
-}
+/*}*/
 
 .form {
     margin-top: 130px;
@@ -32,6 +32,10 @@
     font-weight: bold;
     font-size: 18px;
     border-radius: 8px;
+}
+
+.submit-button-profile {
+    margin-top: 40px;
 }
 .input {
     margin-bottom: 6px;

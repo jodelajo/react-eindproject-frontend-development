@@ -1,45 +1,55 @@
-#star-button {
-
-    /*font-size: 34px;*/
+#star-button-text {
+    vertical-align: bottom;
+    font-size: 34px;
 }
 
 
-#star-button > * {
+#star-button-text > * {
     fill: #ff477e;
-    vertical-align: middle;
-
 }
 
 .text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    padding: 40px;
     background-color: rgba(51, 49, 47, 0.7);
     margin-left: 40px;
+    border-radius: 32px 32px 0 0;
 }
 
 .alinea-text {
-
-    /*background-color: white;*/
+    border-radius: 32px 32px 0 0;
+    background-color: rgba(255, 255, 255, 0.2);
     display: flex;
     flex-direction: column;
     color: white;
+    padding: 20px 30px;
     /*align-items: center;*/
 
 }
 
 .alinea {
-    padding: 10px;
-    font-size: 1.6em;
+    /*padding: 10px;*/
+    font-size: 1.2em;
     text-align: left;
     font-weight: 300;
 
 }
 
-#drie {
-    text-align: center;
+.text-link a {
+    color: #ff0a54;
     font-weight: 600;
+}
+
+.text-link a:hover {
+    color: #f9bec7;
+}
+
+#drie {
+    margin-left: 100px;
+    font-weight: 600;
+    font-size: 1.4em;
 }
 .arrow {
     font-size: 30px;
@@ -53,11 +63,21 @@
     font-size: 2.4em;
     font-variant: all-small-caps;
     color: #f9bec7;
+    margin-bottom: 20px;
 }
 
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1300px) {
     .text-h2 {
         font-size: 3.4em;
+    }
+    .text {
+        padding: 50px;
+    }
+    .alinea {
+        font-size: 1.6em;
+    }
+    #drie {
+        font-size: 1.6em;
     }
 }
