@@ -42,13 +42,6 @@
     display: none;
 }
 
-.exit {
-    width: 100px;
-    text-align: right;
-    font-size: 28px;
-    border: none;
-    background-color: gray;
-}
 .hamburger-icon {
     color: white;
     font-size: 2.8em;
@@ -59,7 +52,7 @@
 }
 
 .menuClass {
-    width: 100px;
+    width: 150px;
     padding: 10px;
     text-decoration: none;
     text-align: center;

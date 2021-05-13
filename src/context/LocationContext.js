@@ -2,7 +2,7 @@ import React, {createContext, useEffect, useState,} from 'react';
 import axios from 'axios';
 import kelvinToCelsius from "../helpers/kelvinToCelsius";
 
-function getPointsClouds(clouds,multiplier) {
+function getPointsClouds(clouds, multiplier) {
     if (clouds < 10) {
         return 11 * multiplier;
         // setPointsClouds(pointsClouds + 20);

@@ -27,10 +27,9 @@ function NavBar() {
         />
 
         {checked && <div id="menu">
-            <button type="button" className="exit" onClick={handleClick}>X</button>
-            <Link to="/" className="menuClass">Home</Link>
-            <Link to="/profile" className="menuClass">Instellingen</Link>
-            <Link to="contact" className="menuClass">Contact</Link>
+            <Link to="/" className="menuClass" onClick={handleClick}>Home</Link>
+            <Link to="/profile" className="menuClass" onClick={handleClick}>Instellingen</Link>
+            <Link to="contact" className="menuClass" onClick={handleClick}>Contact</Link>
         </div>}
 
         <div className="nav-wrapper">
