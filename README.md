@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/60b4deac-549d-468e-aa0e-21c40505379d/deploy-status)](https://app.netlify.com/sites/beste-plakje/deploys)
+
 # React Firebase Auth Example
 
 React application example using [React Router](https://reacttraining.com/react-router/) and [Firebase Authentication](https://firebase.google.com/docs/auth/).

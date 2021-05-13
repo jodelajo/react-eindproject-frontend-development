@@ -14,7 +14,7 @@
     justify-content: space-between;
     padding: 20px 40px 50px 40px;
     background-color: rgba(51, 49, 47, 0.7);
-    margin-left: 40px;
+    margin-left: 60px;
     border-radius: 32px 32px 0 0;
 }
 
@@ -25,17 +25,12 @@
     flex-direction: column;
     color: white;
     padding: 20px 30px;
-    /*margin-bottom: 10px;*/
-    /*align-items: center;*/
-
 }
 
 .alinea {
-    /*padding: 10px;*/
     font-size: 1.2em;
     text-align: left;
     font-weight: 300;
-
 }
 
 .text-link a {
@@ -52,9 +47,11 @@
     font-weight: 600;
     font-size: 1.4em;
 }
+
 .arrow {
     font-size: 30px;
 }
+
 .arrow > * {
     fill: #f71818;
     vertical-align: middle;
@@ -68,6 +65,11 @@
 }
 
 @media only screen and (min-width: 1300px){
+
+    .text {
+        padding: 60px;
+    }
+
     .text-h2 {
         font-size: 3em;
     }
@@ -76,9 +78,7 @@
     .text-h2 {
         font-size: 3.4em;
     }
-    .text {
-        padding: 60px;
-    }
+
     .alinea {
         font-size: 1.6em;
     }
