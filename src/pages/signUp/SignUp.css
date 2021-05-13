@@ -2,19 +2,9 @@
     display: flex;
     flex-direction: column;
 }
-
-/*.signup-wrapper {*/
-/*    margin-top: 40px;*/
-/*    background-color: white;*/
-/*    width: 316px;*/
-/*    padding: 20px;*/
-/*    !*min-height: 470px;*!*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    justify-content: space-between;*/
-
-/*}*/
-
+h2 {
+    font-size: 1.8em;
+}
 .form {
     margin-top: 130px;
     display: flex;
@@ -42,4 +32,21 @@
     width: 250px;
     height: 26px;
     padding: 4px;
+}
+
+.input-textarea {
+    padding: 4px;
+}
+
+.submit-send {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    height: 40px;
+    background-color: #f71818;
+    width: 250px;
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 8px;
 }

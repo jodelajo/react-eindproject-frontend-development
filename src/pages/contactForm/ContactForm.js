@@ -20,36 +20,33 @@ function ContactForm(){
     return <main className="signup-wrapper">
     <form onSubmit={sendEmail} className="form">
     <h2>Contactformulier</h2>
-        <label htmlFor="details-name">
-            Naam:
             <input
             type="text"
             name="name"
-            id="details-name"
+            placeholder="Naam"
             className="input"
             />
-        </label>
-        <label htmlFor="details-email">
-            Emailadres:
+        <input
+            type="text"
+            name="subject"
+            placeholder="Onderwerp"
+            className="input"
+        />
             <input
                 type="email"
                 name="email"
-                id="details-email"
+                placeholder="Email-adres"
                 className="input"
             />
-        </label>
-        <label htmlFor="details-message">
-            Uw bericht:
+
             <textarea
                 name="message"
+                placeholder="Uw bericht"
+                className="input-textarea"
                 rows="4"
-                cols="35"
-                id="details-message"
-                className="input"
             />
-        </label>
 
-        <input type="submit" value="Send" />
+        <input type="submit" value="Send" className="submit-send" />
 
     </form>
     </main>
