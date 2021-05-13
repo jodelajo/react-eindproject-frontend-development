@@ -31,8 +31,8 @@
     }
 
     .screenshot {
-        width: 200px;
-        height: 300px;
+        width: 260px;
+        height: 350px;
         margin-right: 40px;
         border: 3px solid #fff;
         box-shadow: .25rem .5rem 1rem 0 rgba(0, 0, 0, 0.2);
@@ -45,15 +45,30 @@
     .title {
         font-size: 5.5rem;
     }
+    /*.screenshot {*/
+    /*    width: auto;*/
+    /*    height: auto;*/
+    /*}*/
+}
+
+@media only screen and (min-width: 1400px) {
     .screenshot {
-        max-width: 270px;
-        width: auto;
-        height: auto;
+        width: 312px;
+        height: 420px;
     }
 }
 @media only screen and (min-width: 1600px) {
     .header {
         height: 780px;
     }
+    .screenshot {
+        width: 300px;
+        max-width: 300px;
+        height: 495px;
+        max-height: 495px;
+        margin-right: 140px;
+    }
+
+
 }
 
