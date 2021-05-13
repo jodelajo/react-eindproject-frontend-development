@@ -1,16 +1,9 @@
 import React from 'react'
 import '../signUp/SignUp.css'
-import {useForm} from "react-hook-form";
-// import SubmitButton from "../../components/submitButton/SubmitButton";
 import emailjs from "emailjs-com";
 
 
 function ContactForm(){
-    const { handleSubmit, register } = useForm()
-
-    // function onFormSubmit(data) {
-    //     console.log(data)
-    // }
 
     function sendEmail(e) {
         e.preventDefault();
@@ -25,7 +18,7 @@ function ContactForm(){
     }
 
     return <main className="signup-wrapper">
-    <form onSubmit={handleSubmit(sendEmail)} className="form">
+    <form onSubmit={sendEmail} className="form">
     <h2>Contactformulier</h2>
         <label htmlFor="details-name">
             Naam:
@@ -34,7 +27,6 @@ function ContactForm(){
             name="name"
             id="details-name"
             className="input"
-            {...register("username")} required
             />
         </label>
         <label htmlFor="details-email">
@@ -44,7 +36,6 @@ function ContactForm(){
                 name="email"
                 id="details-email"
                 className="input"
-                {...register("email")} required
             />
         </label>
         <label htmlFor="details-message">
@@ -55,14 +46,10 @@ function ContactForm(){
                 cols="35"
                 id="details-message"
                 className="input"
-                {...register("message")} required
             />
         </label>
 
         <input type="submit" value="Send" />
-        {/*<SubmitButton*/}
-        {/*buttonText="Versturen"*/}
-        {/*/>*/}
 
     </form>
     </main>
