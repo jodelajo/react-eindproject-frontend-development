@@ -5,7 +5,7 @@ import {ReactComponent as Terrace} from '../../assets/images/terrace-svgrepo-com
 import SignUpLogInLink from "../../components/signUpLogInLink/SignUpLogInLink";
 import Map from "../../components/map/Map";
 import LittleFooter from "../../components/littleFooter/LittleFooter";
-import mapExample from '../../assets/images/app_example.png'
+import mapExample from '../../assets/images/app_example_transp.png'
 import {Link} from "react-router-dom";
 import Text from "../../components/text/Text";
 
