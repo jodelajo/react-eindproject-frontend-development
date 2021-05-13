@@ -37,6 +37,7 @@ function LogIn() {
     return <main>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
             {error && <p> {error} </p>}
+            <h2>Inloggen</h2>
             <input
                 type="email"
                 name="email"

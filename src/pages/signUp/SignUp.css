@@ -4,12 +4,14 @@
 }
 h2 {
     font-size: 1.8em;
+    margin-bottom: 10px;
 }
 .form {
     margin-top: 130px;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
+    justify-content: stretch;
+    /*flex-wrap: nowrap;*/
     height: 100%;
 }
 .submit-button {
@@ -32,6 +34,8 @@ h2 {
     width: 250px;
     height: 26px;
     padding: 4px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .input-textarea {

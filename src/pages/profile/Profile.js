@@ -32,7 +32,7 @@ function Profile() {
                     {currentUser && currentUser.email}
                 </p>
                 <Link to="/update-profile">
-                    Update profiel
+                    Profiel aanpassen
                 </Link>
 
             </div>

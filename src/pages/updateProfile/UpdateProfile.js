@@ -46,9 +46,10 @@ function UpdateProfile() {
 
 
         return <main>
-            <h2>Update Profile</h2>
+
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
                 {error && <p> {error} </p>}
+                <h2>Annpassen Profiel</h2>
                 <input
                     type="email"
                     name="email"
@@ -76,11 +77,11 @@ function UpdateProfile() {
                 />
                 <SubmitButton
                 disabled={loading}
-                buttonText="Update"
+                buttonText="Aanpassen"
                 />
             </form>
 
-            <p><Link to="/profile">Cancel</Link></p>
+            <p><Link to="/profile">Annuleren</Link></p>
         </main>
     }
 

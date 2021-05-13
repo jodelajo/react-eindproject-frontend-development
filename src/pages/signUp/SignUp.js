@@ -38,6 +38,7 @@ function SignUp() {
     return <main>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
             {error && <p> {error} </p>}
+            <h2>Account aanmaken</h2>
             <input
                 type="text"
                 name="username"

@@ -30,6 +30,7 @@ function ForgotPassword() {
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
             {error && <p> {error} </p>}
             {message && <p>{message}</p>}
+            <h2>Nieuw wachtwoord</h2>
             <input
                 type="email"
                 name="email"
@@ -41,7 +42,7 @@ function ForgotPassword() {
 
             <SubmitButton
             disabled={loading}
-            buttonText="reset password"
+            buttonText="aanvragen"
             />
 
         </form>
