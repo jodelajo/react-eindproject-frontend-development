@@ -1,4 +1,4 @@
-function pointCounter() {
-   return  <div>hoi</div>
+function pointCounter(totalPointsClouds) {
+   return  (totalPointsClouds * 2)
 }
 export default pointCounter;

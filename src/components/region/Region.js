@@ -30,6 +30,7 @@ function Region({locationsRegion, regionName}) {
                                 totalPointsWind={location.totalPointsWind}
                                 totalPointsTemp={location.totalPointsTemp}
                                 totalPoints={location.totalPoints}
+                                totalBoosterClouds={location.totalBoosterClouds}
                             />
                         </li>
                     </NavLink>

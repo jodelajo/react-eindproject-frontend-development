@@ -58,6 +58,7 @@ function Home() {
             </div>
             <div className="web-right">
                 <Text/>
+
             </div>
         </div>
 

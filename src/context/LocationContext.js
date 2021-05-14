@@ -1,206 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, {createContext, useEffect, useState,} from 'react';
 import axios from 'axios';
 import kelvinToCelsius from "../helpers/kelvinToCelsius";
 
-function getPointsClouds(clouds, multiplier) {
-    if (clouds < 10) {
-        return 11 * multiplier;
-        // setPointsClouds(pointsClouds + 20);
-    }
-    if (clouds >= 10 && clouds < 15) {
-        return 10;
-        // setPointsClouds(pointsClouds + 18);
-    }
-    if (clouds >= 15 && clouds < 20) {
-        return 9;
-        // setPointsClouds(pointsClouds + 15);
-    }
-    if (clouds >= 20 && clouds < 30) {
-        return 8;
-        // setPointsClouds(pointsClouds + 15);
-    }
-    if (clouds >= 30 && clouds < 40) {
-        return 7;
-        // setPointsClouds(pointsClouds + 10);
-    }
-    if (clouds >= 40 && clouds < 50) {
-        return 6;
-        // setPointsClouds(pointsClouds + 15);
-    }
-    if (clouds >= 50 && clouds < 60) {
-        return 5;
-        // setPointsClouds(pointsClouds + 8);
-    }
-    if (clouds >= 60 && clouds < 70) {
-        return 4;
-        // setPointsClouds(pointsClouds + 15);
-    }
-    if (clouds >= 70 && clouds < 80) {
-        return 3;
-        // setPointsClouds(pointsClouds + 15);
-    }
-    if (clouds >= 80 && clouds < 90) {
-        return 2;
-        // setPointsClouds(pointsClouds + 15);
-    }
-    if (clouds >= 90 && clouds < 100) {
-        return 1;
-        // setPointsClouds(pointsClouds + 15);
-    }
-    if(clouds >= 100){
-        return 0;
-    }
-}
-
-function getPointsWind(wind) {
-    if (wind < 0.3) {
-        return 14;
-    }
-    if (wind >= 0.3 && wind < 1.5) {
-        return 13;
-    }
-    if (wind >= 1.5 && wind < 3.3) {
-        return 12;
-    }
-    if (wind >= 3.3 && wind < 5.5) {
-        return 10;
-    }
-    if (wind >= 5.5 && wind < 8.0) {
-        return 8;
-    }
-    if (wind >= 8.0 && wind < 10.8) {
-        return 6;
-    }
-    if (wind >= 10.8 && wind < 13.9) {
-        return 5;
-    }
-    if (wind >= 13.9 && wind < 17.2) {
-        return 4;
-    }
-    if (wind >= 17.2 && wind < 20.7) {
-        return 3;
-    }
-    if (wind >= 20.7 && wind < 24.5) {
-        return 2;
-    }
-    if (wind > 24.5) {
-        return 1;
-    }
-}
-
-function getPointsTemp(temp) {
-    if (temp < 0) {
-        return 0;
-    }
-    if (temp >= 0 && temp < 1) {
-        return 1;
-    }
-    if (temp >= 1 && temp < 2) {
-        return 2;
-    }
-    if (temp >= 2 && temp < 3) {
-        return 3;
-    }
-    if (temp >= 3 && temp < 4) {
-        return 4;
-    }
-    if (temp >= 4 && temp < 5) {
-        return 5;
-    }
-    if (temp >= 5 && temp < 6) {
-        return 6;
-    }
-    if (temp >= 6 && temp < 7) {
-        return 7;
-    }
-    if (temp >= 7 && temp < 8) {
-        return 8;
-    }
-    if (temp >= 8 && temp < 9) {
-        return 9;
-    }
-    if (temp >= 9 && temp < 10) {
-        return 10;
-    }
-    if (temp >= 10 && temp < 11) {
-        return 11;
-    }
-    if (temp >= 11 && temp < 12) {
-        return 12;
-    }
-    if (temp >= 12 && temp < 13) {
-        return 13;
-    }
-    if (temp >= 13 && temp < 14) {
-        return 14;
-    }
-    if (temp >= 14 && temp < 15) {
-        return 15;
-    }
-    if (temp >= 15 && temp < 16) {
-        return 16;
-    }
-    if (temp >= 16 && temp < 17) {
-        return 17;
-    }
-    if (temp >= 17 && temp < 18) {
-        return 18;
-    }
-    if (temp >= 18 && temp < 19) {
-        return 19;
-    }
-    if (temp >= 19 && temp < 20) {
-        return 20;
-    }
-    if (temp >= 20 && temp < 21) {
-        return 21;
-    }
-    if (temp >= 21 && temp < 22) {
-        return 22;
-    }
-    if (temp >= 22 && temp < 23) {
-        return 23;
-    }
-    if (temp >= 23 && temp < 24) {
-        return 24;
-    }
-    if (temp >= 24 && temp < 25) {
-        return 25;
-    }
-    if (temp >= 25 && temp < 26) {
-        return 26;
-    }
-    if (temp >= 26 && temp < 27) {
-        return 27;
-    }
-    if (temp >= 27 && temp < 28) {
-        return 28;
-    }
-    if (temp >= 28 && temp < 29) {
-        return 29;
-    }
-    if (temp >= 29 && temp < 30) {
-        return 30;
-    }
-    if (temp >= 30 && temp < 31) {
-        return 31;
-    }
-    if (temp >= 31 && temp < 32) {
-        return 32;
-    }
-    if (temp >= 32 && temp < 33) {
-        return 33;
-    }
-    if (temp >= 33 && temp < 34) {
-        return 34;
-    }
-    if (temp >= 34 && temp < 35) {
-        return 35;
-    }
-    if (temp >= 35) {
-        return 36;
-    }
-}
 
 export const LocationContext = createContext({})
 
@@ -210,24 +12,241 @@ function LocationContextProvider({children}) {
     const [locationsNoordWest, setLocationsNoordWest] = useState([])
     const [locationsNoordOost, setLocationsNoordOost] = useState([])
     const [locationsZuidWest, setLocationsZuidWest] = useState([])
+    const [boosterSelected, toggleBoosterSelected] = useState(false)
+    const [multiplier, setMultiplier] = useState(1)
 
-    // const [boosterSelected, toggleBoosterSelected] = useState(false)
 
-    //
-    //
-    // function boosterCloud(){
-    //     if (boosterSelected === true){
-    //       toggleBoosterSelected(false)
-    //     }else {
-    //         toggleBoosterSelected(true)
-    //     }
-    // }
+
+    function boosterCloud() {
+        if(!boosterSelected) {
+            toggleBoosterSelected(true)
+            setMultiplier(2)
+        }
+        else{
+            toggleBoosterSelected(false)
+            setMultiplier(1)
+        }
+    }
+
+
+    useEffect(()=>{
+    fetchLocations()
+    },[multiplier])
+
+    console.log(boosterSelected)
+
+
+    function getPointsClouds(clouds) {
+
+        if (clouds < 10) {
+            return 11 * multiplier;
+            // setPointsClouds(pointsClouds + 20);
+        }
+        if (clouds >= 10 && clouds < 15) {
+            return 10 * multiplier;
+            // setPointsClouds(pointsClouds + 18);
+        }
+        if (clouds >= 15 && clouds < 20) {
+            return 9 * multiplier;
+            // setPointsClouds(pointsClouds + 15);
+        }
+        if (clouds >= 20 && clouds < 30) {
+            return 8 * multiplier;
+            // setPointsClouds(pointsClouds + 15);
+        }
+        if (clouds >= 30 && clouds < 40) {
+            return 7 * multiplier;
+            // setPointsClouds(pointsClouds + 10);
+        }
+        if (clouds >= 40 && clouds < 50) {
+            return 6 * multiplier;
+            // setPointsClouds(pointsClouds + 15);
+        }
+        if (clouds >= 50 && clouds < 60) {
+            return 5 * multiplier;
+            // setPointsClouds(pointsClouds + 8);
+        }
+        if (clouds >= 60 && clouds < 70) {
+            return 4 * multiplier;
+            // setPointsClouds(pointsClouds + 15);
+        }
+        if (clouds >= 70 && clouds < 80) {
+            return 3 * multiplier;
+            // setPointsClouds(pointsClouds + 15);
+        }
+        if (clouds >= 80 && clouds < 90) {
+            return 2 * multiplier;
+            // setPointsClouds(pointsClouds + 15);
+        }
+        if (clouds >= 90 && clouds < 100) {
+            return multiplier;
+            // setPointsClouds(pointsClouds + 15);
+        }
+        if (clouds >= 100) {
+            return 0;
+        }
+    }
+
+    console.log('multiplier', multiplier)
+
+    function getPointsWind(wind) {
+        if (wind < 0.3) {
+            return 14;
+        }
+        if (wind >= 0.3 && wind < 1.5) {
+            return 13;
+        }
+        if (wind >= 1.5 && wind < 3.3) {
+            return 12;
+        }
+        if (wind >= 3.3 && wind < 5.5) {
+            return 10;
+        }
+        if (wind >= 5.5 && wind < 8.0) {
+            return 8;
+        }
+        if (wind >= 8.0 && wind < 10.8) {
+            return 6;
+        }
+        if (wind >= 10.8 && wind < 13.9) {
+            return 5;
+        }
+        if (wind >= 13.9 && wind < 17.2) {
+            return 4;
+        }
+        if (wind >= 17.2 && wind < 20.7) {
+            return 3;
+        }
+        if (wind >= 20.7 && wind < 24.5) {
+            return 2;
+        }
+        if (wind > 24.5) {
+            return 1;
+        }
+    }
+
+    function getPointsTemp(temp) {
+        if (temp < 0) {
+            return 0;
+        }
+        if (temp >= 0 && temp < 1) {
+            return 1;
+        }
+        if (temp >= 1 && temp < 2) {
+            return 2;
+        }
+        if (temp >= 2 && temp < 3) {
+            return 3;
+        }
+        if (temp >= 3 && temp < 4) {
+            return 4;
+        }
+        if (temp >= 4 && temp < 5) {
+            return 5;
+        }
+        if (temp >= 5 && temp < 6) {
+            return 6;
+        }
+        if (temp >= 6 && temp < 7) {
+            return 7;
+        }
+        if (temp >= 7 && temp < 8) {
+            return 8;
+        }
+        if (temp >= 8 && temp < 9) {
+            return 9;
+        }
+        if (temp >= 9 && temp < 10) {
+            return 10;
+        }
+        if (temp >= 10 && temp < 11) {
+            return 11;
+        }
+        if (temp >= 11 && temp < 12) {
+            return 12;
+        }
+        if (temp >= 12 && temp < 13) {
+            return 13;
+        }
+        if (temp >= 13 && temp < 14) {
+            return 14;
+        }
+        if (temp >= 14 && temp < 15) {
+            return 15;
+        }
+        if (temp >= 15 && temp < 16) {
+            return 16;
+        }
+        if (temp >= 16 && temp < 17) {
+            return 17;
+        }
+        if (temp >= 17 && temp < 18) {
+            return 18;
+        }
+        if (temp >= 18 && temp < 19) {
+            return 19;
+        }
+        if (temp >= 19 && temp < 20) {
+            return 20;
+        }
+        if (temp >= 20 && temp < 21) {
+            return 21;
+        }
+        if (temp >= 21 && temp < 22) {
+            return 22;
+        }
+        if (temp >= 22 && temp < 23) {
+            return 23;
+        }
+        if (temp >= 23 && temp < 24) {
+            return 24;
+        }
+        if (temp >= 24 && temp < 25) {
+            return 25;
+        }
+        if (temp >= 25 && temp < 26) {
+            return 26;
+        }
+        if (temp >= 26 && temp < 27) {
+            return 27;
+        }
+        if (temp >= 27 && temp < 28) {
+            return 28;
+        }
+        if (temp >= 28 && temp < 29) {
+            return 29;
+        }
+        if (temp >= 29 && temp < 30) {
+            return 30;
+        }
+        if (temp >= 30 && temp < 31) {
+            return 31;
+        }
+        if (temp >= 31 && temp < 32) {
+            return 32;
+        }
+        if (temp >= 32 && temp < 33) {
+            return 33;
+        }
+        if (temp >= 33 && temp < 34) {
+            return 34;
+        }
+        if (temp >= 34 && temp < 35) {
+            return 35;
+        }
+        if (temp >= 35) {
+            return 36;
+        }
+    }
+
 
     const refresh = () => {
         fetchLocations()
     }
 
     async function fetchLocations() {
+
+
         try {
             const resWadden = await Promise.all([
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2749334&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
@@ -275,6 +294,7 @@ function LocationContextProvider({children}) {
             const locationsWaddenWithPoints = dataWadden.map((location, index) => {
 
                 if (location.name === "Ulrum") {
+
                     return {
                         locationName: 'Schiermonnikoog',
                         locationTemp: location.main.temp,
@@ -285,10 +305,12 @@ function LocationContextProvider({children}) {
                         locationID: location.id,
                         locationIcon: location.weather[0].icon,
                         region: 'wadden',
+                        // totalBoosterClouds: getPointsClouds(location.clouds.all, 2),
+                        // totalBoosterWind: getPointsWind(location.wind.speed, 2),
                         totalPointsClouds: getPointsClouds(location.clouds.all),
                         totalPointsTemp: getPointsTemp(kelvinToCelsius(location.main.temp)),
                         totalPointsWind: getPointsWind(location.wind.speed),
-                        totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed) + getPointsTemp(kelvinToCelsius(location.main.temp)),
+                        totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed, 1) + getPointsTemp(kelvinToCelsius(location.main.temp)),
                     }
                 }
 
@@ -303,20 +325,24 @@ function LocationContextProvider({children}) {
                     locationID: location.id,
                     locationIcon: location.weather[0].icon,
                     region: 'wadden',
+                    // totalBoosterClouds: getPointsClouds(location.clouds.all, 2),
+                    // totalBoosterWind: getPointsWind(location.wind.speed, 2),
                     totalPointsClouds: getPointsClouds(location.clouds.all),
                     totalPointsTemp: getPointsTemp(kelvinToCelsius(location.main.temp)),
                     totalPointsWind: getPointsWind(location.wind.speed),
-                    totalPoints: getPointsClouds(location.clouds.all,1) + getPointsWind(location.wind.speed) + getPointsTemp(kelvinToCelsius(location.main.temp)),
+                    totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed) + getPointsTemp(kelvinToCelsius(location.main.temp)),
                 }
+
 
             })
 
 
             setLocationsWadden(locationsWaddenWithPoints)
             console.log('wadden', locationsWaddenWithPoints)
+            console.log('cloudpunten',locationsWaddenWithPoints[0].totalPointsClouds)
 
             const locationsZuidOostWithPoints = dataZuidOost.map((location, index) => {
-                if(location.name === "Assen"){
+                if (location.name === "Assen") {
                     return {
                         locationName: 'Appelscha',
                         locationTemp: location.main.temp,
@@ -433,7 +459,6 @@ function LocationContextProvider({children}) {
 
     useEffect(() => {
         fetchLocations();
-
     }, [])
 
     const data = {
@@ -443,7 +468,7 @@ function LocationContextProvider({children}) {
         locationsNoordOost: locationsNoordOost,
         locationsZuidWest: locationsZuidWest,
         refresh,
-        // boosterCloud: boosterCloud,
+        boosterCloud: boosterCloud,
     }
 
     return (
