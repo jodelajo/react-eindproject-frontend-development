@@ -8,7 +8,7 @@ function Booster(){
 
 
     function handleSubmit() {
-        localStorage.setItem('checked', checked)
+        // localStorage.setItem('checked', checked)
         toggleChecked(!checked)
         boosterCloud()
         console.log('hoi')

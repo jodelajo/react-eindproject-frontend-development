@@ -3,7 +3,6 @@ import '../signUp/SignUp.css'
 import {useAuth} from '../../context/AuthContext'
 import {Link, useHistory} from 'react-router-dom'
 import SubmitButton from "../../components/submitButton/SubmitButton";
-import Booster from "../../components/booster/Booster";
 
 function Profile() {
     const [error, setError] = useState('')
@@ -103,7 +102,7 @@ function Profile() {
         {/*        </div>*/}
         {/*    </div>*/}
         {/*</div>*/}
-                <Booster/>
+
 
                 <div>
             <SubmitButton

@@ -14,7 +14,7 @@ function LocationContextProvider({children}) {
     const [locationsZuidWest, setLocationsZuidWest] = useState([])
     const [boosterSelected, toggleBoosterSelected] = useState(false)
     const [multiplier, setMultiplier] = useState(1)
-
+    // const [error, setError] = useState(false)
 
 
     function boosterCloud() {
@@ -30,7 +30,9 @@ function LocationContextProvider({children}) {
 
 
     useEffect(()=>{
-    fetchLocations()
+        if(multiplier) {
+            fetchLocations()
+        }
     },[multiplier])
 
     console.log(boosterSelected)
@@ -452,8 +454,12 @@ function LocationContextProvider({children}) {
             console.log('ZuidWest', locationsZuidWestWithPoints)
 
 
-        } catch {
-            throw Error("Promise failed");
+        } catch (e) {
+            // throw Error("Promise failed");
+
+            console.error(e);
+            throw Error('oeps');
+
         }
     }
 
