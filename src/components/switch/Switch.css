@@ -1,0 +1,51 @@
+
+.switch-wrapper {
+    /*position: relative;*/
+    height: 60px;
+    /*width: 200px;*/
+    min-width: 50%;
+    background-color: #ff0a54;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.switch {
+    z-index: 10;
+    opacity: 0;
+}
+
+.switch-btn {
+    box-sizing: border-box;
+    position: relative;
+    outline: none;
+    width: 4.6rem;
+    height: 2rem;
+    display: block;
+
+    cursor: pointer;
+    background: #40463F;
+    border-radius: 2rem;
+    padding: 3px;
+    transition: all .4s ease;
+}
+
+.switch-btn::after {
+    position: relative;
+    left: 0;
+    display: block;
+    content: "";
+    width: 40%;
+    height: 100%;
+    border-radius: 50%;
+    background: white;
+    transition: all .2s ease;
+}
+
+.switch:checked + .switch-btn {
+    background: #f9bec7;
+}
+
+.switch:checked + .switch-btn::after {
+    left: 60%;
+}

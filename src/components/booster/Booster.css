@@ -8,7 +8,7 @@
 
 .options {
     /*min-width: 40%;*/
-    min-width: 50%;
+    min-width: 100%;
     display: flex;
     height: 60px;
 
@@ -23,57 +23,6 @@
     display: flex;
     align-self: center;
     /*justify-content: space-around;*/
-}
-
-.switch-wrapper {
-    /*position: relative;*/
-    height: 60px;
-    /*width: 200px;*/
-    min-width: 50%;
-    background-color: #ff0a54;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.switch {
-    z-index: 10;
-    opacity: 0;
-}
-
-.switch-btn {
-    box-sizing: border-box;
-    position: relative;
-    outline: none;
-    width: 4.6rem;
-    height: 2rem;
-    display: block;
-
-    cursor: pointer;
-    background: #40463F;
-    border-radius: 2rem;
-    padding: 3px;
-    transition: all .4s ease;
-}
-
-.switch-btn::after {
-    position: relative;
-    left: 0;
-    display: block;
-    content: "";
-    width: 40%;
-    height: 100%;
-    border-radius: 50%;
-    background: white;
-    transition: all .2s ease;
-}
-
-.switch:checked + .switch-btn {
-    background: #f9bec7;
-}
-
-.switch:checked + .switch-btn::after {
-    left: 60%;
 }
 
 #temp, #clouds, #wind {
@@ -91,7 +40,7 @@
 }
 
 .wind {
-    color: #f9bec7;
+    color: #747474;
 }
 
 
@@ -102,15 +51,21 @@
     padding-top: 12px;
     /*color: #f9bec7;*/
     height: 60px;
-    border: none;
+    border: 1px solid #40463F;
+
 }
 
 .booster-button-checked {
-    background-color: #f9bec7;
+    background-color: #ff477e;
     color: #5a287f;
 }
 
+.clouds-checked, .temp-checked, .wind-checked {
+    color: #f9bec7;
+}
+
+
 .booster-button:hover {
-    background-color: #f71818;
+    background-color: #f9bec7;
 }
 
