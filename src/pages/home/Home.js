@@ -31,9 +31,7 @@ function Home() {
                 :
                 <Map/>
 
-
             }
-
             {!currentUser && <div className="signup">
                 <SignUpLogInLink/>
             </div>}
@@ -52,16 +50,13 @@ function Home() {
                         <div className="map-web-left">
                             <Map/>
                         </div>
-
                         <div className="footer-web-left">
-
                             <LittleFooter/>
                         </div>
                     </div>}
             </div>
             <div className="web-right">
                 <Text/>
-
             </div>
         </div>
 

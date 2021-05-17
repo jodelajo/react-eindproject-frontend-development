@@ -1,10 +1,18 @@
 .little-footer {
-    padding: 8px 12px 0 12px;
-    display: flex;
-    height: 60px;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #181D17;
-    width: 100%;
+    display: none;
+}
 
+
+
+@media only screen and (min-width: 767px) {
+    .little-footer {
+        padding: 8px 12px 0 12px;
+        display: flex;
+        height: 60px;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #181D17;
+        width: 100%;
+
+    }
 }

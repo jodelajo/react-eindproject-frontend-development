@@ -9,6 +9,7 @@ function Wadden() {
             locationsRegion={locationsWadden}
             regionName="Wadden"
         />
+
     </div>
 };
 export default Wadden

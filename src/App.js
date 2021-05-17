@@ -29,7 +29,7 @@ function App() {
                 <NavBar/>
                 <Header/>
                 <div className="weather-wrapper">
-                    <main className="app-content">
+
                         <Switch>
                             <Route exact path="/" component={Home}/>
                             <PrivateRoute path="/friesland" component={Friesland}/>
@@ -47,7 +47,7 @@ function App() {
                             <Route path="/sign-up" component={SignUp}/>
                             <Route path="/log-in" component={LogIn}/>
                         </Switch>
-                    </main>
+
                 </div>
                 <Footer/>
             </div>

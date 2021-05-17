@@ -70,9 +70,9 @@ function LocationContextProvider({children}) {
     }, [multiplierClouds, multiplierTemp, multiplierWind])
 
 
-    console.log('booster clouds selected', boosterCloudsSelected)
-    console.log('booster temp selected', boosterTempSelected)
-    console.log('booster wind selected', boosterWindSelected)
+    console.log('boosterClouds selected', boosterCloudsSelected)
+    console.log('boosterTemp selected', boosterTempSelected)
+    console.log('boosterWind selected', boosterWindSelected)
     console.log('multiplierClouds', multiplierClouds)
     console.log('multiplierTemp', multiplierTemp)
     console.log('multiplierWind', multiplierWind)

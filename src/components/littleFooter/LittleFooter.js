@@ -2,7 +2,6 @@ import React, {useContext} from 'react'
 import {RiArrowLeftLine, RiHome2Line, RiStarLine} from "react-icons/ri";
 import {Link, useHistory} from "react-router-dom";
 import './LittleFooter.css'
-import Booster from "../booster/Booster";
 import {LocationContext} from "../../context/LocationContext";
 
 
@@ -17,7 +16,7 @@ function LittleFooter() {
     }
 
     return <>
-        <Booster/>
+
         <div className="little-footer">
 
             <p className="icon" onClick={onClickHandler}><RiArrowLeftLine/></p>
