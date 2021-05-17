@@ -69,3 +69,9 @@
     background-color: #f9bec7;
 }
 
+@media only screen and (min-width: 767px){
+    .booster {
+        width: 100%;
+    }
+}
+

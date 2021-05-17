@@ -67,9 +67,9 @@
     fill: #f71818;
 }
 
-.signup {
-    display: inline-block;
-}
+/*.signup {*/
+/*    display: inline-block;*/
+/*}*/
 
 
 @media only screen and (min-width: 767px) {

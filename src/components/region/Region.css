@@ -38,21 +38,21 @@ a:link {
 }
 
 @media only screen and (min-height: 800px) {
+    .region-ul {
+    height: 80%;
+
+    }
+
     .region-wrapper {
         padding-top: 80px;
-        padding-bottom: 70px;
-        display: flex;
+        /*padding-bottom: 70px;*/
+
 
     }
 }
 
 @media only screen and (min-width: 767px) {
-    .region-ul {
-        width: 35%;
-        background-color: rgba(90, 40, 127, 0.4);
-        border-radius: 32px 0 0 0;
-       padding-top: 16px;
-    }
+
 
     .region-wrapper {
         display: flex;
@@ -60,7 +60,21 @@ a:link {
         /*padding: unset;*/
         position: static;
         flex-direction: row;
+        justify-content: stretch;
+        padding: 10px 0;
     }
+    .region-ul {
+        width: 45%;
+
+        background-color: rgba(90, 40, 127, 0.4);
+        border-radius: 32px 0 0 0;
+        /*padding: 16px;*/
+    }
+
+    /*.region-li {*/
+    /*    min-width: 100%;*/
+
+    /*}*/
 
     .footer-region {
         display: flex;
@@ -81,5 +95,11 @@ a:link {
         padding: 10px 6px 0 6px;
         margin-left: auto;
         margin-right: auto;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    .region-ul {
+        width: 35%;
     }
 }
