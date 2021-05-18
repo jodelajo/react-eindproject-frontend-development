@@ -3,6 +3,8 @@
     min-width: 100%;
     justify-content: space-between;
     margin-top: 40px;
+    position: fixed;
+    bottom: 60px;
     /*align-items: center;*/
 }
 
@@ -72,6 +74,7 @@
 @media only screen and (min-width: 767px){
     .booster {
         width: 100%;
+        position: static;
     }
 }
 
