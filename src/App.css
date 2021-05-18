@@ -25,10 +25,10 @@ body {
 }
 
 .weather-container {
-    display: block;
-    /*flex-direction: column;*/
+    display: flex;
+    flex-direction: column;
     width: 375px;
-    height: 650px;
+    height: 667px;
     /*original height 667px;
     /*margin-bottom: auto;*/
     /*margin-top: auto;*/
