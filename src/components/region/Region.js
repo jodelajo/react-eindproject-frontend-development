@@ -38,7 +38,10 @@ function Region({locationsRegion, regionName}) {
                             </li>
                         </NavLink>
                     })}
-                <BoosterMobile/>
+                <div className="booster-bar">
+                    <BoosterMobile/>
+                </div>
+
                 <LittleFooter/>
             </ul>
             <div className="web-right">

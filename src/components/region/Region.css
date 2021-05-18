@@ -12,6 +12,10 @@
     margin: 8px 0;
 }
 
+.booster-bar {
+    z-index: 10;
+}
+
 a:link {
     text-decoration: none;
 }
