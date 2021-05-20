@@ -39,21 +39,21 @@ function Profile() {
 
             </div>
         </div>
-        {/*<div className="boosterMobile-wrapper">*/}
+        {/*<div className="booster-wrapper">*/}
         {/*    <h4>Turbo BoosterWeb</h4>*/}
         {/*    <p>Kies je BoosterWeb! Geef dubbele punten aan:</p>*/}
-        {/*    <div className="boosterMobile-content">*/}
+        {/*    <div className="booster-content">*/}
         {/*        <h4>Radiobutton is: {radio}</h4>*/}
         {/*        <div className="radio-buttons">*/}
         {/*            <label*/}
         {/*                htmlFor="geen"*/}
-        {/*                className="label-boosterMobile">*/}
-        {/*                Geen boosterMobile*/}
+        {/*                className="label-booster">*/}
+        {/*                Geen booster*/}
         {/*                <input*/}
         {/*                    className="radio-button"*/}
         {/*                    type="radio"*/}
         {/*                    id="geen"*/}
-        {/*                    name="boosterMobile"*/}
+        {/*                    name="booster"*/}
         {/*                    value="geen"*/}
         {/*                    checked={radio ==="geen"}*/}
         {/*                    onChange={(e)=>{ setRadio(e.target.value)}}*/}
@@ -61,39 +61,39 @@ function Profile() {
         {/*            </label>*/}
         {/*            <label*/}
         {/*                htmlFor="clouds"*/}
-        {/*                className="label-boosterMobile">*/}
+        {/*                className="label-booster">*/}
         {/*                Wolken*/}
         {/*                <input*/}
         {/*                    className="radio-button"*/}
         {/*                    type="radio"*/}
         {/*                    id="clouds"*/}
-        {/*                    name="boosterMobile"*/}
+        {/*                    name="booster"*/}
         {/*                    value="clouds"*/}
         {/*                    checked={radio ==="clouds"}*/}
         {/*                    onChange={(e)=>{ setRadio(e.target.value)}}*/}
         {/*                />*/}
         {/*            </label>*/}
         {/*            <label htmlFor="wind"*/}
-        {/*                   className="label-boosterMobile">*/}
+        {/*                   className="label-booster">*/}
         {/*                Wind*/}
         {/*                <input*/}
         {/*                    className="radio-button"*/}
         {/*                    type="radio"*/}
         {/*                    id="wind"*/}
-        {/*                    name="boosterMobile"*/}
+        {/*                    name="booster"*/}
         {/*                    value="wind"*/}
         {/*                    checked={radio ==="wind"}*/}
         {/*                    onChange={(e)=>{ setRadio(e.target.value)}}*/}
         {/*                />*/}
         {/*            </label>*/}
         {/*            <label htmlFor="temp"*/}
-        {/*                   className="label-boosterMobile">*/}
+        {/*                   className="label-booster">*/}
         {/*                Temperatuur*/}
         {/*                <input*/}
         {/*                    className="radio-button"*/}
         {/*                    type="radio"*/}
         {/*                    id="temp"*/}
-        {/*                    name="boosterMobile"*/}
+        {/*                    name="booster"*/}
         {/*                    value="temp"*/}
         {/*                    checked={radio ==="temp"}*/}
         {/*                    onChange={(e)=>{ setRadio(e.target.value)}}*/}

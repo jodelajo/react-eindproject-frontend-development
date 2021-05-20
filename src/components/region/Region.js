@@ -1,14 +1,16 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import Counter from "../counter/Counter"
 import './Region.css'
 import {NavLink} from 'react-router-dom'
 import LittleFooter from "../littleFooter/LittleFooter";
 import Text from "../text/Text";
-import BoosterMobile from "../boosterMobile/BoosterMobile";
+import Booster from "../booster/Booster";
+import { HotColdContext} from "../../context/HotColdContext";
+
 
 function Region({locationsRegion, regionName}) {
-
-
+const { winter } = useContext(HotColdContext)
+    console.log('winter op region', winter)
     return <div className="region-wrapper">
         <ul className="region-ul">
             <h2 className="region-title">Top 5 {regionName}</h2>
@@ -37,8 +39,9 @@ function Region({locationsRegion, regionName}) {
                         </li>
                     </NavLink>
                 })}
+
             <div className="booster-bar">
-                <BoosterMobile/>
+                <Booster/>
             </div>
 
             <LittleFooter/>
@@ -46,7 +49,6 @@ function Region({locationsRegion, regionName}) {
         <div className="web-right">
             <Text/>
         </div>
-        {/*<BoosterMobile/>*/}
 
 
     </div>

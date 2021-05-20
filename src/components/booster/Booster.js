@@ -1,9 +1,9 @@
 import React, {useState, useContext} from 'react'
-import './BoosterMobile.css'
+import './Booster.css'
 import {RiSunLine, RiTempHotLine, RiWindyLine} from "react-icons/ri";
 import {LocationContext} from "../../context/LocationContext";
 
-function BoosterMobile() {
+function Booster() {
     const {boosterCloud, boosterTemp, boosterWind} = useContext(LocationContext)
     const [checkedClouds, toggleCheckedClouds] = useState(false);
     const [checkedTemp, toggleCheckedTemp] = useState(false);
@@ -130,4 +130,4 @@ function BoosterMobile() {
     );
 }
 
-export default BoosterMobile
+export default Booster

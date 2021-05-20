@@ -3,10 +3,10 @@
     /*position: relative;*/
     height: 60px;
     /*width: 200px;*/
-    min-width: 50%;
-    background-color: #ff0a54;
+    min-width: 100%;
+    background-color: #5a287f;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -24,11 +24,12 @@
     display: block;
 
     cursor: pointer;
-    background: #40463F;
+    background: #f71818;
     border-radius: 2rem;
     padding: 3px;
     transition: all .4s ease;
 }
+
 
 .switch-btn::after {
     position: relative;
@@ -43,9 +44,14 @@
 }
 
 .switch:checked + .switch-btn {
-    background: #f9bec7;
+    background: #2191BB;
 }
 
 .switch:checked + .switch-btn::after {
     left: 60%;
+}
+
+.season {
+    width: 150px;
+    color: #f9bec7;
 }

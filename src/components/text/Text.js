@@ -3,7 +3,7 @@ import {RiStarLine, RiArrowRightLine} from "react-icons/ri";
 import './Text.css'
 import {useAuth} from "../../context/AuthContext";
 import {Link} from 'react-router-dom'
-import Switch from "../switch/Switch";
+
 
 function Text() {
     const {currentUser} = useAuth()
@@ -30,7 +30,7 @@ function Text() {
 
 
         </div>
-       <Switch />
+
     </div>
 }
 

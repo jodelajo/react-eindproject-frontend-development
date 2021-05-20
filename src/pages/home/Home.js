@@ -1,4 +1,4 @@
-import React from 'react'
+import React  from 'react'
 import './Home.css'
 import {useAuth} from '../../context/AuthContext'
 import {ReactComponent as Terrace} from '../../assets/images/terrace-svgrepo-com.svg';
@@ -8,11 +8,12 @@ import LittleFooter from "../../components/littleFooter/LittleFooter";
 import mapExample from '../../assets/images/app_example_transp.png'
 import {Link} from "react-router-dom";
 import Text from "../../components/text/Text";
-
+import {RiStarLine} from "react-icons/ri";
 
 function Home() {
 
     const {currentUser} = useAuth()
+
 
     return <div className="home">
         <h2 className="home-title">It beste plakje fan Fryslân</h2>
@@ -30,11 +31,17 @@ function Home() {
                 </div>
                 :
                 <Map/>
-
             }
             {!currentUser && <div className="signup">
                 <SignUpLogInLink/>
             </div>}
+            <div className="hot-cold-button">
+               <p>Klik op een regio of op de <span className="icon-star"><RiStarLine/> </span> voor het beste weer. Klik dan op locatie voor informatie over terras. Of kies eerst een booster voor extra punten.</p>
+
+            </div>
+
+
+
         </div>
 
         <div className="web-home">
