@@ -11,18 +11,33 @@ import { HotColdContext} from "../../context/HotColdContext";
 function Region({locationsRegion, regionName}) {
 const { winter } = useContext(HotColdContext)
     console.log('winter op region', winter)
+
+   const listOfNumbers = (locs) => {
+    let count = 0 ;
+
+       for (let i = 1; i < locs.length; i++) {
+           count =  count + [i];
+       }
+    return count
+   }
+    console.log(listOfNumbers(locationsRegion))
+
+
+
     return <div className="region-wrapper">
-        <ul className="region-ul">
+        <ol className="region-ul">
             <h2 className="region-title">Top 5 {regionName}</h2>
             {locationsRegion && locationsRegion.sort((a, b) =>
                 b.totalPoints - a.totalPoints).slice(0, 5)
-                .map((location) => {
+                .map((location, index) => {
                     return <NavLink
                         to={`/location/${location.locationName}`}
                         key={location.locationID}
                     >
                         <li className="region-li">
+
                             <Counter
+                                index={location[index]}
                                 key={location.locationID}
                                 location={location}
                                 clouds={location.locationClouds}
@@ -45,7 +60,7 @@ const { winter } = useContext(HotColdContext)
             </div>
 
             <LittleFooter/>
-        </ul>
+        </ol>
         <div className="web-right">
             <Text/>
         </div>

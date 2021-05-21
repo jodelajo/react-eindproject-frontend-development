@@ -335,6 +335,7 @@ function LocationContextProvider({children}) {
                 if (location.name === "Ulrum") {
 
                     return {
+                        // locationIndex: 0,
                         locationName: 'Schiermonnikoog',
                         locationTemp: location.main.temp,
                         locationClouds: location.clouds.all,
@@ -355,6 +356,7 @@ function LocationContextProvider({children}) {
 
 
                 return {
+                    // locationIndex: 0,
                     locationName: location.name,
                     locationTemp: location.main.temp,
                     locationClouds: location.clouds.all,

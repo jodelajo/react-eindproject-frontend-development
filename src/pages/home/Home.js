@@ -35,10 +35,11 @@ function Home() {
             {!currentUser && <div className="signup">
                 <SignUpLogInLink/>
             </div>}
-            <div className="hot-cold-button">
-               <p>Klik op een regio of op de <span className="icon-star"><RiStarLine/> </span> voor het beste weer. Klik dan op locatie voor informatie over terras. Of kies eerst een booster voor extra punten.</p>
+            {currentUser && <div className="hot-cold-button">
+                <p>Klik op een regio of op de <span className="icon-star"><RiStarLine/> </span> voor het beste weer.
+                    Klik dan op locatie voor informatie over terras. Of kies eerst een booster voor extra punten.</p>
 
-            </div>
+            </div>}
 
 
 

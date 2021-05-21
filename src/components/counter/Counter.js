@@ -6,8 +6,6 @@ import './Counter.css';
 function Counter({location}) {
 
 
-
-
     return <div className="counter">
         <div className="weather-left">
 
