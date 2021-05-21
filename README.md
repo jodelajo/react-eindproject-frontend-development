@@ -4,9 +4,11 @@
 
 React application example using [React Router](https://reacttraining.com/react-router/) and [Firebase Authentication](https://firebase.google.com/docs/auth/).
 
-Checkout the [demo here](https://risan.io/react-firebase-auth-example/).
+Checkout the [demo here](https://beste-plakje.netlify.app/).
 
-![React Firebase Auth Example](https://media.giphy.com/media/3E0N2p3E139I38ojDy/source.gif)
+
+![React Firebase Auth Example](https://media.giphy.com/media/o7roT3Vq8AKkJt1ZhQ/giphy.gif)
+
 
 ## Requirements
 
