@@ -48,7 +48,7 @@
     left: 60%;
 }
 
-.season {
-    /*width: 150px;*/
+.switch-text {
+    font-weight: 300;
     color: #f9bec7;
 }

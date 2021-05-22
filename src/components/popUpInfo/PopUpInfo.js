@@ -1,13 +1,13 @@
 import React from 'react'
 import  './PopUpInfo.css'
+import {RiStarLine} from "react-icons/all";
 
 function PopUpInfo(){
     return <div className="popup-wrapper">
         <h1>
-            popup
+            Klik op een regio of op <RiStarLine/>
         </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aliquam doloribus eaque error eveniet exercitationem expedita iste laboriosam, minima natus porro quas qui ratione sapiente soluta sunt tenetur! Aspernatur, ipsum!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, aliquam doloribus eaque error eveniet exercitationem expedita iste laboriosam, minima natus porro quas qui ratione sapiente soluta sunt tenetur! Aspernatur, ipsum!</p>
+        <img className="first-gif" src={"https://media.giphy.com/media/RVmErCMMvnlpkzA5iC/giphy.gif"} alt="first gif"/>
 
     </div>
 }

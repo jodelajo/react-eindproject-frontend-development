@@ -13,16 +13,16 @@ const Switch = ({popup, togglePopup}) => {
     }
 
     return <div className="switch-wrapper">
-        <span className="season">Meer informatie?</span>
+        <span className="switch-text">Meer informatie?</span>
         <input
             type="checkbox"
             className="switch"
-            id="metric-system"
+            id="more-info"
             onChange={handleChecked}
         />
 
         <label
-            htmlFor="metric-system"
+            htmlFor="more-info"
             className="switch-btn"
         />
     </div>
