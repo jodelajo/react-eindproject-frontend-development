@@ -33,11 +33,9 @@ function NavBar() {
         </div>}
 
         <div className="nav-wrapper">
-            {currentUser ? <p className="username">
+            {currentUser && <p className="username">
                 Hoi {currentUser && currentUser.displayName}
-            </p>
-            :
-            <p></p>}
+            </p>}
 
         {!checked && <div id="menu-web">
             <Link to="/" className="menuClass">Home</Link>

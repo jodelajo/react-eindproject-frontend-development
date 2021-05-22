@@ -1,14 +1,19 @@
 .popup-wrapper {
-    width: auto;
-    height: 200px;
+    /*width: auto;*/
+    height: 380px;
     z-index: 10;
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.92);
     border-radius: 32px 32px 0 0;
     margin: 0 20px;
     color: #40463F;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: 400;
-    transition: all .8s ease-in-out;
+
+
+}
+
+.popup-wrapper:hover {
+
 }
 
 /*BEGIN STAAT*/
@@ -16,10 +21,13 @@
     display: block;
     content: "";
     height: 0%;
+    width: auto;
+    transition: height 1s ease-in-out;
 }
 
 /* EIND STAAT */
-#popup-wrapper:hover::after {
+#popup-wrapper:focus::after {
     /* alle andere properties worden behouden, we overschrijven alleen de width property */
     height: 100%;
+
 }
