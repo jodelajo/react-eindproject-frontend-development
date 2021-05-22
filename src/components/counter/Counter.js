@@ -3,13 +3,16 @@ import kelvinToCelsius from "../../helpers/kelvinToCelsius";
 import metricToBeaufort from "../../helpers/metricToBeaufort";
 import './Counter.css';
 
-function Counter({location}) {
+function Counter({location, index}) {
 
 
     return <div className="counter">
         <div className="weather-left">
+            <div className="numbers">
+                <p>{index}</p>
+                <p className="total-points">{location && location.totalPoints}</p>
+            </div>
 
-            <p className="total-points">{location && location.totalPoints}</p>
             <img className="icon-weather"
                  src={location && `https://openweathermap.org/img/wn/${location.locationIcon}.png`} alt="icon"/>
 

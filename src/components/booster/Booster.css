@@ -5,15 +5,12 @@
     margin-top: 40px;
     position: fixed;
     bottom: 60px;
-    /*align-items: center;*/
 }
 
 .options {
-    /*min-width: 40%;*/
     min-width: 100%;
     display: flex;
     height: 60px;
-
     justify-content: space-between;
     align-items: stretch;
     background-color: #5a287f;
@@ -21,10 +18,8 @@
 
 .booster-options {
     width: 100%;
-
     display: flex;
     align-self: center;
-    /*justify-content: space-around;*/
 }
 
 #temp, #clouds, #wind {
@@ -35,9 +30,7 @@
     color: #f71818;
 }
 
-
 .temp {
-
     color: #ff477e;
 }
 
@@ -45,16 +38,12 @@
     color: #747474;
 }
 
-
 .booster-button, .booster-button-checked {
     width: 100%;
     font-size: 34px;
-    /*background-color: #f9bec7;*/
     padding-top: 12px;
-    /*color: #f9bec7;*/
     height: 60px;
     border: 1px solid #40463F;
-
 }
 
 .booster-button-checked {

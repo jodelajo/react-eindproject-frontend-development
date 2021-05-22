@@ -1,5 +1,4 @@
-.map{
-    /*margin-bottom: 50px;*/
+.map {
     max-width: 400px;
     height: 230px;
 }
@@ -38,12 +37,10 @@
     padding: 0;
 }
 
-
 @media only screen and (min-width: 767px) {
-  .map {
-     max-width: 640px;
-      height: auto;
 
-      /*height: 60%;*/
-  }
+    .map {
+        max-width: 640px;
+        height: auto;
+    }
 }

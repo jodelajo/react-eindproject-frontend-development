@@ -19,8 +19,6 @@ function LocationContextProvider({children}) {
     const [multiplierTemp, setMultiplierTemp] = useState(1)
     const [multiplierWind, setMultiplierWind] = useState(1)
 
-    // const [error, setError] = useState(false)
-
 
     function boosterCloud() {
         if (!boosterCloudsSelected) {
@@ -335,7 +333,7 @@ function LocationContextProvider({children}) {
                 if (location.name === "Ulrum") {
 
                     return {
-                        // locationIndex: 0,
+                        // locationIndex: [],
                         locationName: 'Schiermonnikoog',
                         locationTemp: location.main.temp,
                         locationClouds: location.clouds.all,
@@ -356,7 +354,7 @@ function LocationContextProvider({children}) {
 
 
                 return {
-                    // locationIndex: 0,
+                    // locationIndex: [],
                     locationName: location.name,
                     locationTemp: location.main.temp,
                     locationClouds: location.clouds.all,

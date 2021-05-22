@@ -1,4 +1,4 @@
-import React  from 'react'
+import React from 'react'
 import './Home.css'
 import {useAuth} from '../../context/AuthContext'
 import {ReactComponent as Terrace} from '../../assets/images/terrace-svgrepo-com.svg';
@@ -40,7 +40,6 @@ function Home() {
                     Klik dan op locatie voor informatie over terras. Of kies eerst een booster voor extra punten.</p>
 
             </div>}
-
 
 
         </div>

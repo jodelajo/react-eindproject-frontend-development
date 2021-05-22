@@ -12,16 +12,6 @@ function Region({locationsRegion, regionName}) {
 const { winter } = useContext(HotColdContext)
     console.log('winter op region', winter)
 
-   const listOfNumbers = (locs) => {
-    let count = 0 ;
-
-       for (let i = 1; i < locs.length; i++) {
-           count =  count + [i];
-       }
-    return count
-   }
-    console.log(listOfNumbers(locationsRegion))
-
 
 
     return <div className="region-wrapper">
@@ -37,7 +27,7 @@ const { winter } = useContext(HotColdContext)
                         <li className="region-li">
 
                             <Counter
-                                index={location[index]}
+                                index={index + 1}
                                 key={location.locationID}
                                 location={location}
                                 clouds={location.locationClouds}

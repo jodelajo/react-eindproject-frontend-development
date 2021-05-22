@@ -2,18 +2,20 @@
     display: flex;
     flex-direction: column;
 }
+
 h2 {
     font-size: 1.8em;
     margin-bottom: 10px;
 }
+
 .form {
     margin-top: 130px;
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    /*flex-wrap: nowrap;*/
     height: 100%;
 }
+
 .submit-button {
     margin: 40px auto 10px auto;
     height: 40px;
@@ -29,6 +31,7 @@ h2 {
 .submit-button-profile {
     margin-top: 40px;
 }
+
 .input {
     margin-bottom: 6px;
     width: 250px;
