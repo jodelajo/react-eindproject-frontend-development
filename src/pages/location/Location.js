@@ -6,7 +6,7 @@ import './Location.css'
 import Counter from "../../components/counter/Counter";
 import LittleFooter from "../../components/littleFooter/LittleFooter";
 import Text from "../../components/text/Text";
-
+import {RiHeart3Line} from "react-icons/ri";
 
 
 function Location() {
@@ -27,7 +27,7 @@ function Location() {
         .concat(locationsZuidWest)
 
 
-    const specificLocation = frieslandLocations.find((loc) => {
+    const specificLocation = frieslandLocations.find((loc, index) => {
         return loc.locationName === slug
     })
 
@@ -38,12 +38,13 @@ function Location() {
     return <div className="single-location">
         <div className="single-location-mobile">
                 <Counter
+                    index={<RiHeart3Line/>}
                     key={specificLocation && specificLocation.locationID}
                     location={specificLocation && specificLocation}
                     clouds={specificLocation && specificLocation.locationClouds}
                     wind={specificLocation && specificLocation.locationWind}
                     temp={specificLocation && specificLocation.locationTemp}
-                    totalPoints={specificLocation && specificLocation.totalPoints}
+                    // totalPoints={specificLocation && specificLocation.totalPoints}
                 />
 
         </div>
@@ -63,12 +64,13 @@ function Location() {
             <div className="web-left">
                 <div className="single-location-web">
                     <Counter
+                        index={<RiHeart3Line/>}
                         key={specificLocation && specificLocation.locationID}
                         location={specificLocation && specificLocation}
                         clouds={specificLocation && specificLocation.locationClouds}
                         wind={specificLocation && specificLocation.locationWind}
                         temp={specificLocation && specificLocation.locationTemp}
-                        totalPoints={specificLocation && specificLocation.totalPoints}
+                        // totalPoints={specificLocation && specificLocation.totalPoints}
                     />
 
                 </div>

@@ -9,7 +9,7 @@ function Counter({location, index}) {
     return <div className="counter">
         <div className="weather-left">
             <div className="numbers">
-                <p>{index}</p>
+                <p className="index">{index}</p>
                 <p className="total-points">{location && location.totalPoints}</p>
             </div>
 
@@ -22,7 +22,7 @@ function Counter({location, index}) {
             </div>
         </div>
         <div className="weather-right">
-            <p>{`${kelvinToCelsius(location && location.locationTemp)} °C`}</p>
+            <p className="celsius">{`${kelvinToCelsius(location && location.locationTemp)} °C`}</p>
             <p className="windkracht">Windkracht {metricToBeaufort(location && location.locationWind)}</p>
 
         </div>

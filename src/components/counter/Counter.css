@@ -14,6 +14,9 @@
     font-size: 14px;
     justify-content: space-between;
 }
+.name-description h3 {
+    font-size: 18px;
+}
 
 .weather-left {
     display: flex;
@@ -24,13 +27,22 @@
 .numbers{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
-    font-size: 16px;
+    text-align: center;
+    padding: 0 3px 3px 3px;
+    row-gap: 2px;
+}
+
+.index {
     color: #5a287f;
-    padding:0 3px 3px 3px;
-    background-color: rgba(255, 255, 255, 0.3);
-    /*font-weight: bold;*/
+    background-color: rgba(255, 255, 255, 0.5);
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .weather-right {
@@ -39,6 +51,7 @@
     color: lightgrey;
     text-align: end;
     display: flex;
+    margin-top: 6px;
     flex-direction: column;
     justify-content: space-between;
 }
@@ -46,17 +59,20 @@
 .total-points {
     background-color: #f9bec7;
     margin-top: 2px;
-    font-size: 10px;
+    font-size: 11px;
     color: #f71818;
     border-radius: 50%;
     padding: 4px;
     text-align: center;
-    font-weight: normal;
 }
 
 .icon-weather {
     width: 44px;
     height: 44px;
+}
+
+.celsius {
+    font-weight: 600;
 }
 
 .windkracht {
