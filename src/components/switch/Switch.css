@@ -3,7 +3,8 @@
     min-width: 100%;
     background-color: #5a287f;
     display: flex;
-    justify-content: space-between;
+
+    justify-content: space-evenly;
     align-items: center;
 }
 
@@ -20,7 +21,7 @@
     height: 2rem;
     display: block;
     cursor: pointer;
-    background: #f71818;
+    background: #747474;
     border-radius: 2rem;
     padding: 3px;
     transition: all .4s ease;
@@ -40,7 +41,7 @@
 }
 
 .switch:checked + .switch-btn {
-    background: #2191BB;
+    background: #ff0a54;
 }
 
 .switch:checked + .switch-btn::after {
@@ -48,6 +49,6 @@
 }
 
 .season {
-    width: 150px;
+    /*width: 150px;*/
     color: #f9bec7;
 }

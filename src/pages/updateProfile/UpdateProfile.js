@@ -49,7 +49,7 @@ function UpdateProfile() {
 
             <form className="form" onSubmit={handleSubmit(onSubmit)}>
                 {error && <p> {error} </p>}
-                <h2>Annpassen Profiel</h2>
+                <h2>Aanpassen Profiel</h2>
                 <input
                     type="email"
                     name="email"

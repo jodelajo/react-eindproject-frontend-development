@@ -15,7 +15,7 @@ const { winter } = useContext(HotColdContext)
 
 
     return <div className="region-wrapper">
-        <ol className="region-ul">
+        <ul className="region-ul">
             <h2 className="region-title">Top 5 {regionName}</h2>
             {locationsRegion && locationsRegion.sort((a, b) =>
                 b.totalPoints - a.totalPoints).slice(0, 5)
@@ -50,7 +50,7 @@ const { winter } = useContext(HotColdContext)
             </div>
 
             <LittleFooter/>
-        </ol>
+        </ul>
         <div className="web-right">
             <Text/>
         </div>

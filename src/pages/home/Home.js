@@ -8,7 +8,7 @@ import LittleFooter from "../../components/littleFooter/LittleFooter";
 import mapExample from '../../assets/images/app_example_transp.png'
 import {Link} from "react-router-dom";
 import Text from "../../components/text/Text";
-import {RiStarLine} from "react-icons/ri";
+import MoreInfo from "../../components/moreInfo/MoreInfo";
 
 function Home() {
 
@@ -35,10 +35,8 @@ function Home() {
             {!currentUser && <div className="signup">
                 <SignUpLogInLink/>
             </div>}
-            {currentUser && <div className="hot-cold-button">
-                <p>Klik op een regio of op de <span className="icon-star"><RiStarLine/> </span> voor het beste weer.
-                    Klik dan op locatie voor informatie over terras. Of kies eerst een booster voor extra punten.</p>
-
+            {currentUser && <div className="info-button">
+                <MoreInfo/>
             </div>}
 
 
@@ -64,7 +62,9 @@ function Home() {
             </div>
             <div className="web-right">
                 <Text/>
+
             </div>
+
         </div>
 
     </div>

@@ -69,19 +69,11 @@
     font-size: 18px;
 }
 
-.hot-cold-button {
+.info-button {
     width: 100vw;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin: 0;
     bottom: 60px;
     position: fixed;
-    background-color: #5a287f;
-    color: white;
-    font-size: 16px;
-    padding: 6px;
     font-weight: 200;
 }
 
@@ -114,6 +106,7 @@
 
     .web-home {
         display: flex;
+
         justify-content: center;
 
         margin-left: auto;
@@ -143,6 +136,7 @@
 
     .web-right {
         display: flex;
+        flex-direction: column;
         min-height: 100%;
         justify-content: stretch;
     }
