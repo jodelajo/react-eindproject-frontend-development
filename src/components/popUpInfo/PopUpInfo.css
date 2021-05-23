@@ -5,10 +5,11 @@
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 32px 32px 0 0;
     margin: 0 20px;
-    padding-top: 20px;
+    padding: 20px;
     color: #40463F;
     font-size: 16px;
     font-weight: 400;
+
 
 
 }
@@ -42,4 +43,6 @@
 
 .first-gif {
     width: 50%;
+  margin-left: auto;
+    margin-right: auto;
 }
