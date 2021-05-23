@@ -1,27 +1,50 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useEffect} from 'react'
 import './Slider.css'
+import infoTwo from "../../assets/gifs/info-two.gif";
+import firstInfo from "../../assets/gifs/first-info.gif";
 
-function Slider( { slides } ) {
-    const [currentSlide, setCurrentSlide] = useState(0)
-    const { length } = slides
+import {RiArrowLeftLine, RiArrowRightLine} from "react-icons/ri";
+
+function Slider(  ) {
+    const [currentSlide, setCurrentSlide] = useState(1)
+    // const { length } = slides
+
+
+    const slides = [
+        {
+            title: 'Klik op een booster',
+            image: infoTwo
+        },
+        {
+            title: 'Klik op een regio',
+            image: firstInfo
+        }
+    ]
 
     const goToNext = () => {
-        setCurrentSlide(currentSlide === length - 1 ? 0 : currentSlide + 1)
+        setCurrentSlide(currentSlide === slides.length - 1 ? 0 : currentSlide + 1)
     }
 
+    const goToPrevious = () => {
+        setCurrentSlide(currentSlide === slides.length - 1 ? 0 : currentSlide - 1)
+    }
 
     useEffect(() =>{
-        setTimeout(() =>{
             setCurrentSlide(goToNext)
-        })
     }, [])
 
-    if(!Array.isArray(slides) || slides.lenght <= 0){
+    useEffect(() =>{
+        setCurrentSlide(goToPrevious)
+    }, [])
+
+    if(!Array.isArray(slides) || slides.length <= 0){
         return null;
     }
+    console.log('currentSlide?', currentSlide)
 
     return <div className="slider">
+        <button type="button" className="slider-button" onClick={goToPrevious}><RiArrowLeftLine/></button>
         {slides.map((slide, index) =>(
 
             <div  className={index === currentSlide ? "slide active" : "slide"} key={slide.title}>
@@ -31,9 +54,9 @@ function Slider( { slides } ) {
                 {slide &&(
                     <img className="gif" src={slide.image} alt="slider"/>
                 )}
-
             </div>
         ))}
+        <button type="button" className="slider-button" onClick={goToNext}><RiArrowRightLine/></button>
     </div>
 }
 export default Slider

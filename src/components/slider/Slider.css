@@ -7,22 +7,28 @@
     background-color: rgba(255, 255, 255, 0.95);
     border-radius: 32px 32px 0 0;
     z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*flex-wrap: nowrap;*/
 }
 
 .slide {
     position: absolute;
-    bottom: 60px;
+    width: 70%;
+    bottom: 10px;
     left: 20px;
     right: 20px;
     margin-left: auto;
     margin-right: auto;
-    width: 70%;
-    height: 70%;
+    padding-top: 20px;
+    /*width: 70%;*/
+    /*height: 70%;*/
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transition: 1s ease;
+    transition: .3s ease;
     flex-direction: column;
 }
 
@@ -34,11 +40,14 @@
     font-size: 24px;
     position: static;
     color: #33312F;
-    /*text-shadow: 2px 2px 1px #000;*/
-    /*position: absolute;*/
-    /*top: -100px;*/
 
+}
 
+.slider-button {
+    font-weight: 800;
+    border: none;
+    font-size: 36px;
+    /*width: 30px;*/
 }
 
 .gif {
