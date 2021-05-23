@@ -1,43 +1,42 @@
 import React from 'react'
-import  './PopUpInfo.css'
-import {RiStarLine} from "react-icons/all";
+// import  './PopUpInfo.css'
 import firstInfo from '../../assets/gifs/first-info.gif'
 import infoTwo from '../../assets/gifs/info-two.gif'
-import Slider from 'react-slick'
-
-import "./slick-theme.css";
-import "./slick.css";
+import Slider from "../slider/Slider";
+// import defaultSlides from '../slider/defaultSlides'
 
 
 
 function PopUpInfo(){
+const defaultSlides = [
+    {
+        title: 'Klik op een booster',
+        image: infoTwo
+    },
+    {
+        title: 'Klik op een regio',
+        image: firstInfo
+    }
+]
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        // adaptiveHeight: true
-    };
 
     return <div className="popup-wrapper">
-        <h3>
-            Klik op een regio of op <RiStarLine/>
-        </h3>
+        {/*<h3>*/}
+        {/*    Klik op een regio of op <RiStarLine/>*/}
+        {/*</h3>*/}
         {/*<img className="first-gif" src={"https://media.giphy.com/media/RVmErCMMvnlpkzA5iC/giphy.gif"} alt="first gif"/>*/}
 
 
+        <Slider slides={defaultSlides} />
 
-        <Slider {...settings}>
-            <div>
-                <img src={firstInfo} alt="frist gif" className="first-gif"/>
-            </div>
-            <div>
-                <img src={infoTwo} alt="frist gif" className="first-gif"/>
+            {/*<div>*/}
+            {/*    <img src={firstInfo} alt="frist gif" className="first-gif"/>*/}
+            {/*</div>*/}
+            {/*<div>*/}
+            {/*    <img src={infoTwo} alt="frist gif" className="first-gif"/>*/}
 
-            </div>
-        </Slider>
+            {/*</div>*/}
+
 
 
 

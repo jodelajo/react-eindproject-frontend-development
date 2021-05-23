@@ -1,0 +1,52 @@
+.slider {
+    position: relative;
+    height: 66vh;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 32px 32px 0 0;
+    z-index: 10;
+}
+
+.slide {
+    position: absolute;
+    bottom: 60px;
+    left: 20px;
+    right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 1s ease;
+    flex-direction: column;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide h1, .slide h2 {
+    font-size: 24px;
+    position: static;
+    color: #33312F;
+    /*text-shadow: 2px 2px 1px #000;*/
+    /*position: absolute;*/
+    /*top: -100px;*/
+
+
+}
+
+.gif {
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
