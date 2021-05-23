@@ -12,13 +12,14 @@ function Slider(  ) {
 
 
     const slides = [
-        {
-            title: 'Klik op een booster',
-            image: infoTwo
-        },
+
         {
             title: 'Klik op een regio',
             image: firstInfo
+        },
+        {
+            title: 'Klik op een booster',
+            image: infoTwo
         }
     ]
 
@@ -27,7 +28,7 @@ function Slider(  ) {
     }
 
     const goToPrevious = () => {
-        setCurrentSlide(currentSlide === slides.length - 1 ? 0 : currentSlide - 1)
+        setCurrentSlide(currentSlide <= 0 ? 0 : currentSlide - 1)
     }
 
     useEffect(() =>{
