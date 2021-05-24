@@ -10,7 +10,7 @@ const[checked, toggleChecked] = useState(false)
     console.log(Name)
 
 
-    function handleParentalStates(){
+    function handleParentalStates() {
     if(Name === 'webSwitch') {
         toggleGifs(!gifs)
     }

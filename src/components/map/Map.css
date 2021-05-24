@@ -1,5 +1,5 @@
 .map {
-    max-width: 400px;
+    width: 100%;
     height: 230px;
 }
 
@@ -35,13 +35,47 @@
     width: 100%;
     margin-top: 6px;
     padding: 0;
+
 }
 
 @media only screen and (min-width: 767px) {
 
     .map {
+        max-width: 400px;
+        min-height: 200px;
+        max-height: 100%;
+        padding-bottom: 60px;
+        /*margin-bottom: 200px;*/
+
+    }
+}
+
+@media only screen and (min-width: 900px) {
+
+    .map {
+        max-width: 460px;
+        min-height: 250px;
+        max-height: 100%;
+        /*margin-bottom: 200px;*/
+
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    .map {
+        max-width: 460px;
+        min-height: 300px;
+        max-height: 100%;
+    }
+}
+
+@media only screen and (min-width: 1400px) {
+    .map {
         max-width: 640px;
-        height: auto;
+        min-height: 320px;
+        height: 380px;
+        margin-bottom: 80px;
 
     }
 }
