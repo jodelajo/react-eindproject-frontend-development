@@ -1,4 +1,4 @@
-
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 
 export default function useMediaQuery(query) {
@@ -11,7 +11,7 @@ export default function useMediaQuery(query) {
             mediaQuery.addEventListener("change", handler);
             return () => mediaQuery.removeEventListener("change", handler);
         },
-        [] // Empty array ensures effect is only run on mount and unmount
+        []
     );
     return matches;
 }

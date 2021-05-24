@@ -2,7 +2,7 @@
 import React, { useState, useEffect} from 'react'
 import './Slider.css'
 import infoTwo from "../../assets/gifs/info-two.gif";
-import firstInfo from "../../assets/gifs/first-info.gif";
+
 import uno from "../../assets/gifs/uno.gif"
 
 import {RiArrowLeftLine, RiArrowRightLine} from "react-icons/ri";

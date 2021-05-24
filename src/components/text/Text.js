@@ -3,7 +3,7 @@ import {RiStarLine, RiArrowRightLine} from "react-icons/ri";
 import './Text.css'
 import {useAuth} from "../../context/AuthContext";
 import {Link} from 'react-router-dom'
-import MoreInfo from "../moreInfo/MoreInfo";
+
 import Slider from "../slider/Slider";
 import Switch from "../switch/Switch";
 
