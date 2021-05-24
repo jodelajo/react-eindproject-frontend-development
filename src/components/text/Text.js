@@ -1,17 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {RiStarLine, RiArrowRightLine} from "react-icons/ri";
 import './Text.css'
 import {useAuth} from "../../context/AuthContext";
 import {Link} from 'react-router-dom'
+import MoreInfo from "../moreInfo/MoreInfo";
+import Slider from "../slider/Slider";
+import Switch from "../switch/Switch";
 
 
 
 function Text() {
+    const [gifs, toggleGifs] = useState(false)
     const {currentUser} = useAuth()
+
+    console.log(gifs)
+
     return <div className="text">
 
         <h2 className="text-h2">Wil je weten waar je op dit moment het beste weer hebt in Friesland?</h2>
-        <div className="alinea-text">
+        {!gifs ? <div className="alinea-text">
 
 
             {!currentUser && <div>
@@ -31,7 +38,18 @@ function Text() {
                 voor het dichtstbijzijnde terras!</p>
 
         </div>
+        :
+            <div className="slider-text">
+                <Slider/>
+            </div>
 
+        }
+
+<Switch
+Name='webSwitch'
+gifs={gifs}
+toggleGifs={toggleGifs}
+/>
     </div>
 }
 

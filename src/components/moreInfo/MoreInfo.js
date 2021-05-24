@@ -1,20 +1,23 @@
 import React, {useState} from 'react'
-import PopUpInfo from "../popUpInfo/PopUpInfo";
 import Switch from "../switch/Switch";
 import './MorInfo.css'
+import Slider from "../slider/Slider";
 
-function MoreInfo(){
-const [popUp, togglePopUp] = useState(false)
+function MoreInfo() {
+    const [popUp, togglePopUp] = useState(false)
 
-
+    console.log(popUp)
     return <div className="more-info-wrapper">
-        {popUp && <div className="popup-more-info"> <PopUpInfo/>
+        {popUp && <div className="popup-more-info"><Slider/>
         </div>}
-
+    <div className="switch-bar">
         <Switch
-            popup={popUp}
-            togglePopup={togglePopUp}
+            popUp={popUp}
+            togglePopUp={togglePopUp}
+            Name='mobSwitch'
         />
+    </div>
+
     </div>
 };
 export default MoreInfo

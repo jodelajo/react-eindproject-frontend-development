@@ -1,15 +1,26 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import './Switch.css'
 
-const Switch = ({popup, togglePopup}) => {
+const Switch = ({popUp, togglePopUp, gifs, toggleGifs, Name}) => {
+const[checked, toggleChecked] = useState(false)
 
-
-    console.log(popup)
-
+    console.log('mob-slides', popUp)
+    console.log('web-slides', gifs)
+    console.log(checked)
+    console.log(Name)
+    function handleParentalStates(){
+    if(Name === 'webSwitch') {
+        toggleGifs(!gifs)
+    }
+    if(Name === 'mobSwitch'){
+        togglePopUp(!popUp)
+    }
+    }
 
     function handleChecked() {
+        toggleChecked(!checked)
+        handleParentalStates()
 
-        togglePopup(!popup)
     }
 
     return <div className="switch-wrapper">
@@ -17,12 +28,14 @@ const Switch = ({popup, togglePopup}) => {
         <input
             type="checkbox"
             className="switch"
-            id="more-info"
-            onChange={handleChecked}
+            id={Name}
+            name={Name}
+            // checked={checked}
+            onClick={handleChecked}
         />
 
         <label
-            htmlFor="more-info"
+            htmlFor={Name}
             className="switch-btn"
         />
     </div>
