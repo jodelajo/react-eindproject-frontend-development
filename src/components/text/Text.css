@@ -84,10 +84,17 @@
     }
 }
 
+@media only screen and (min-width: 900px) {
+    .text-h2 {
+        margin-bottom: 30px;
+    }
+}
+
 @media only screen and (min-width: 1200px) {
 
     .text-h2 {
         font-size: 2.2em;
+        margin-bottom: 60px;
     }
 }
 
@@ -99,6 +106,7 @@
 
     .text-h2 {
         font-size: 3em;
+        margin-bottom: 20px;
     }
 }
 
@@ -106,6 +114,7 @@
 
     .text-h2 {
         font-size: 3.4em;
+        margin-bottom: 44px;
     }
 
     .alinea {
@@ -115,4 +124,9 @@
     #drie {
         font-size: 1.6em;
     }
+
+    /*.slider-text {*/
+    /*    min-width: 800px;*/
+    /*    min-height: 90%;*/
+    /*}*/
 }

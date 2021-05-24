@@ -108,14 +108,14 @@
         display: flex;
 
         justify-content: center;
-
+        align-items: stretch;
         margin-left: auto;
         margin-right: auto;
     }
 
     .web-left {
         color: #33312F;
-        width: 35%;
+        width: 36%;
         border-radius: 32px 0 0 0;
         display: flex;
         padding-top: 30px;
@@ -127,9 +127,11 @@
 
     .map-web-left {
         border-radius: 32px 0 0 0;
+        /*margin-bottom: 20px;*/
     }
 
     .footer-web-left {
+        margin-top: 60px;
         width: 100%;
         margin-bottom: 0;
     }
@@ -163,12 +165,16 @@
 
 @media only screen and (min-width: 1400px) {
 
+    .web-home {
+        /*min-height: 700px;*/
+    }
     .web-left {
-        min-height: 400px;
+        min-height: 00px;
         min-width: 400px;
         max-width: 640px;
     }
     .web-right {
-        min-height: 400px;
+        min-height: 700px;
+        min-width: 60%;
     }
 }

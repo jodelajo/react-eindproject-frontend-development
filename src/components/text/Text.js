@@ -17,7 +17,7 @@ function Text() {
 
     return <div className="text">
 
-        <h2 className="text-h2">Wil je weten waar je op dit moment het beste weer hebt in Friesland?</h2>
+        {!gifs && <h2 className="text-h2">Wil je weten waar je op dit moment het beste weer hebt in Friesland?</h2>}
         {!gifs ? <div className="alinea-text">
 
 

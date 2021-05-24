@@ -8,6 +8,8 @@ const[checked, toggleChecked] = useState(false)
     console.log('web-slides', gifs)
     console.log(checked)
     console.log(Name)
+
+
     function handleParentalStates(){
     if(Name === 'webSwitch') {
         toggleGifs(!gifs)
@@ -20,7 +22,6 @@ const[checked, toggleChecked] = useState(false)
     function handleChecked() {
         toggleChecked(!checked)
         handleParentalStates()
-
     }
 
     return <div className="switch-wrapper">
