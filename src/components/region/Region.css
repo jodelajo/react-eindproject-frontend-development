@@ -53,30 +53,15 @@ a:link {
     padding: 10px 0 0 0;
 }
 
-/*@media only screen and (min-height: 800px) {*/
-
-/*    !*.region-ul {*!*/
-/*    !*    height: 80%;*!*/
-
-/*    !*}*!*/
-
-/*    !*.region-wrapper {*!*/
-/*    !*    !*padding-top: 80px;*!*!*/
-/*    !*    !*padding-bottom: 30px;*!*!*/
-/*    !*}*!*/
-/*}*/
-
 @media only screen and (min-width: 767px) {
 
     .region-wrapper {
         display: flex;
         align-items: stretch;
-        /*padding: unset;*/
         position: static;
         flex-direction: row;
         justify-content: stretch;
         height: 100%;
-        /*padding: 10px 0;*/
     }
 
     .region-ul {
@@ -86,10 +71,6 @@ a:link {
         justify-content: flex-end;
 
     }
-
-    /*.booster-bar {*/
-    /*    margin-bottom: -5px;*/
-    /*}*/
 
     .footer-region {
         display: flex;
