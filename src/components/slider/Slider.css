@@ -1,32 +1,29 @@
 .slider {
     position: relative;
-    height: 66vh;
+    height: 74vh;
     width: 80vw;
     max-height: 100%;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
-    background-color: rgba(255, 255, 255, 0.92);
+    background-color: rgba(255, 255, 255, 0.95);
     border-radius: 32px 32px 0 0;
     z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /*flex-wrap: nowrap;*/
+
 }
 
 .slide {
     position: absolute;
     width: 70%;
-
-    bottom: 10px;
+    bottom: 0;
     left: 20px;
     right: 20px;
     margin-left: auto;
     margin-right: auto;
     padding-top: 20px;
-    /*width: 70%;*/
-    /*height: 70%;*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,9 +37,13 @@
 }
 
 .slide h1, .slide h2 {
-    font-size: 24px;
+    font-size: 18px;
     position: static;
-    color: #33312F;
+    color: #f9bec7;
+    padding: 8px;
+    margin: 0 0 5px 0;
+    border-radius: 4px;
+    background-color: #40463F;
 
 }
 
@@ -52,13 +53,13 @@
     font-size: 36px;
     color: #ff0a54;
     background: none;
-    /*width: 30px;*/
+}
+
+.slider-button:disabled {
+    color: #747474;
 }
 
 .gif {
-    /*position: absolute;*/
-    /*top: 0;*/
-    /*left: 0;*/
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -67,15 +68,9 @@
 
 @media only screen and (min-width: 767px) {
     .slider {
-        /*position: absolute;*/
-        /*bottom: 0;*/
-        /*left: 20%;*/
         margin-left: auto;
         margin-right: auto;
-        /*max-height: 50%;*/
-        /*max-width: 50%;*/
-        /*margin-bottom: 300px;*/
-        height: 450px;
+        height: 500px;
         width: 300px;
     }
 
@@ -83,12 +78,11 @@
         max-width: 300px;
         max-height: 400px;
         position: absolute;
-        bottom: 0;
+        bottom: 60px;
 
     }
 
     .switch-bar {
         position: relative;
-        /*width: auto;*/
     }
 }
