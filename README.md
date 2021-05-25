@@ -14,7 +14,8 @@ Checkout the [demo here](https://beste-plakje.netlify.app/).
 1. App description
 2. Requirements
 3. Installation
-4.  Learn more
+4. Other available commands
+5. Learn more
 
 
 ## 1.   App description
@@ -32,7 +33,7 @@ The following items are required to run this React application:
 
 ## 3.   Installation
 
-### 1. Clone the Repository
+### A. Clone the Repository
 
 Clone this repository to your computer:
 
@@ -40,7 +41,7 @@ Clone this repository to your computer:
 $ git clone https://github.com/jodelajo/react-my-app.git
 ```
 
-### 2. Install the Dependencies
+### B. Install the Dependencies
 
 On your terminal, go to the project directory and install all of the required dependencies:
 
@@ -55,11 +56,11 @@ $ npm install
 $ yarn install
 ```
 
-### 3.A Configure the Firebase API Key 
+### C.1 Configure the Firebase API Key 
 
 If you don't have the Firebase API key, you can go to their website at [firebase.google.com](https://firebase.google.com/) and create a new account for free.
 
-### 3.B Configure the Open Weather Map API key
+### C.2 Configure the Open Weather Map API key
 If you haven't had an Open Weather Map account, signup for free [here](https://home.openweathermap.org/users/sign_up). Log in with your Open Weather Map account and get your API key [here](https://home.openweathermap.org/api_keys).
 
 Copy the `.env.dist` file:
@@ -81,7 +82,7 @@ REACT_APP_FIREBASE_APP_ID=
 REACT_APP_FIREBASE_MEASUREMENT_ID=
 ```
 
-### 4. Run the application
+### D. Run the application
 
 To run the application within the development mode, type the following command:
 
@@ -94,7 +95,7 @@ yarn start
 
 It will start the development server. You can visit the application at [localhost:3000](http://localhost:3000). Play around with the code on `src` directory. The application will be reloaded automatically if you make any changes.
 
-Other available commands:
+## 4. Other available commands:
 
 ```shell
 #Builds the app for production to the `build` folder.
@@ -116,7 +117,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-##4.    Learn More
+##5.    Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
