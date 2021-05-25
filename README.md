@@ -10,26 +10,25 @@ Checkout the [demo here](https://beste-plakje.netlify.app/).
 ![React Firebase Auth Example](https://media.giphy.com/media/o7roT3Vq8AKkJt1ZhQ/giphy.gif)
 
 
-##Table of content
+## Table of content
 1. App description
 2. Requirements
 3. Installation
-4.  Configure API Key
-5.  Run the application
 
-## App description
+
+## 1.   App description
 This weather application shows you the best spot for this moment in Friesland. With the Boosters you can choose which element gets more points; sun, temperature and/or wind. The app will show you the top 5 locations in a region or in Friesland.
 If you click on a location, the app will show you the best café with terrace in the neighbourhood.
 
 
-## Requirements
+## 2.   Requirements
 
 The following items are required to run this React application:
 
 * [Firebase](#https://firebase.google.com/) account
 * [Openweather](#https://home.openweathermap.org/users/sign_up) account
 
-## Installation
+## 3.   Installation
 
 ### 1. Clone the Repository
 
