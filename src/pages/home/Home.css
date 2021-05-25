@@ -8,6 +8,10 @@
     text-align: center;
 }
 
+.web-home {
+    display: none;
+}
+
 .home-wrapper {
     text-align: center;
     height: auto;
