@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Switch from "../switch/Switch";
-import './MorInfo.css'
+import './MoreInfo.css'
 import Slider from "../slider/Slider";
 
 function MoreInfo() {
@@ -10,13 +10,13 @@ function MoreInfo() {
     return <div className="more-info-wrapper">
         {popUp && <div className="popup-more-info"><Slider/>
         </div>}
-    <div className="switch-bar">
-        <Switch
-            popUp={popUp}
-            togglePopUp={togglePopUp}
-            Name='mobSwitch'
-        />
-    </div>
+        <div className="switch-bar">
+            <Switch
+                popUp={popUp}
+                togglePopUp={togglePopUp}
+                Name='mobSwitch'
+            />
+        </div>
 
     </div>
 };

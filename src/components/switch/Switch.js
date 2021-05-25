@@ -31,7 +31,7 @@ const[checked, toggleChecked] = useState(false)
             className="switch"
             id={Name}
             name={Name}
-            // checked={checked}
+            checked={checked}
             onClick={handleChecked}
         />
 
