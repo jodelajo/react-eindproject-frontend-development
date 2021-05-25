@@ -10,7 +10,10 @@ function Slider() {
     const [currentSlide, setCurrentSlide] = useState(1)
 
     const slides = [
-
+        {
+            title: 'Maak een account aan of log in.',
+            image: `${uitleg3}`
+        },
         {
             title: `Klik op een regio voor Top 5 locaties`,
             image: `${uitleg1}`
@@ -18,10 +21,6 @@ function Slider() {
         {
             title: 'Klik op een Booster voor extra punten voor zon, temperatuur en/of wind.',
             image: `${uitleg2}`
-        },
-        {
-            title: 'Maak een account aan of log in.',
-            image: `${uitleg3}`
         }
     ]
 
