@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 import './Slider.css'
 import uitleg2 from "../../assets/gifs/uitleg2.gif";
 import uitleg1 from "../../assets/gifs/uitleg1.gif";
-import uitleg3 from "../../assets/gifs/uitleg3.gif"
+import uitleg3 from "../../assets/gifs/uitleg-login.gif"
 import {RiArrowLeftLine, RiArrowRightLine} from "react-icons/ri";
 
 function Slider() {

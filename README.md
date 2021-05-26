@@ -2,19 +2,20 @@
 
 # React Open Weather App with Firebase authentication
 
-React application app using [React Router](https://reacttraining.com/react-router/), [Open Weather Map](https://openweathermap.org/api/) and [Firebase Authentication](https://firebase.google.com/docs/auth/).
+[React Application](https://github.com/facebook/create-react-app) app using  [Open Weather Map](https://openweathermap.org/api/) and [Firebase Authentication](https://firebase.google.com/docs/auth/).
 
 Checkout the [demo here](https://beste-plakje.netlify.app/).
 
 
-![React Firebase Auth Example](https://media.giphy.com/media/o7roT3Vq8AKkJt1ZhQ/giphy.gif)
+![React Beste Plakje app example 1](https://media.giphy.com/media/eS3nb6gbp91ELZpSS6/giphy.gif) 
 
 
-## Table of content
+## Table of Contents
 1. App description
 2. Requirements
 3. Installation
 4. Other available commands
+
 
 
 
@@ -42,6 +43,8 @@ $ git clone https://github.com/jodelajo/react-my-app.git
 ```
 
 ### B. Install the Dependencies
+
+Install dependencies. Make sure you already have [`nodejs`](https://nodejs.org/en/) & [`npm`](https://www.npmjs.com/) installed in your system.
 
 On your terminal, go to the project directory and install all of the required dependencies:
 
