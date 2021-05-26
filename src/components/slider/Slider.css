@@ -74,13 +74,13 @@
         width: 300px;
     }
 
-    .slide {
-        max-width: 300px;
-        max-height: 400px;
-        position: absolute;
-        bottom: 60px;
+    /*.slide {*/
+    /*    max-width: 300px;*/
+    /*    max-height: 400px;*/
+    /*    position: absolute;*/
+    /*    bottom: 60px;*/
 
-    }
+    /*}*/
 
     .switch-bar {
         position: relative;
