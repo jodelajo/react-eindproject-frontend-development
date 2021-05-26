@@ -23,6 +23,7 @@ Checkout the [demo here](https://beste-plakje.netlify.app/).
 This weather application shows you the best spot for this moment in Friesland. With the Boosters you can choose which element gets more points; sun, temperature and/or wind. The app will show you the top 5 locations in a region or in Friesland.
 If you click on a location, the app will show you the best café with terrace in the neighbourhood.
 
+For using this application, just create an account with your email-address, username and password.
 
 ## 2.   Requirements
 
