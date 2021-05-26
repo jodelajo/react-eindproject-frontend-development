@@ -51,7 +51,7 @@ const { winter } = useContext(HotColdContext)
 
             <LittleFooter/>
         </ul>
-        <div className="web-right">
+        <div className="web-right-region">
             <Text/>
         </div>
 

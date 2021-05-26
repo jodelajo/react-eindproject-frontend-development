@@ -39,7 +39,7 @@ a:link {
     text-decoration: none;
 }
 
-.web-right {
+.web-right-region {
     display: none;
 }
 
@@ -76,7 +76,7 @@ a:link {
         display: flex;
     }
 
-    .web-right {
+    .web-right-region {
         display: flex;
         min-height: 100%;
         width: 65%;
