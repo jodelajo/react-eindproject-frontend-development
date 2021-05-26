@@ -24,22 +24,7 @@ it('renders Counter without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<Counter />, div);
 });
-//
-// it('renders Region without crashing', () => {
-//     const div = document.createElement('div');
-//     act( ()=> {
-//
-//        ReactDOM.render(
-//            <Router>
-//                <AuthContextProvider>
-//                    <Region />
-//                </AuthContextProvider>
-//
-//            </Router>
-//            , div);
-//    })
-//
-// });
+
 
 
 test('should have text jodelajo',()=>{
