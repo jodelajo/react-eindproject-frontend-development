@@ -8,14 +8,20 @@
     text-align: center;
 }
 
+.map-home {
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .web-home {
     display: none;
 }
 
 .home-wrapper {
     text-align: center;
+    display: flex;
     height: auto;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 
 .pop-up {
@@ -43,10 +49,6 @@
     border: 3px solid #fff;
     box-shadow: .25rem .5rem 1rem 0 rgba(0, 0, 0, 0.1);
 }
-
-/*.web-home {*/
-/*    display: none;*/
-/*}*/
 
 .welkom-text {
     font-size: 30px;
@@ -88,25 +90,10 @@
         height: auto;
     }
 
-    /*.home-wrapper {*/
-    /*    display: none;*/
-    /*}*/
-
     .home-title {
         display: none;
     }
 
-    /*.pop-up {*/
-    /*    display: none;*/
-    /*}*/
-
-    /*.signup {*/
-    /*    display: none;*/
-    /*}*/
-
-    /*.welkom {*/
-    /*    display: none;*/
-    /*}*/
 
     .web-home {
         display: flex;
@@ -120,7 +107,7 @@
 
     .web-left {
         color: #33312F;
-        width: 36%;
+        /*width: 36%;*/
         border-radius: 32px 0 0 0;
         display: flex;
         padding-top: 30px;
@@ -174,7 +161,7 @@
         /*min-height: 700px;*/
     }
     .web-left {
-        min-height: 00px;
+        min-height: 700px;
         min-width: 400px;
         max-width: 640px;
     }

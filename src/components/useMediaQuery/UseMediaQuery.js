@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 
-export default function useMediaQuery(query) {
+export default function UseMediaQuery(query) {
     const [matches, setMatches] = useState(false);
     useEffect(
         () => {

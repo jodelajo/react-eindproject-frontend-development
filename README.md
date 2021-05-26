@@ -31,7 +31,7 @@ The following items are required to run this React application:
 
 * [Firebase](#https://firebase.google.com/) account (You will only need Authentication)
 * [Openweather](#https://home.openweathermap.org/users/sign_up) account (Current weather data)
-* [emailjs](#https://dashboard.emailjs.com/sign-up) account (Just for contact-form)
+* [Emailjs](#https://dashboard.emailjs.com/sign-up) account (Just for contact-form)
 
 ## 3.   Installation
 

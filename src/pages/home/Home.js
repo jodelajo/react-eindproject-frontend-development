@@ -9,16 +9,16 @@ import mapExample from '../../assets/images/app_example_transp.png'
 import {Link} from "react-router-dom";
 import Text from "../../components/text/Text";
 import MoreInfo from "../../components/moreInfo/MoreInfo";
-import useMediaQuery from "../../components/useMediaQuery";
+import UseMediaQuery from "../../components/useMediaQuery/UseMediaQuery";
 
 function Home() {
 
     const {currentUser} = useAuth()
-    const isActive = useMediaQuery('(min-width: 767px)')
+    const isActive = UseMediaQuery('(min-width: 767px)')
 
 
     return <div className="home">
-        <h2 className="home-title">It beste plakje fan Fryslân</h2>
+        <h2 className="home-title">It bêste plakje fan Fryslân</h2>
 
         {!isActive ? <div className="home-wrapper">
                 {!currentUser ?
@@ -31,7 +31,9 @@ function Home() {
                         </div>
                     </div>
                     :
+                    <div className="map-home">
                     <Map/>
+                    </div>
                 }
                 {!currentUser && <div className="signup">
                     <SignUpLogInLink/>
@@ -61,10 +63,6 @@ function Home() {
                 </div>
                 <div className="web-right">
                     <Text/>
-                    {/*<div className="switch-web">*/}
-                    {/*    <MoreInfo/>*/}
-                    {/*</div>*/}
-
                 </div>
 
             </div>

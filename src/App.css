@@ -17,7 +17,7 @@
 body {
     font-family: "Avenir Next", Arial, sans-serif;
     width: 100vw;
-    /*height: 100vh;*/
+    height: 100vh;
     min-height: 100%;
     color: #33312F;
     background: linear-gradient(#ffffff, #f9bec7);
@@ -49,8 +49,12 @@ body {
 
 @media only screen and (min-width: 767px) {
 
+    body {
+        height: 100%;
+    }
+
     .weather-wrapper {
-        padding: 60px 30px 160px 30px;
+        padding: 60px 30px 180px 30px;
         height: auto;
         margin-left: auto;
         margin-right: auto;
@@ -60,18 +64,9 @@ body {
     }
 }
 
-@media only screen and (min-width: 1024px) {
-    body {
-        min-height: 1200px;
-    }
-}
 
 @media only screen and (min-width: 1600px) {
 
-    body {
-        min-height: 1700px;
-        max-height: 3000px;
-    }
     .weather-container {
         padding: 0 0 20px 0;
     }

@@ -34,6 +34,8 @@
     .screenshot {
         width: 260px;
         height: 350px;
+        max-width: 260px;
+        max-height: 350px;
         margin-right: 40px;
         border: 3px solid #fff;
         box-shadow: .25rem .5rem 1rem 0 rgba(0, 0, 0, 0.2);
@@ -51,10 +53,13 @@
 @media only screen and (min-width: 1400px) {
 
     .screenshot {
-        width: 312px;
+        width: 300px;
         height: 420px;
+        max-width: 300px;
+        max-height: 420px;
     }
 }
+
 
 @media only screen and (min-width: 1600px) {
 
