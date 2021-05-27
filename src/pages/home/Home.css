@@ -126,7 +126,7 @@
 
     .login-web-home {
         margin-bottom: 0;
-        height: 416px;
+        height: 400px;
     }
 
     .footer-web-left {
@@ -143,15 +143,30 @@
     }
 
     .map-example {
-        width: 100%;
+        width: 450px;
         padding: 0;
         margin: 0;
-        height: 416px;
+        height: 400px;
     }
 
     .switch-web {
         margin-left: 40px;
         max-height: 500px;
         justify-content: center;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+
+    .web-left {
+        min-width: 500px;
+    }
+
+    .login-web-home {
+        min-width: 500px;
+    }
+
+    .map-example {
+        width: 100%;
     }
 }
