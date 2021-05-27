@@ -38,7 +38,6 @@ function Region({locationsRegion, regionName}) {
                         </li>
                     </NavLink>
                 })}
-
             <div className="booster-bar">
                 <Booster/>
             </div>
@@ -48,8 +47,6 @@ function Region({locationsRegion, regionName}) {
         <div className="web-right-region">
             <Text/>
         </div>
-
-
     </div>
 }
 

@@ -2,7 +2,7 @@ import React, {useState, useContext} from 'react';
 import './NavBar.css';
 import {RiRefreshLine} from "react-icons/ri";
 import {Link} from 'react-router-dom';
-import {useAuth} from '../../context/AuthContext'
+import {useAuth} from '../../context/AuthContext';
 import {LocationContext} from "../../context/LocationContext";
 
 function NavBar() {
@@ -37,11 +37,11 @@ function NavBar() {
                 Hoi {currentUser && currentUser.displayName}
             </p>}
 
-        {!checked && <div id="menu-web">
-            <Link to="/" className="menuClass">Home</Link>
-            <Link to="/profile" className="menuClass">Instellingen</Link>
-            <Link to="/contact" className="menuClass">Contact</Link>
-        </div>}
+            {!checked && <div id="menu-web">
+                <Link to="/" className="menuClass">Home</Link>
+                <Link to="/profile" className="menuClass">Instellingen</Link>
+                <Link to="/contact" className="menuClass">Contact</Link>
+            </div>}
         </div>
         <button className="refresh-button" onClick={refresh}>
             <RiRefreshLine className="refresh"/>

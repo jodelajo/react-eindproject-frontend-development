@@ -68,13 +68,6 @@ function LocationContextProvider({children}) {
     }, [multiplierClouds, multiplierTemp, multiplierWind])
 
 
-    console.log('boosterClouds selected', boosterCloudsSelected)
-    console.log('boosterTemp selected', boosterTempSelected)
-    console.log('boosterWind selected', boosterWindSelected)
-    console.log('multiplierClouds', multiplierClouds)
-    console.log('multiplierTemp', multiplierTemp)
-    console.log('multiplierWind', multiplierWind)
-
     function getPointsClouds(clouds) {
 
         if (clouds < 10) {
@@ -282,8 +275,6 @@ function LocationContextProvider({children}) {
     }
 
     async function fetchLocations() {
-
-
         try {
             const resWadden = await Promise.all([
                 axios.get(`https://api.openweathermap.org/data/2.5/weather?id=2749334&appid=${process.env.REACT_APP_OPENWEATHER_API_KEY}&lang=nl`),
@@ -326,25 +317,19 @@ function LocationContextProvider({children}) {
             const dataNoordWest = resNoordWest.map((res) => res.data);
             const dataNoordOost = resNoordOost.map((res) => res.data);
             const dataZuidWest = resZuidWest.map((res) => res.data);
-            console.log(dataZuidOost)
+
 
             const locationsWaddenWithPoints = dataWadden.map((location, index) => {
-
                 if (location.name === "Ulrum") {
-
                     return {
-                        // locationIndex: [],
                         locationName: 'Schiermonnikoog',
                         locationTemp: location.main.temp,
                         locationClouds: location.clouds.all,
                         locationWind: location.wind.speed,
                         locationDescription: location.weather[0].description,
-                        // locationRain: location.rain["1h"],
                         locationID: location.id,
                         locationIcon: location.weather[0].icon,
                         region: 'wadden',
-                        // totalBoosterClouds: getPointsClouds(location.clouds.all, 2),
-                        // totalBoosterWind: getPointsWind(location.wind.speed, 2),
                         totalPointsClouds: getPointsClouds(location.clouds.all),
                         totalPointsTemp: getPointsTemp(kelvinToCelsius(location.main.temp)),
                         totalPointsWind: getPointsWind(location.wind.speed),
@@ -354,31 +339,22 @@ function LocationContextProvider({children}) {
 
 
                 return {
-                    // locationIndex: [],
                     locationName: location.name,
                     locationTemp: location.main.temp,
                     locationClouds: location.clouds.all,
                     locationWind: location.wind.speed,
                     locationDescription: location.weather[0].description,
-                    // locationRain: location.rain["1h"],
                     locationID: location.id,
                     locationIcon: location.weather[0].icon,
                     region: 'wadden',
-                    // totalBoosterClouds: getPointsClouds(location.clouds.all, 2),
-                    // totalBoosterWind: getPointsWind(location.wind.speed, 2),
                     totalPointsClouds: getPointsClouds(location.clouds.all),
                     totalPointsTemp: getPointsTemp(kelvinToCelsius(location.main.temp)),
                     totalPointsWind: getPointsWind(location.wind.speed),
                     totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed) + getPointsTemp(kelvinToCelsius(location.main.temp)),
                 }
-
-
             })
-
-
             setLocationsWadden(locationsWaddenWithPoints)
-            console.log('wadden', locationsWaddenWithPoints)
-            console.log('cloudpunten', locationsWaddenWithPoints[0].totalPointsClouds)
+
 
             const locationsZuidOostWithPoints = dataZuidOost.map((location, index) => {
                 if (location.name === "Assen") {
@@ -427,11 +403,9 @@ function LocationContextProvider({children}) {
                     totalPointsTemp: getPointsTemp(kelvinToCelsius(location.main.temp)),
                     totalPointsWind: getPointsWind(location.wind.speed),
                     totalPoints: getPointsClouds(location.clouds.all) + getPointsWind(location.wind.speed) + getPointsTemp(kelvinToCelsius(location.main.temp)),
-
                 }
             })
             setLocationsZuidOost(locationsZuidOostWithPoints)
-            console.log('Zuidoost', locationsZuidOostWithPoints)
 
             const locationsNoordWestWithPoints = dataNoordWest.map((location, index) => {
                 return {
@@ -450,7 +424,7 @@ function LocationContextProvider({children}) {
                 }
             })
             setLocationsNoordWest(locationsNoordWestWithPoints)
-            console.log('Noordwest', locationsNoordWestWithPoints)
+
 
             const locationsNoordOostWithPoints = dataNoordOost.map((location, index) => {
                 return {
@@ -469,7 +443,6 @@ function LocationContextProvider({children}) {
                 }
             })
             setLocationsNoordOost(locationsNoordOostWithPoints)
-            console.log('Noordoost', locationsNoordOostWithPoints)
 
             const locationsZuidWestWithPoints = dataZuidWest.map((location, index) => {
                 return {
@@ -488,14 +461,12 @@ function LocationContextProvider({children}) {
                 }
             })
             setLocationsZuidWest(locationsZuidWestWithPoints)
-            console.log('ZuidWest', locationsZuidWestWithPoints)
 
 
         } catch (e) {
-            // throw Error("Promise failed");
 
             console.error(e);
-            throw Error('oeps');
+            throw Error('Er is iets verkeerd gegaan, probeer het opnieuw!');
 
         }
     }

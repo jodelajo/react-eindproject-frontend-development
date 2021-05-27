@@ -46,7 +46,7 @@ function Home() {
             <div className="web-home">
                 <div className="web-left">
                     {!currentUser ?
-                        <div>
+                        <div className="login-web-home">
                             <Link to="/log-in">
                                 <img src={mapExample} alt="map-example" className="map-example"/>
                             </Link>

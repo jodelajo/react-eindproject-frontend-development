@@ -14,6 +14,7 @@
     font-size: 14px;
     justify-content: space-between;
 }
+
 .name-description h3 {
     font-size: 18px;
 }
@@ -24,7 +25,7 @@
     align-items: stretch;
 }
 
-.numbers{
+.numbers {
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -42,7 +43,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .weather-right {

@@ -1,22 +1,16 @@
-import React, { useState} from "react";
-import './Switch.css'
+import React, {useState} from "react";
+import './Switch.css';
 
 const Switch = ({popUp, togglePopUp, gifs, toggleGifs, Name}) => {
-const[checked, toggleChecked] = useState(false)
-
-    console.log('mob-slides', popUp)
-    console.log('web-slides', gifs)
-    console.log(checked)
-    console.log(Name)
-
+    const [checked, toggleChecked] = useState(false)
 
     function handleParentalStates() {
-    if(Name === 'webSwitch') {
-        toggleGifs(!gifs)
-    }
-    if(Name === 'mobSwitch'){
-        togglePopUp(!popUp)
-    }
+        if (Name === 'webSwitch') {
+            toggleGifs(!gifs)
+        }
+        if (Name === 'mobSwitch') {
+            togglePopUp(!popUp)
+        }
     }
 
     function handleChecked() {

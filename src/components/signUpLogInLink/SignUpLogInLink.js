@@ -1,8 +1,8 @@
-import React from 'react'
-import './SignUpLogInLink.css'
+import React from 'react';
+import './SignUpLogInLink.css';
 import {Link} from "react-router-dom";
 
-function SignUpLogInLink(){
+function SignUpLogInLink() {
     return <div className="auth">
         <Link to="/sign-up" className="auth-link-active">Sign Up
         </Link>
@@ -10,4 +10,5 @@ function SignUpLogInLink(){
         </Link>
     </div>
 }
+
 export default SignUpLogInLink

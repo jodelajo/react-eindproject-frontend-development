@@ -1,10 +1,10 @@
-import React, {useState, useContext} from 'react'
-import './Booster.css'
+import React, {useState, useContext} from 'react';
+import './Booster.css';
 import {RiSunLine, RiTempHotLine, RiWindyLine} from "react-icons/ri";
 import {LocationContext} from "../../context/LocationContext";
 
 function Booster() {
-    const {boosterCloud, boosterTemp, boosterWind} = useContext(LocationContext)
+    const {boosterCloud, boosterTemp, boosterWind} = useContext(LocationContext);
     const [checkedClouds, toggleCheckedClouds] = useState(false);
     const [checkedTemp, toggleCheckedTemp] = useState(false);
     const [checkedWind, toggleCheckedWind] = useState(false);
@@ -41,10 +41,6 @@ function Booster() {
             boosterWind()
         }
     }
-
-    console.log('checkedClouds', checkedClouds)
-    console.log('checkedTemp', checkedTemp)
-    console.log('checkedWind', checkedWind)
 
     return (
         <div className="booster">

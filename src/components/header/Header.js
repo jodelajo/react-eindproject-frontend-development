@@ -1,5 +1,5 @@
-import React from 'react'
-import './Header.css'
+import React from 'react';
+import './Header.css';
 import {useAuth} from "../../context/AuthContext";
 import SignUpLogInLink from "../signUpLogInLink/SignUpLogInLink";
 import screenshot_app from "../../assets/images/screenshot_app2.png";

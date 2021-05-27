@@ -21,10 +21,10 @@ function Footer() {
 
             </div>
             <div>
-            <p>girlPowered by jodelajo 2021</p>
-            <a href="https://github.com/jodelajo">
-                <RiGithubFill/>
-            </a>
+                <p>girlPowered by jodelajo 2021</p>
+                <a href="https://github.com/jodelajo">
+                    <RiGithubFill/>
+                </a>
             </div>
         </div>
     </>

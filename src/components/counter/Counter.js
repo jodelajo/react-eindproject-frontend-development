@@ -5,7 +5,6 @@ import './Counter.css';
 
 function Counter({location, index}) {
 
-
     return <div className="counter">
         <div className="weather-left">
             <div className="numbers">
@@ -27,5 +26,6 @@ function Counter({location, index}) {
 
         </div>
     </div>
-};
+}
+
 export default Counter
