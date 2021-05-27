@@ -1,5 +1,5 @@
-import React from 'react'
-import './Map.css'
+import React from 'react';
+import './Map.css';
 import {Link} from "react-router-dom";
 import wadden from "../../assets/plattegrond/wadden_roze.png";
 import noordwest from "../../assets/plattegrond/noordwest_roze.png";
@@ -7,7 +7,7 @@ import noordoost from "../../assets/plattegrond/noordoost_roze.png";
 import zuidwest from "../../assets/plattegrond/zuidwest_roze.png";
 import zuidoost from "../../assets/plattegrond/zuidoost_roze.png";
 
-function Map(){
+function Map() {
     return <div className="map">
         <Link to="/wadden">
             <img src={wadden} id="wadden" alt="wadden"/>
@@ -26,4 +26,5 @@ function Map(){
         </Link>
     </div>
 }
+
 export default Map

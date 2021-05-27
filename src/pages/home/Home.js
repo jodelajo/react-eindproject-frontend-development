@@ -1,11 +1,11 @@
-import React from 'react'
-import './Home.css'
-import {useAuth} from '../../context/AuthContext'
+import React from 'react';
+import './Home.css';
+import {useAuth} from '../../context/AuthContext';
 import {ReactComponent as Terrace} from '../../assets/images/terrace-svgrepo-com.svg';
 import SignUpLogInLink from "../../components/signUpLogInLink/SignUpLogInLink";
 import Map from "../../components/map/Map";
 import LittleFooter from "../../components/littleFooter/LittleFooter";
-import mapExample from '../../assets/images/app_example_transp.png'
+import mapExample from '../../assets/images/app_example_transp.png';
 import {Link} from "react-router-dom";
 import Text from "../../components/text/Text";
 import MoreInfo from "../../components/moreInfo/MoreInfo";
@@ -32,7 +32,7 @@ function Home() {
                     </div>
                     :
                     <div className="map-home">
-                    <Map/>
+                        <Map/>
                     </div>
                 }
                 {!currentUser && <div className="signup">
@@ -68,6 +68,6 @@ function Home() {
             </div>
         }
     </div>
-};
+}
 
 export default Home

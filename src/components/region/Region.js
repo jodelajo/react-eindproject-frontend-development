@@ -1,18 +1,13 @@
-import React, {useContext} from 'react'
-import Counter from "../counter/Counter"
-import './Region.css'
-import {NavLink} from 'react-router-dom'
+import React from 'react';
+import Counter from "../counter/Counter";
+import './Region.css';
+import {NavLink} from 'react-router-dom';
 import LittleFooter from "../littleFooter/LittleFooter";
 import Text from "../text/Text";
 import Booster from "../booster/Booster";
-import { HotColdContext} from "../../context/HotColdContext";
 
 
 function Region({locationsRegion, regionName}) {
-const { winter } = useContext(HotColdContext)
-    console.log('winter op region', winter)
-
-
 
     return <div className="region-wrapper">
         <ul className="region-ul">
@@ -34,7 +29,6 @@ const { winter } = useContext(HotColdContext)
                                 wind={location.locationWind}
                                 temp={location.locationTemp}
                                 description={location.locationDescription}
-                                // rain={location.locationRain}
                                 totalPointsClouds={location.totalPointsClouds}
                                 totalPointsWind={location.totalPointsWind}
                                 totalPointsTemp={location.totalPointsTemp}
