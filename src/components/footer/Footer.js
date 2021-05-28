@@ -7,6 +7,8 @@ import {LocationContext} from "../../context/LocationContext";
 function Footer() {
     const history = useHistory()
     const {goBackHandler} = useContext(LocationContext)
+    const day = new Date()
+    const year = day.getFullYear()
 
     function onClickHandler() {
         goBackHandler()
@@ -24,14 +26,12 @@ function Footer() {
             </Link>
         </div>
         <div className="footer-web" data-testid='footer-1'>
-            <div>
 
-            </div>
             <div>
-                <p>girlPowered by jodelajo 2021</p>
-                <a href="https://github.com/jodelajo">
+                <p>girlPowered by <a href="https://jodelajo.nl">jodelajo</a> {year} <a
+                    href="https://github.com/jodelajo">
                     <RiGithubFill/>
-                </a>
+                </a></p>
             </div>
         </div>
     </>
