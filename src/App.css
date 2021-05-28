@@ -25,21 +25,24 @@ body {
 
 @media only screen and (min-width: 567px) {
 
+    body {
+        height: 100%;
+    }
+
     .weather-container {
         width: 100vw;
         height: 100%;
+    }
+
+    .weather-wrapper {
+        height: auto;
     }
 }
 
 @media only screen and (min-width: 767px) {
 
-    body {
-        height: 100%;
-    }
-
     .weather-wrapper {
         padding: 60px 30px 180px 30px;
-        height: auto;
         margin-left: auto;
         margin-right: auto;
         width: 100%;
