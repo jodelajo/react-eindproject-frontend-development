@@ -38,6 +38,7 @@
 
     .single-location-web {
         display: flex;
+        padding: 0 30px;
     }
 
     .terras-web {
