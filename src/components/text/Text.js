@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import {RiStarLine, RiArrowRightLine} from "react-icons/ri";
 import './Text.css';
-import {useAuth} from "../context/AuthContext";
+import {useAuth} from "../../context/AuthContext";
 import {Link} from 'react-router-dom';
-import Slider from "../components/slider/Slider";
-import Switch from "../components/switch/Switch";
+import Slider from "../slider/Slider";
+import Switch from "../switch/Switch";
 
 
 function Text() {

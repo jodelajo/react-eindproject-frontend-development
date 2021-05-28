@@ -5,7 +5,7 @@ import terraceData from '../../data/terrace.json';
 import './Location.css';
 import Counter from "../../components/counter/Counter";
 import LittleFooter from "../../components/littleFooter/LittleFooter";
-import Text from "../../text/Text";
+import Text from "../../components/text/Text";
 import {RiHeart3Line} from "react-icons/ri";
 
 

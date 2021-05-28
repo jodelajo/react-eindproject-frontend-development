@@ -7,7 +7,7 @@ import Map from "../../components/map/Map";
 import LittleFooter from "../../components/littleFooter/LittleFooter";
 import mapExample from '../../assets/images/app_example_transp.png';
 import {Link} from "react-router-dom";
-import Text from "../../text/Text";
+import Text from "../../components/text/Text";
 import MoreInfo from "../../components/moreInfo/MoreInfo";
 import UseMediaQuery from "../../components/useMediaQuery/UseMediaQuery";
 
