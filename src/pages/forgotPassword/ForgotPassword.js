@@ -1,8 +1,8 @@
-import React, { useRef, useState } from 'react'
-import { useForm } from "react-hook-form"
-import '../signUp/SignUp.css'
-import { useAuth } from '../../context/AuthContext'
-import { Link } from 'react-router-dom'
+import React, {useRef, useState} from 'react';
+import {useForm} from "react-hook-form";
+import '../signUp/SignUp.css';
+import {useAuth} from '../../context/AuthContext';
+import {Link} from 'react-router-dom';
 import SubmitButton from "../../components/submitButton/SubmitButton";
 
 function ForgotPassword() {
@@ -41,8 +41,8 @@ function ForgotPassword() {
             />
 
             <SubmitButton
-            disabled={loading}
-            buttonText="aanvragen"
+                disabled={loading}
+                buttonText="aanvragen"
             />
 
         </form>

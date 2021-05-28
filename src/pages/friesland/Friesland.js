@@ -1,5 +1,5 @@
-import React, {useContext} from 'react'
-import {LocationContext} from '../../context/LocationContext'
+import React, {useContext} from 'react';
+import {LocationContext} from '../../context/LocationContext';
 import Region from "../../components/region/Region";
 
 function Friesland() {

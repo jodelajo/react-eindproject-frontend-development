@@ -72,47 +72,36 @@ function LocationContextProvider({children}) {
 
         if (clouds < 10) {
             return 11 * multiplierClouds;
-            // setPointsClouds(pointsClouds + 20);
         }
         if (clouds >= 10 && clouds < 15) {
             return 10 * multiplierClouds;
-            // setPointsClouds(pointsClouds + 18);
         }
         if (clouds >= 15 && clouds < 20) {
             return 9 * multiplierClouds;
-            // setPointsClouds(pointsClouds + 15);
         }
         if (clouds >= 20 && clouds < 30) {
             return 8 * multiplierClouds;
-            // setPointsClouds(pointsClouds + 15);
         }
         if (clouds >= 30 && clouds < 40) {
             return 7 * multiplierClouds;
-            // setPointsClouds(pointsClouds + 10);
         }
         if (clouds >= 40 && clouds < 50) {
             return 6 * multiplierClouds;
-            // setPointsClouds(pointsClouds + 15);
         }
         if (clouds >= 50 && clouds < 60) {
             return 5 * multiplierClouds;
-            // setPointsClouds(pointsClouds + 8);
         }
         if (clouds >= 60 && clouds < 70) {
             return 4 * multiplierClouds;
-            // setPointsClouds(pointsClouds + 15);
         }
         if (clouds >= 70 && clouds < 80) {
             return 3 * multiplierClouds;
-            // setPointsClouds(pointsClouds + 15);
         }
         if (clouds >= 80 && clouds < 90) {
             return 2 * multiplierClouds;
-            // setPointsClouds(pointsClouds + 15);
         }
         if (clouds >= 90 && clouds < 100) {
             return multiplierClouds;
-            // setPointsClouds(pointsClouds + 15);
         }
         if (clouds >= 100) {
             return 0;
@@ -267,11 +256,6 @@ function LocationContextProvider({children}) {
         if (temp >= 35) {
             return 36 * multiplierTemp;
         }
-    }
-
-
-    const refresh = () => {
-        fetchLocations()
     }
 
     async function fetchLocations() {
@@ -481,7 +465,6 @@ function LocationContextProvider({children}) {
         locationsNoordWest: locationsNoordWest,
         locationsNoordOost: locationsNoordOost,
         locationsZuidWest: locationsZuidWest,
-        refresh,
         boosterCloud: boosterCloud,
         goBackHandler: goBackHandler,
         boosterTemp: boosterTemp,

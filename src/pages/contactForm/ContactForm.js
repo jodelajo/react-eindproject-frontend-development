@@ -1,9 +1,9 @@
-import React, { useState, useRef } from 'react'
-import '../signUp/SignUp.css'
+import React, {useState, useRef} from 'react';
+import '../signUp/SignUp.css';
 import emailjs from "emailjs-com";
 
 
-function ContactForm(){
+function ContactForm() {
     const nameRef = useRef()
     const subjectRef = useRef()
     const emailRef = useRef()
@@ -26,22 +26,22 @@ function ContactForm(){
     }
 
     return <main className="signup-wrapper">
-    <form onSubmit={sendEmail} className="form">
-    <h2>Contactformulier</h2>
+        <form onSubmit={sendEmail} className="form">
+            <h2>Contactformulier</h2>
             <input
-            type="text"
-            name="name"
-            placeholder="Naam"
-            className="input"
-            ref={nameRef} required
+                type="text"
+                name="name"
+                placeholder="Naam"
+                className="input"
+                ref={nameRef} required
             />
-        <input
-            type="text"
-            name="subject"
-            placeholder="Onderwerp"
-            className="input"
-            ref={subjectRef} required
-        />
+            <input
+                type="text"
+                name="subject"
+                placeholder="Onderwerp"
+                className="input"
+                ref={subjectRef} required
+            />
             <input
                 type="email"
                 name="email"
@@ -58,10 +58,11 @@ function ContactForm(){
                 ref={messageRef} required
             />
 
-        <input type="submit" value="Send" className="submit-send" />
-        {succesMessage && <p>Uw bericht is succesvol verzonden!</p>}
-    </form>
+            <input type="submit" value="Send" className="submit-send"/>
+            {succesMessage && <p>Uw bericht is succesvol verzonden!</p>}
+        </form>
 
     </main>
 }
+
 export default ContactForm

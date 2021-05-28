@@ -1,22 +1,20 @@
-import React, {useRef, useState} from 'react'
-import {useForm} from "react-hook-form"
-import './SignUp.css'
-import {useAuth} from '../../context/AuthContext'
-import {Link, useHistory } from 'react-router-dom'
+import React, {useRef, useState} from 'react';
+import {useForm} from "react-hook-form";
+import './SignUp.css';
+import {useAuth} from '../../context/AuthContext';
+import {Link, useHistory} from 'react-router-dom';
 
 
 function SignUp() {
-    const {handleSubmit } = useForm()
+    const {handleSubmit} = useForm()
     const emailRef = useRef()
     const userNameRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
-    const {signup, currentUser} = useAuth()
+    const {signup} = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const history = useHistory()
-
-    console.log(currentUser)
 
     async function onSubmit() {
         if (passwordRef.current.value !==

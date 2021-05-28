@@ -1,8 +1,8 @@
-import React, {useContext} from 'react'
+import React, {useContext} from 'react';
 import {LocationContext} from "../../context/LocationContext";
-import {useParams} from 'react-router-dom'
-import terraceData from '../../data/terrace.json'
-import './Location.css'
+import {useParams} from 'react-router-dom';
+import terraceData from '../../data/terrace.json';
+import './Location.css';
 import Counter from "../../components/counter/Counter";
 import LittleFooter from "../../components/littleFooter/LittleFooter";
 import Text from "../../components/text/Text";
@@ -37,15 +37,14 @@ function Location() {
 
     return <div className="single-location">
         <div className="single-location-mobile">
-                <Counter
-                    index={<RiHeart3Line/>}
-                    key={specificLocation && specificLocation.locationID}
-                    location={specificLocation && specificLocation}
-                    clouds={specificLocation && specificLocation.locationClouds}
-                    wind={specificLocation && specificLocation.locationWind}
-                    temp={specificLocation && specificLocation.locationTemp}
-                    // totalPoints={specificLocation && specificLocation.totalPoints}
-                />
+            <Counter
+                index={<RiHeart3Line/>}
+                key={specificLocation && specificLocation.locationID}
+                location={specificLocation && specificLocation}
+                clouds={specificLocation && specificLocation.locationClouds}
+                wind={specificLocation && specificLocation.locationWind}
+                temp={specificLocation && specificLocation.locationTemp}
+            />
 
         </div>
         <div className="terras">
@@ -70,7 +69,6 @@ function Location() {
                         clouds={specificLocation && specificLocation.locationClouds}
                         wind={specificLocation && specificLocation.locationWind}
                         temp={specificLocation && specificLocation.locationTemp}
-                        // totalPoints={specificLocation && specificLocation.totalPoints}
                     />
 
                 </div>

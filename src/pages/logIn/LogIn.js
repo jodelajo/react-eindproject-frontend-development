@@ -1,7 +1,7 @@
 import React, {useRef, useState} from 'react';
 import {useForm} from "react-hook-form";
-import '../signUp/SignUp.css'
-import {useAuth} from '../../context/AuthContext'
+import '../signUp/SignUp.css';
+import {useAuth} from '../../context/AuthContext';
 import {Link, useHistory} from 'react-router-dom';
 import SubmitButton from "../../components/submitButton/SubmitButton";
 
@@ -10,12 +10,10 @@ function LogIn() {
     const {handleSubmit} = useForm();
     const emailRef = useRef()
     const passwordRef = useRef()
-    const {login, currentUser} = useAuth()
+    const {login} = useAuth()
     const [error, setError] = useState('')
     const [loading, setLoading] = useState(false)
     const history = useHistory()
-
-    console.log(currentUser)
 
     async function onSubmit() {
 
@@ -31,8 +29,6 @@ function LogIn() {
         }
         setLoading(false)
     }
-
-    console.log(currentUser)
 
     return <main>
         <form className="form" onSubmit={handleSubmit(onSubmit)}>
@@ -57,10 +53,10 @@ function LogIn() {
                 className="input"
             />
 
-           <SubmitButton
-           disabled={loading}
-           buttonText="Inloggen"
-           />
+            <SubmitButton
+                disabled={loading}
+                buttonText="Inloggen"
+            />
 
         </form>
         <p>Wachtwoord vergeten? <Link to="/forgot-password">Klik hier</Link>.</p>

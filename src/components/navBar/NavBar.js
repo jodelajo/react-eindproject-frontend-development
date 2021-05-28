@@ -1,14 +1,11 @@
-import React, {useState, useContext} from 'react';
+import React, {useState} from 'react';
 import './NavBar.css';
-import {RiRefreshLine} from "react-icons/ri";
 import {Link} from 'react-router-dom';
 import {useAuth} from '../../context/AuthContext';
-import {LocationContext} from "../../context/LocationContext";
 
 function NavBar() {
     const {currentUser} = useAuth()
     const [checked, setChecked] = useState(false)
-    const {refresh} = useContext(LocationContext)
 
     function handleClick() {
         setChecked(!checked)
@@ -43,9 +40,6 @@ function NavBar() {
                 <Link to="/contact" className="menuClass">Contact</Link>
             </div>}
         </div>
-        <button className="refresh-button" onClick={refresh}>
-            <RiRefreshLine className="refresh"/>
-        </button>
     </div>
 
 }

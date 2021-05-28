@@ -11,9 +11,9 @@ ReactDOM.render(
     <React.StrictMode>
         <Router>
             <AuthContextProvider>
-                    <LocationContextProvider>
-                        <App/>
-                    </LocationContextProvider>
+                <LocationContextProvider>
+                    <App/>
+                </LocationContextProvider>
             </AuthContextProvider>
         </Router>
     </React.StrictMode>,

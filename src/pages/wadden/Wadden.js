@@ -3,7 +3,7 @@ import {LocationContext} from "../../context/LocationContext";
 import Region from "../../components/region/Region";
 
 function Wadden() {
-    const { locationsWadden} = useContext(LocationContext)
+    const {locationsWadden} = useContext(LocationContext)
     return <div>
         <Region
             locationsRegion={locationsWadden}
@@ -11,5 +11,6 @@ function Wadden() {
         />
 
     </div>
-};
+}
+
 export default Wadden

@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React, {useContext} from 'react';
 import {RiArrowLeftLine, RiHome2Line, RiStarLine} from "react-icons/ri";
 import {Link, useHistory} from "react-router-dom";
 import './LittleFooter.css';
@@ -7,7 +7,6 @@ import {LocationContext} from "../../context/LocationContext";
 
 function LittleFooter() {
     const {goBackHandler} = useContext(LocationContext)
-
     const history = useHistory()
 
     function onClickHandler() {
