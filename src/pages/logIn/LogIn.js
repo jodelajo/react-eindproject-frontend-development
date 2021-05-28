@@ -20,9 +20,8 @@ function LogIn() {
         try {
             setError('')
             setLoading(true)
+            // eslint-disable-next-line
             const result = await login(emailRef.current.value, passwordRef.current.value)
-            console.log(result)
-            console.log(result.user.email)
             history.push('/')
         } catch {
             setError('Failed to log in')
@@ -41,8 +40,6 @@ function LogIn() {
                 placeholder="Email"
                 ref={emailRef} required
                 className="input"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                title="Het emailadres moet een @ bevatten"
             />
             <input
                 type="password"

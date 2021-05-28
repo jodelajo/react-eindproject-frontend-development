@@ -3,7 +3,7 @@ import Counter from "../counter/Counter";
 import './Region.css';
 import {NavLink} from 'react-router-dom';
 import LittleFooter from "../littleFooter/LittleFooter";
-import Text from "../text/Text";
+import Text from "../../text/Text";
 import Booster from "../booster/Booster";
 
 

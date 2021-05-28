@@ -4,6 +4,14 @@ import './SignUp.css';
 import {useAuth} from '../../context/AuthContext';
 import {Link, useHistory} from 'react-router-dom';
 
+export const validateEmail = (value) => {
+    if(value.includes("@")) {
+        return true
+    } else {
+        return `Uw email dient een "@" te bevatten.`
+    }
+}
+
 
 function SignUp() {
     const {handleSubmit} = useForm()
