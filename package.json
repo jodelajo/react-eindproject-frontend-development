@@ -1,5 +1,6 @@
 {
-  "name": "react-my-app",
+  "name": "beste-plakje",
+  "homepage": "https://www.beste-plakje.nl/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -1,10 +1,8 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/60b4deac-549d-468e-aa0e-21c40505379d/deploy-status)](https://app.netlify.com/sites/beste-plakje/deploys)
-
 # React Open Weather App with Firebase authentication
 
 [React Application](https://github.com/facebook/create-react-app) app using  [Open Weather Map](https://openweathermap.org/api/) and [Firebase Authentication](https://firebase.google.com/docs/auth/).
 
-Checkout the [demo here](https://beste-plakje.netlify.app/).
+Checkout the [website](https://beste-plakje.nl/).
 
 
 ![React Beste Plakje app example 1](https://media.giphy.com/media/eS3nb6gbp91ELZpSS6/giphy.gif) 
